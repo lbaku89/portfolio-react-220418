@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'NanumSquare';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareLight';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareExtraBold';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareBold';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareAcR';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acR.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acR.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acR.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acR.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareAcL';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acL.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acL.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acL.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acL.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareAcEB';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acEB.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acEB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acEB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acEB.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareAcB';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acB.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquare_acB.ttf) format("truetype");
+}
+
+* {
+  padding: 0;
+  list-style: none;
+  font-family: 'NanumSquare';
+}
+
+.logoBox {
+  height: 100%;
+  width: 150px;
+}
+
+.logo {
+  height: 100px;
+  width: 150px;
+}
+
+.togglerKHJ {
+  font-size: 2.5rem !important;
+}
+
+.mIntro {
+  height: 500px;
+  width: 100%;
+  background-color: beige;
+  padding-top: 10rem;
+  text-align: center;
+}
+
+.hrLine {
+  width: 200px;
+  height: 3px !important;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+}
+/*# sourceMappingURL=App.css.map */
