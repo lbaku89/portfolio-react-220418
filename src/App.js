@@ -4,8 +4,14 @@ import logo from './img/head/logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Snsdiv from './Snsdiv';
+import { useState } from 'react';
 
 function App() {
+  const [snsstate, snsUpdate] = useState(false);
+  const snsFL = (t) =>{
+    snsUpdate(t)
+  }
   return (
    <>
      <nav className="navbar navbar-expand-lg fixed-top" id="mainNav">
@@ -18,11 +24,11 @@ function App() {
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarResponsivfe">
                     <ul className="navbar-nav text-uppercase py-4 py-lg-0">                 
-                        <li className="nav-item"><a class="nav-link  text-dark fw-bold" href="#services">About me</a></li>
-                        <li className="nav-item"><a class=" nav-link  text-dark fw-bold" href="#portfolio">Skills</a></li> 
-                        <li className="nav-item"><a class=" nav-link  text-dark fw-bold" href="#event1">Project#1</a></li>
-                        <li className="nav-item"><a class=" nav-link  text-dark fw-bold" href="#portfolio">Project#2</a></li>
-                        <li className="nav-item"><a class=" nav-link  text-dark fw-bold" href="#contact">Contact me</a></li>
+                        <li className="nav-item"><a class="nav-link  text-dark fw-bold" href="#services">내소개</a></li>
+                        <li className="nav-item"><a class=" nav-link  text-dark fw-bold" href="#portfolio">포트폴리오</a></li> 
+                        <li className="nav-item"><a class=" nav-link  text-dark fw-bold" href="#event1">사전인터뷰</a></li>
+                        <button onClick={()=>{snsFL(!snsstate)}}>etc...</button>
+                        { snsstate && <Snsdiv></Snsdiv> }       
                     </ul>
                 </div>
             </div>                    
@@ -34,7 +40,7 @@ function App() {
         <h5>기억보다는 기록을!<br></br>계획보단 직접실천를 좋아합니다.</h5>
       </div>
      </div>
-           
+
    </>
   );
 }
