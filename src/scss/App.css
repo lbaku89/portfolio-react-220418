@@ -58,19 +58,19 @@
 }
 
 .logo {
-  height: 100px;
+  height: 80px;
   width: 150px;
 }
 
-.togglerKHJ {
-  font-size: 2.5rem !important;
+.toggler {
+  font-size: 2rem !important;
 }
 
 .mIntro {
-  height: 500px;
+  height: 300px;
   width: 100%;
   background-color: beige;
-  padding-top: 10rem;
+  padding-top: 5rem;
   text-align: center;
 }
 
@@ -81,4 +81,3 @@
   margin-bottom: 1rem;
   border-radius: 2px;
 }
-/*# sourceMappingURL=App.css.map */
