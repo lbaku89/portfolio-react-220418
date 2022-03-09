@@ -1,9 +1,8 @@
-
 import appStyle from './App.module.css';
 import logo from './img/head/logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faGithub} from '@fortawesome/free-solid-svg-icons'
 import Snsdiv from './Snsdiv';
 import { useState } from 'react';
 
@@ -11,22 +10,22 @@ function App() {
   const [snsstate, snsUpdate] = useState(false);
   const snsFL = (t) =>{
     snsUpdate(t)
-  }
+      }
   return (
    <>
-     <nav className="navbar navbar-expand-lg fixed-top" id={appStyle.}>
-            <div className="container">
-                <a className={appStyle.logoBox+" navbar-brand"} href="#page-top">
-                  <img src={logo} className={appStyle.logo +" d-block h-100"} alt="..." /></a>
-                <button className={appStyle.toggler +" navbar-toggler"} type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    {/* <i className="fas fa-bars ms-1"></i>  */}
-                    <FontAwesomeIcon icon={faBars}/>
+     <nav className="fixed-top">
+            <div className="container d-flex justify-content-between" id={appStyle.naviContainer}>
+                <a className={appStyle.logoBox} href="#page-top">
+                  <img src={logo} className={appStyle.logo +" d-block h-100"} alt="..." />
+                </a>
+                <button className={appStyle.toggler} type="button">
+                    <FontAwesomeIcon icon={faBars} className={appStyle.tolgglerIcon}/>
                 </button>
-                <div className="collapse navbar-collapse justify-content-end" id="navbarResponsivfe">
-                    <ul className="navbar-nav text-uppercase py-4 py-lg-0">                 
-                        <li className="nav-item"><a class="nav-link  text-dark fw-bold" href="#services">어바웃미</a></li>
-                        <li className="nav-item"><a class=" nav-link  text-dark fw-bold" href="#portfolio">포트폴리오</a></li> 
-                        <li className="nav-item"><a class=" nav-link  text-dark fw-bold" href="#event1">사전인터뷰</a></li>
+                <div className="w-100" id={appStyle.naviBox}>
+                    <ul className="d-flex justify-content-end" id={appStyle.navListUl}>                 
+                        <li className={appStyle.navList+' d-block'}><a class={appStyle.navListA} href="#services">어바웃미</a></li>
+                        <li className={appStyle.navList+' d-block'}><a class={appStyle.navListA} href="#portfolio">포트폴리오</a></li> 
+                        <li className={appStyle.navList+' d-block'}><a class={appStyle.navListA} href="#event1">사전인터뷰</a></li>
                     </ul>
                 </div>
             </div>                             
@@ -45,7 +44,7 @@ function App() {
      </section>
      <button onClick={()=>{snsFL(!snsstate)}}>etc...</button>
             { snsstate && <Snsdiv></Snsdiv> } 
-
+     <div class="fixed-bottom"><FontAwesomeIcon icon={faGithub} className={appStyle.tolgglerIcon}/></div>
    </>
   );
 }

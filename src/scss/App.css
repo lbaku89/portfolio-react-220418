@@ -50,6 +50,8 @@
   padding: 0;
   list-style: none;
   font-family: 'NanumSquare';
+  text-decoration: none !important;
+  color: black;
 }
 
 .logoBox {
@@ -60,10 +62,32 @@
 .logo {
   height: 80px;
   width: 150px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.logo:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .toggler {
   font-size: 2rem !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: transparent;
+  border: none;
+}
+
+.toggler:hover {
+  border-radius: none;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.togglerIcon:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .mIntro {
@@ -74,10 +98,59 @@
   text-align: center;
 }
 
+#naviContainer {
+  height: 6rem !important;
+  padding: 1rem;
+  line-height: 4rem;
+}
+
 .hrLine {
   width: 200px;
   height: 3px !important;
   margin: 0 auto;
   margin-bottom: 1rem;
   border-radius: 2px;
+}
+
+.aboutMeSection {
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+}
+
+.navListUl {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navList {
+  margin-left: 1rem;
+}
+
+.navListA {
+  color: black;
+  font-family: 'NanumSquareExtraBold' !important;
+  font-size: 1.3rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.navListA:hover {
+  font-size: 1.5rem;
+  color: brown;
+}
+
+@media (max-width: 768px) {
+  #naviBox {
+    display: none;
+  }
+  .toggler {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .toggler {
+    display: none;
+  }
 }
