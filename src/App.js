@@ -44,7 +44,7 @@ function App() {
      </section>
      <button onClick={()=>{snsFL(!snsstate)}}>etc...</button>
             { snsstate && <Snsdiv></Snsdiv> } 
-     <div class="fixed-bottom"><FontAwesomeIcon icon={faGithub} className={appStyle.tolgglerIcon}/></div>
+     <div class="fixed-bottom"></div>
    </>
   );
 }
