@@ -1,0 +1,21 @@
+{
+  "name": "pjt220228",
+  "version": "1.0.0",
+  "description": "node + react",
+  "main": "server.js",
+  "scripts": {
+    "myreact": "cd front && npm start",
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run myreact\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
