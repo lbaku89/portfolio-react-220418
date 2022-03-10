@@ -149,6 +149,10 @@
   .toggler{
     display: block;
   }
+  #Navi{
+    background-color: white;
+    transition: 2s;
+  }
 }
 @media (min-width:768px){
 
@@ -156,25 +160,15 @@
     display: none;
   }
 }
-// .container{
-//   display: flex;
-//   justify-content: space-between;
-//   height: 100px;
-//   padding:1rem;
-// }
-// .gnb{
-//   display: flex;
-//   list-style: none;
-// }
-// // a{display: block;}
-// // img{display: block;}
 
-// .naviMenu{
-//   align-items: middle;
+.snsLogoImg{
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
+}
+
+
+// .togglerNavi{
+//   height: 500px;
 // }
-// .logoImg{
-// height: 100%;
-// }
-// .test {
-//   font-size: 50px;
-// }
+
