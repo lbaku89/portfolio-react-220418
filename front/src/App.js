@@ -2,11 +2,10 @@ import appStyle from './App.module.css';
 import logo from './img/head/logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,faUser,faCakeCandles,faLocationDot,faStairs,faEnvelope,faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faBars,faUser,faCakeCandles,faLocationDot,faEnvelope,faPhone,faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import {faGithub, faInstagram} from '@fortawesome/free-brands-svg-icons'
-import Snsdiv from './Snsdiv';
 import { useState } from 'react';
-
+import aboutMe from './img/aboutMe.jpg'
 import tistoyLogo from './img/tistory-logo.svg';
 import NaviTogglerDrop from './NaviTogglerDrop';
 
@@ -17,11 +16,7 @@ function App() {
     togglerUpdate(t);
   }
 
-  // sns box usestate
-  const [snsstate, snsUpdate] = useState(false);
-  const snsFL = (t) =>{
-    snsUpdate(t)
-  }
+ 
 
   return (
    <>
@@ -56,26 +51,33 @@ function App() {
       <div className='container-lg'>
         <div className='row'>
           <div className='col-sm-6 bg-primary'>
+            <img src={aboutMe} className='img-fluid'></img>
           </div>
           <div className='col-sm-6 p-3 row'>
-              <div className='col-sm-6 col-md-4 d-flex'>
-                <div className='me-1'><FontAwesomeIcon icon={faUser} size="xl"/></div>
-                <div>이름 : 권혁중</div>
+    
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
+                <FontAwesomeIcon icon={faUser} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}>권현우</div>
               </div>
-              <div className='col-sm-6 col-md-4'>
-                <FontAwesomeIcon icon={faCakeCandles} /> 1993.04.10
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
+                <FontAwesomeIcon icon={faCakeCandles} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}>1993.04.10</div>
               </div>
-              <div className='col-sm-6 col-md-4'>
-              <FontAwesomeIcon icon={faLocationDot} /> 거주지:경기도 부천
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
+                <FontAwesomeIcon icon={faLocationDot} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}>경기도 부천시</div>
               </div>
-              <div className='col-sm-6 col-md-4'> 
-              <FontAwesomeIcon icon={faPhone} /> 연락처:010-6732-9168
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
+                <FontAwesomeIcon icon={faPhone} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}>010-6372-9168</div>
               </div>
-              <div className='col-sm-6 col-md-4'>
-              <FontAwesomeIcon icon={faEnvelope} />
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
+                <FontAwesomeIcon icon={faEnvelope} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}>khj930410<br></br>@naver.com</div>
               </div>
-              <div className='col-sm-6 col-md-4'>
-              <FontAwesomeIcon icon={faStairs} />
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
+                <FontAwesomeIcon icon={faGraduationCap} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}>서울과기대 졸업<br></br><span class={appStyle.aboutMeSubText}>(기계시스템디자인 공학부)</span></div>
               </div>
            </div>
         </div>
