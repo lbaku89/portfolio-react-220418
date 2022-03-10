@@ -54,6 +54,10 @@
   color: black;
 }
 
+.nanumEB {
+  font-family: 'NanumSquareExtraBold';
+}
+
 .logoBox {
   height: 100%;
   width: 150px;
@@ -91,10 +95,10 @@
 }
 
 .mIntro {
-  height: 300px;
+  height: 280px;
   width: 100%;
   background-color: beige;
-  padding-top: 5rem;
+  padding-top: 6rem;
   text-align: center;
 }
 
@@ -164,9 +168,5 @@
   width: 30px;
   height: 30px;
   margin-right: 30px;
-}
-
-.togglerDownBox {
-  -webkit-transition: 3s;
-  transition: 3s;
+  margin-top: 0px;
 }

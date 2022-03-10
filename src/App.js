@@ -2,10 +2,11 @@ import appStyle from './App.module.css';
 import logo from './img/head/logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars,faUser,faCakeCandles,faLocationDot,faStairs,faEnvelope,faPhone } from '@fortawesome/free-solid-svg-icons'
+import {faGithub, faInstagram} from '@fortawesome/free-brands-svg-icons'
 import Snsdiv from './Snsdiv';
 import { useState } from 'react';
-import { BsGithub, BsInstagram } from 'react-icons/bs';
+
 import tistoyLogo from './img/tistory-logo.svg';
 import NaviTogglerDrop from './NaviTogglerDrop';
 
@@ -45,25 +46,57 @@ function App() {
      </nav>   
      <div className={appStyle.mIntro}>
        <div className={appStyle.mIntroTextBox}>
-        <h1>- 권현우 -<br></br>웹 개발자 포트폴리오</h1>
+        <h1>웹 개발자 포트폴리오</h1>
         <hr className={appStyle.hrLine}></hr>
-        <h5>기억보다는 기록을!<br></br>계획보단 직접실천를 좋아합니다.</h5>
+        <h5>기억보다는 <sapn className={appStyle.nanumEB}>기록을!</sapn><br></br>계획보단 <sapn className={appStyle.nanumEB}>직접실천</sapn>을 좋아합니다.</h5>
       </div>
      </div>
+     {/* 인적사항 part */}
      <section id={appStyle.aboutMeSection}>
-      <div className='container'>
-
+      <div className='container-lg'>
+        <div className='row'>
+          <div className='col-sm-6 bg-primary'>
+          </div>
+          <div className='col-sm-6 p-3 row'>
+              <div className='col-sm-6 col-md-4 d-flex'>
+                <div className='me-1'><FontAwesomeIcon icon={faUser} size="xl"/></div>
+                <div>이름 : 권혁중</div>
+              </div>
+              <div className='col-sm-6 col-md-4'>
+                <FontAwesomeIcon icon={faCakeCandles} /> 1993.04.10
+              </div>
+              <div className='col-sm-6 col-md-4'>
+              <FontAwesomeIcon icon={faLocationDot} /> 거주지:경기도 부천
+              </div>
+              <div className='col-sm-6 col-md-4'> 
+              <FontAwesomeIcon icon={faPhone} /> 연락처:010-6732-9168
+              </div>
+              <div className='col-sm-6 col-md-4'>
+              <FontAwesomeIcon icon={faEnvelope} />
+              </div>
+              <div className='col-sm-6 col-md-4'>
+              <FontAwesomeIcon icon={faStairs} />
+              </div>
+           </div>
+        </div>
       </div>
      </section>
-     <button onClick={()=>{snsFL(!snsstate)}}>etc...</button>
-            { snsstate && <Snsdiv></Snsdiv> } 
+
+
+
+
+     {/* <button onClick={()=>{snsFL(!snsstate)}}>etc...</button>
+            { snsstate && <Snsdiv></Snsdiv> }  */}
     
     {/* 하단 sns Part */}
-     <div class="fixed-bottom text-center bg-secondary">
-      <div className='p-2'>
-        <BsGithub className={appStyle.snsLogoImg}/><BsInstagram className={appStyle.snsLogoImg}/><img src={tistoyLogo} className={appStyle.snsLogoImg}></img>
+
+     {/* <div class="fixed-bottom text-center bg-secondary">
+      <div>
+      <FontAwesomeIcon icon={faGithub}/>
+      <img src={tistoyLogo} className={appStyle.snsLogoImg}></img>
+      <FontAwesomeIcon icon={faInstagram} />
       </div>
-    </div>
+    </div> */}
  
    </>
   
