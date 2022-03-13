@@ -54,6 +54,10 @@
   color: black;
 }
 
+.fs3rem {
+  font-size: 3rem !important;
+}
+
 .nanumEB {
   font-family: 'NanumSquareExtraBold';
 }
@@ -155,6 +159,9 @@
     background-color: white;
     -webkit-transition: 2s;
     transition: 2s;
+  }
+  #aboutMeBox {
+    text-align: center;
   }
 }
 
