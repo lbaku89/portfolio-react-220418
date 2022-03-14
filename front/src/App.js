@@ -48,40 +48,41 @@ function App() {
       </div>
      </div>
      {/* 인적사항 part */}
-     <section id={appStyle.aboutMeSection}>
-      <div className='container-lg'>
-        <div className='row d-flex justify-content-center' id={appStyle.aboutMeBox} >
-          <div className='col-sm-4 p-3 text-center'>
-            <img src={myPicture} className='img-fluid col-6'></img>
-          </div>
-          <div className='p-3 row col-sm-6' >       
-            <div><p className={appStyle.fs3rem +' fw-bold'}>About ME!</p></div>
-            <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
-              <FontAwesomeIcon icon={faUser} className={appStyle.aboutMeIcon}/>
-                <div className={appStyle.aboutMeText}>권현우</div>
+     <section id={appStyle.aboutMeSection} className="container-lg">
+      <div><p className={appStyle.aboutMeTxt +' text-center p-3 mb-0'}>ABOUT ME</p></div>
+      <div className='p-3'>
+        <img src={myPicture} class="d-block" id={appStyle.myPicture}></img>
+      </div>
+      <div>
+        <div className='row' id={appStyle.aboutMeBox} >
+            <div className='p-3 row' >       
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start align-items-center'>
+                <FontAwesomeIcon icon={faUser} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}><span className={appStyle.aboutMeSubText}>이름</span><p>권현우</p></div>
+              </div>
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start align-items-center'>
+                <FontAwesomeIcon icon={faCakeCandles} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}><span className={appStyle.aboutMeSubText}>생년월일</span><br></br>1993.04.10</div>
+              </div>
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start align-items-center'>
+                <FontAwesomeIcon icon={faLocationDot} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}><span className={appStyle.aboutMeSubText}>거주지</span><br></br>경기도 부천시</div>
+              </div>
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start align-items-center'>
+                <FontAwesomeIcon icon={faPhone} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}><span className={appStyle.aboutMeSubText}>연락처</span><br></br>010-6372-9168</div>
+              </div>
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start align-items-center'>
+                <FontAwesomeIcon icon={faEnvelope} className={appStyle.aboutMeIcon}/>
+                <div className={appStyle.aboutMeText}><span className={appStyle.aboutMeSubText}>e-mail-</span><br></br>khj930410@naver.com</div>
+              </div>
+              <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start align-items-center'>
+                <FontAwesomeIcon icon={faGraduationCap} className={appStyle.aboutMeIcon}/>
+                  <div className={appStyle.aboutMeText}><span className={appStyle.aboutMeSubText}>학력</span><br></br>서울과기대 졸업<br></br><span class={appStyle.aboutMeSubText}>(기계공학)</span></div>
+              </div>
             </div>
-            <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
-              <FontAwesomeIcon icon={faCakeCandles} className={appStyle.aboutMeIcon}/>
-                <div className={appStyle.aboutMeText}>1993.04.10</div>
-            </div>
-            <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
-              <FontAwesomeIcon icon={faLocationDot} className={appStyle.aboutMeIcon}/>
-                <div className={appStyle.aboutMeText}>경기도 부천시</div>
-            </div>
-            <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
-              <FontAwesomeIcon icon={faPhone} className={appStyle.aboutMeIcon}/>
-                <div className={appStyle.aboutMeText}>010-6372-9168</div>
-            </div>
-            <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
-              <FontAwesomeIcon icon={faEnvelope} className={appStyle.aboutMeIcon}/>
-                <div className={appStyle.aboutMeText}>khj930410<br></br>@naver.com</div>
-            </div>
-            <div className='col-sm-6 col-md-4 d-flex p-3 justify-content-start'>
-              <FontAwesomeIcon icon={faGraduationCap} className={appStyle.aboutMeIcon}/>
-                <div className={appStyle.aboutMeText}>서울과기대 졸업<br></br><span class={appStyle.aboutMeSubText}>(기계시스템디자인 공학부)</span></div>
-            </div>
-           </div>
-        </div>
+      </div>
+
       </div>
      </section>
 
