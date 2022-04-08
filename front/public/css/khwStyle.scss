@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* Noto-sans 글꼴  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; 로 적용 font-weight 100, 300, 400, 500 ,700, 900 사용 가능*/
+/* 나눔 스퀘어 글꼴 */
+@font-face {
+  font-family: 'NanumSquare';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareR.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareLight';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareL.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareExtraBold';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareEB.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumSquareBold';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquare/NanumSquareB.ttf) format("truetype");
+}
+
+/* 여기어때 잘난체 */
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+  font-size: 16px;
+}
+
+*{
+  padding: 0;
+  list-style: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-decoration: none !important;
+  color:black;
+}
+
+.navLogo{ font-size: 3rem !important; 
+          font-weight: 900;}
+
+#NaviCollapse{ 
+  flex: unset;
+
+}
+
+#NaviNav{
+  li{
+    font-size: 1.25rem;
+  }
+}
+
+// MainPage 
+.MainPageMainImgWrap{
+  margin-top: 83px;
+  width: auto;
+  height: 912px;
+  background-image: url('/img/mainimg1920x912.jpg');
+  background-position: center;
+  background-size: auto;
+  
+
+}
+.MainPageMainImgWrap>.MainPageTxtWrap{
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%,-50%);
+}
