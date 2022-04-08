@@ -1,7 +1,8 @@
 // components
 import Navi from './components/Navi'
-import Footer from './components/Footer'
 import MainPage from './components/MainPage'
+import AboutMe from './components/AboutMe';
+import Footer from './components/Footer'
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,6 +13,7 @@ function App() {
     <div className='wrap'>
       <Navi></Navi>
       <MainPage></MainPage>
+      <AboutMe></AboutMe>
       <Footer></Footer>
     </div>
   );

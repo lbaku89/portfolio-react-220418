@@ -35,6 +35,11 @@
   font-style: normal;
 }
 
+// common class 
+.white{color: white;}
+.primary{color: #0D6EFD;}
+
+
 html{
   font-size: 16px;
 }
@@ -44,12 +49,16 @@ html{
   list-style: none;
   font-family: 'Noto Sans KR', sans-serif;
   text-decoration: none !important;
-  color:black;
 }
 
-.navLogo{ font-size: 3rem !important; 
-          font-weight: 900;}
+// Navi Component
 
+
+.navLogo{ font-size: 2.5rem !important; 
+          font-weight: 900;}
+#NaviNavbar{ padding-top: 0; padding-bottom: 0; transition: top ease-in-out;}
+.NaviNavUp{top:-70px;} // Navi 사라지게 함
+.NaviNavDown{top:0px;}
 #NaviCollapse{ 
   flex: unset;
 
@@ -63,17 +72,40 @@ html{
 
 // MainPage 
 .MainPageMainImgWrap{
-  margin-top: 83px;
+  margin-top: 75px;
   width: auto;
   height: 912px;
   background-image: url('/img/mainimg1920x912.jpg');
   background-position: center;
   background-size: auto;
-  
 
 }
 .MainPageMainImgWrap>.MainPageTxtWrap{
   top: 50%;
   left: 50%;
-  transform: translate(-100%,-50%);
+  transform: translate(-80%,-80%);
+  text-align: end;
+  h3{font-size: 3rem; font-weight: 700; margin-bottom: 30px;}
+  p{font-size: 1.5rem; margin-right: 30px; margin-bottom: 5px;}
+  p:last-child{margin-bottom: 0; margin-top: 25px; margin-right: 40px;
+    a{color: black; font-weight: 900; border-bottom: 2px solid black;}
+  }
+  
 }
+// AboutMe
+#AboutMeWrap{height: 1060px; background-color: white;
+padding-top: 100px; padding-bottom: 100px;
+  #AboutMeTitleBox{
+    align-items: center;
+    justify-content: center;
+    div{width:20px; height: 40px; background-color:#0D6EFD;}
+    h3{font-size: 2.5rem; margin-left: 10px; margin-right: 20px;}
+    img{height: 70px;}
+  }
+  
+}
+
+
+
+// Footer Component 
+.FooterWrap{height: 50px; background-color: transparent;}
