@@ -3,48 +3,52 @@ import $ from 'jquery';
 
 // react Component import 
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink, UncontrolledDropdown,
-         DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
+        } from 'reactstrap';
 
 export default class Header extends Component {
+  
   render() {
 
-    var lastScrollTop=0;
-    var delta = 5; // 동작의 구현이 시작되는 위치
-    var navbarHeight = $('#NaviNavbar').outerHeight;
-    
-    var didScroll;
-  
+    // navigation scroll event 구현! 
+    $(document).ready(function(){
+      // 변수선언
+      var didScroll;
+      var lastScrollTop = 0;
+      var delta = 5;
+      var navbarHeight = $('#NaviNavbar').outerHeight();
 
-    $(window).scroll(function(event){
-      didScroll = true;
-    })
+      // 스크롤 터지면 didScroll = true
+      $(window).scroll(function(){
+        didScroll=true;
+      });
 
-    setInterval(function(){
-      if(didScroll){
-        hasScrolled();
-        didScroll = false;
-      }
-    }, 250);
-    
-    function hasScrolled(){ 
-      var st = $(this).scrollTop(); 
-      // Make sure they scroll more than delta 
-      if(Math.abs(lastScrollTop - st) <= delta) 
-      return; 
-      
-      // If they scrolled down and are past the navbar, add class .nav-up.
-       // This is necessary so you never see what is "behind" the navbar. 
-       if (st > lastScrollTop && st > navbarHeight){ 
-         // Scroll Down 
-         $('#NaviNavbar').removeClass('NaviNavDown').addClass('NaviNavUp'); 
-        }else { 
-          // Scroll Up 
-          if(st + $(window).height() < $(document).height()){ 
-            $('#NaviNavbar').removeClass('NaviNavUp').addClass('NaviNavDown');
-           } 
-          } lastScrollTop = st; 
+      // 0.25초마다 scroll 상태 확인
+      setInterval(function(){
+        if(didScroll){  
+          hasScrolled(); // hasScrolled Function 실행!
+          didScroll =false; // didScroll은 0으로 
         }
+      },250);
 
+      function hasScrolled(){
+        var st = $(window).scrollTop();
+        
+        if(Math.abs(lastScrollTop-st)<=delta)
+          return;
+
+        if(st>lastScrollTop && st>navbarHeight){
+          $('#NaviNavbar').addClass('NaviNavUp')
+        }else{
+
+          if(st+$(window).height()<$(document).height()){
+            $('#NaviNavbar').removeClass('NaviNavUp')
+          }
+        }
+        lastScrollTop=st;
+      }
+    })
+    
+    
     return (
       <div id="NaviWrap">
         <Navbar
@@ -65,23 +69,23 @@ export default class Header extends Component {
               navbar
               id="NaviNav"
             >
-              <NavItem className='NaviNavItem'>
-                <NavLink href="/components/">
+              <NavItem>
+                <NavLink href="/components/" className='NaviNavLink'>
                   About me
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <NavLink href="https://github.com/reactstrap/reactstrap" className='NaviNavLink'>
                   Portfolio
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">
+                <NavLink href="/components/" className='NaviNavLink'>
                   Pre Interview
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <NavLink href="https://github.com/reactstrap/reactstrap" className='NaviNavLink'>
                   Contact me
                 </NavLink>
               </NavItem>

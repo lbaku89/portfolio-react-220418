@@ -62,16 +62,12 @@ html {
 #NaviNavbar {
   padding-top: 0;
   padding-bottom: 0;
-  -webkit-transition: top ease-in-out;
-  transition: top ease-in-out;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .NaviNavUp {
-  top: -70px;
-}
-
-.NaviNavDown {
-  top: 0px;
+  top: -70px !important;
 }
 
 #NaviCollapse {
@@ -82,6 +78,18 @@ html {
 
 #NaviNav li {
   font-size: 1.25rem;
+}
+
+.NaviNavLink {
+  -webkit-transition: 0.5s !important;
+  transition: 0.5s !important;
+}
+
+.NaviNavLink:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  color: black;
+  font-weight: 500;
 }
 
 .MainPageMainImgWrap {

@@ -56,12 +56,10 @@ html{
 
 .navLogo{ font-size: 2.5rem !important; 
           font-weight: 900;}
-#NaviNavbar{ padding-top: 0; padding-bottom: 0; transition: top ease-in-out;}
-.NaviNavUp{top:-70px;} // Navi 사라지게 함
-.NaviNavDown{top:0px;}
+#NaviNavbar{ padding-top: 0; padding-bottom: 0; transition: 1s; }
+.NaviNavUp{top:-70px !important;} // Scrooll down 시 Navi 사라지게 함
 #NaviCollapse{ 
   flex: unset;
-
 }
 
 #NaviNav{
@@ -69,6 +67,12 @@ html{
     font-size: 1.25rem;
   }
 }
+.NaviNavLink{transition: 0.5s !important;}
+.NaviNavLink:hover {transform: translateY(10px);
+  color: black;
+  font-weight: 500;
+}
+
 
 // MainPage 
 .MainPageMainImgWrap{
