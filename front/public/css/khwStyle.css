@@ -147,6 +147,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 3.5rem;
 }
 
 #AboutMeWrap #AboutMeTitleBox div {
@@ -163,6 +164,138 @@ html {
 
 #AboutMeWrap #AboutMeTitleBox img {
   height: 70px;
+}
+
+#AboutMeWrap #AboutMeLeftDiv {
+  margin-right: 100px;
+}
+
+#AboutMeWrap #AboutMeLeftDiv div:first-child p {
+  font-size: 1.5rem;
+}
+
+#AboutMeWrap #AboutMeLeftDiv div:first-child ul {
+  padding-left: 15px;
+}
+
+#AboutMeWrap #AboutMeLeftDiv div:last-child {
+  margin-top: 80px;
+}
+
+#AboutMeWrap #AboutMeLeftDiv div:last-child p {
+  font-size: 1.5rem;
+}
+
+#AboutMeWrap #AboutMeLeftDiv div:last-child ul {
+  padding-left: 15px;
+}
+
+#AboutMeWrap #AboutMeRightDiv > p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li {
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeIconBox {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeIconBox .AboutMeIcon {
+  height: 40px;
+  margin-bottom: 20px;
+  margin-right: 0;
+  display: block;
+}
+
+#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox {
+  height: 40px;
+  width: 400px;
+  padding-left: 10px;
+}
+
+#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox p {
+  height: 30px;
+  margin-bottom: 0;
+}
+
+#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox .graph {
+  width: 100%;
+  margin-bottom: 5px;
+  height: 5px;
+  background-color: #ccc;
+}
+
+#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox .graph span {
+  width: 90%;
+  height: 100%;
+  background-color: black;
+  display: block;
+  -webkit-animation: stack90 2s 1;
+          animation: stack90 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .graphTxtDiv {
+  font-size: 1.25rem;
+  padding-left: 10px;
+  padding-top: 10px;
+  -webkit-animation: show 2s 1;
+          animation: show 2s 1;
+}
+
+@-webkit-keyframes show {
+  0% {
+    color: rgba(0, 0, 0, 0);
+  }
+  80% {
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes show {
+  0% {
+    color: rgba(0, 0, 0, 0);
+  }
+  80% {
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes stack90 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 90%;
+    color: black;
+  }
+}
+
+@keyframes stack90 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 90%;
+    color: black;
+  }
 }
 
 .FooterWrap {
