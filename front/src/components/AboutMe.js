@@ -42,9 +42,9 @@ export default class AboutMe extends Component {
             </div>
           </div>
           {/* contents -right */}
-          <dvi>
+          <div>
             
-          </dvi>
+          </div>
       </div>
     )
   }
