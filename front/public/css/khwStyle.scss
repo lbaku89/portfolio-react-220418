@@ -78,12 +78,7 @@ html{
 
 /* 스마트폰 */
 @media (max-width:767.78px){
-  .NaviNavLink{font-size: 1.2rem;}
-  .navLogo{display: none;}
 
-  #NaviNavbar{ height: 80px; }
-  #NaviCollapse{ width: 100%;}
-  #NaviNav{ width: 100%; justify-content: space-around;}
 }
 
 
@@ -135,7 +130,7 @@ html{
 @media (max-width:767.78px) {
 .MainPageMainImgWrap{
   width: auto;
-  background-image: url('/img/mainImg_mobile.jpg');
+  background-image: url('/img/mainImg2_mobile.jpg');
   background-position: center;
   background-size: 100% auto;
   }

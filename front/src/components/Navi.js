@@ -54,7 +54,7 @@ export default class Header extends Component {
         <Navbar
           color="light"
           container="sm"
-          expand
+          expand="md"
           fixed="top"
           light
           id='NaviNavbar'
@@ -89,6 +89,11 @@ export default class Header extends Component {
                   Contact me
                 </NavLink>
               </NavItem>
+              <UncontrolledDropdown
+                inNavbar
+                nav
+              >
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
