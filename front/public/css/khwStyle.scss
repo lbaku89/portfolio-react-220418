@@ -52,9 +52,7 @@ html{
 }
 
 // Navi Component
-
-
-.navLogo{ font-size: 2.5rem !important; 
+.navLogo{ font-size: 2.5rem !important;
           font-weight: 900;}
 #NaviNavbar{ padding-top: 0; padding-bottom: 0; transition: 1s; }
 .NaviNavUp{top:-70px !important;} // Scrooll down 시 Navi 사라지게 함
@@ -73,8 +71,23 @@ html{
   font-weight: 500;
 }
 
+/* 테블릿 */
+@media (max-width:991.98px){
+ 
+}
 
-// MainPage 
+/* 스마트폰 */
+@media (max-width:767.78px){
+  .NaviNavLink{font-size: 1.2rem;}
+  .navLogo{display: none;}
+
+  #NaviNavbar{ height: 80px; }
+  #NaviCollapse{ width: 100%;}
+  #NaviNav{ width: 100%; justify-content: space-around;}
+}
+
+
+// MainPage Component
 .MainPageMainImgWrap{
   margin-top: 75px;
   width: auto;
@@ -94,9 +107,42 @@ html{
   p:last-child{margin-bottom: 0; margin-top: 25px; margin-right: 40px;
     a{color: black; font-weight: 900; border-bottom: 2px solid black;}
   }
-  
 }
-// AboutMe
+
+/* 테블릿 */
+@media (max-width:991.98px) {
+  .MainPageMainImgWrap{
+    width: auto;
+    height: 724px;
+    background-image: url('/img/mainImg_tablet.jpg');
+    background-position: center;
+    background-size: auto;
+  }
+
+  .MainPageMainImgWrap>.MainPageTxtWrap{
+    h3{margin-top :50px;
+      font-size:1.8rem;
+      width:480px;}
+    p{font-size: 1.25rem;
+      margin-right:50px;}
+    p:last-child{
+      a{margin-right: 45px;}
+    }
+  }
+}
+
+/* 스마트폰 */
+@media (max-width:767.78px) {
+.MainPageMainImgWrap{
+  width: auto;
+  background-image: url('/img/mainImg_mobile.jpg');
+  background-position: center;
+  background-size: 100% auto;
+  }
+}
+
+
+// AboutMe Component
 #AboutMeWrap{height: 1060px; background-color: white; padding-top: 100px; padding-bottom: 100px;
   #AboutMeTitleBox{
     align-items: center;
@@ -162,6 +208,7 @@ html{
   0% {width: 0; color: rgba(0,0,0,0);}
   100% {width: 90%; color: rgba(0,0,0,1);}
 }
+
 
 
 // Footer Component 

@@ -92,6 +92,28 @@ html {
   font-weight: 500;
 }
 
+/* 테블릿 */
+/* 스마트폰 */
+@media (max-width: 767.78px) {
+  .NaviNavLink {
+    font-size: 1.2rem;
+  }
+  .navLogo {
+    display: none;
+  }
+  #NaviNavbar {
+    height: 80px;
+  }
+  #NaviCollapse {
+    width: 100%;
+  }
+  #NaviNav {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .MainPageMainImgWrap {
   margin-top: 75px;
   width: auto;
@@ -131,6 +153,39 @@ html {
   color: black;
   font-weight: 900;
   border-bottom: 2px solid black;
+}
+
+/* 테블릿 */
+@media (max-width: 991.98px) {
+  .MainPageMainImgWrap {
+    width: auto;
+    height: 724px;
+    background-image: url("/img/mainImg_tablet.jpg");
+    background-position: center;
+    background-size: auto;
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap h3 {
+    margin-top: 50px;
+    font-size: 1.8rem;
+    width: 480px;
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap p {
+    font-size: 1.25rem;
+    margin-right: 50px;
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap p:last-child a {
+    margin-right: 45px;
+  }
+}
+
+/* 스마트폰 */
+@media (max-width: 767.78px) {
+  .MainPageMainImgWrap {
+    width: auto;
+    background-image: url("/img/mainImg_mobile.jpg");
+    background-position: center;
+    background-size: 100% auto;
+  }
 }
 
 #AboutMeWrap {

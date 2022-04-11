@@ -59,7 +59,7 @@ export default class AboutMe extends Component {
                     </div>
                   </div>
                   <span class="graphTxtDiv">
-                    70%
+                    90%
                   </span>
                 </li>
                 <li className='d-flex'>
@@ -73,8 +73,9 @@ export default class AboutMe extends Component {
                       <span className='graph80'></span>
                     </div>
                   </div>
-                  <div>
-                  </div>
+                  <span class="graphTxtDiv">
+                    95%
+                  </span>
                 </li>
                 <li className='d-flex'>
                   <div className='AboutMeIconBox'>
@@ -87,8 +88,9 @@ export default class AboutMe extends Component {
                       <span className='graph80'></span>
                     </div>
                   </div>
-                  <div>
-                  </div>
+                  <span class="graphTxtDiv">
+                    90%
+                  </span>
                 </li>
                 <li className='d-flex'>
                   <div className='AboutMeIconBox'>
@@ -100,8 +102,9 @@ export default class AboutMe extends Component {
                       <span className='graph80'></span>
                     </div>
                   </div>
-                  <div>
-                  </div>
+                  <span class="graphTxtDiv">
+                    60%
+                  </span>
                 </li>
                 <li className='d-flex'>
                   <div className='AboutMeIconBox'>
@@ -113,8 +116,9 @@ export default class AboutMe extends Component {
                       <span className='graph80'></span>
                     </div>
                   </div>
-                  <div>
-                  </div>
+                  <span class="graphTxtDiv">
+                    70%
+                  </span>
                 </li>
                 <li className='d-flex'>
                   <div className='AboutMeIconBox'>
@@ -126,8 +130,9 @@ export default class AboutMe extends Component {
                       <span className='graph80'></span>
                     </div>
                   </div>
-                  <div>
-                  </div>
+                  <span class="graphTxtDiv">
+                    70%
+                  </span>
                 </li>
                 <li className='d-flex'>
                   <div className='AboutMeIconBox'>
@@ -139,8 +144,9 @@ export default class AboutMe extends Component {
                       <span className='graph80'></span>
                     </div>
                   </div>
-                  <div>
-                  </div>
+                  <span class="graphTxtDiv">
+                    60%
+                  </span>
                 </li>
                 <li className='d-flex'>
                   <div className='AboutMeIconBox'>
@@ -152,21 +158,24 @@ export default class AboutMe extends Component {
                       <span className='graph80'></span>
                     </div>
                   </div>
-                  <div>
-                  </div>
+                  <span class="graphTxtDiv">
+                    90%
+                  </span>
                 </li>
                 <li className='d-flex'>
                   <div className='AboutMeIconBox'>
                     <img src="/img/icon/mysqlIcon.png" alt="figma Icon" className='AboutMeIcon'/>
+                    <img src="/img/icon/xml.svg" alt="figma Icon" className='AboutMeIcon'/>
                   </div>
                   <div className='AboutMeSkillgraphBox'>
-                    <p>MySQL</p>
+                    <p>MySQL, xml</p>
                     <div className='graph'>
                       <span className='graph80'></span>
                     </div>
                   </div>
-                  <div>
-                  </div>
+                  <span class="graphTxtDiv">
+                    50%
+                  </span>
                 </li>
               </ul>
             </div>
