@@ -49,17 +49,17 @@ export default function AboutMe() {
             <div id="AboutMeRightDiv" className='col-12 col-md-12 col-lg-8'>
               <p>- SKILLS -</p>
               <ul id="AboutMeSkillUl">
-                <li className='d-flex'>
-                  <div className='AboutMeIconBox'>
+                <li className='row'>
+                  <div className='AboutMeIconBox col-3'>
                     <img src="/img/icon/figma2Icon.svg" alt="figma Icon" className='AboutMeIcon'/>
                   </div>
-                  <div className='AboutMeSkillgraphBox'>
+                  <div className='AboutMeSkillgraphBox col-7'>
                     <p>Figma</p>
-                    <div className='graph'>
-                      <span className=''></span>
+                    <div className='graph w-100'>
+                      <span className='w-50'></span>
                     </div>
                   </div>
-                  <span class="graphTxtDiv">
+                  <span class="graphTxtDiv col-2">
                     90%
                   </span>
                 </li>
@@ -163,18 +163,18 @@ export default function AboutMe() {
                     90%
                   </span>
                 </li>
-                <li className='d-flex'>
-                  <div className='AboutMeIconBox'>
+                <li className='row'>
+                  <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
                     <img src="/img/icon/mysqlIcon.png" alt="figma Icon" className='AboutMeIcon'/>
                     <img src="/img/icon/xml.svg" alt="figma Icon" className='AboutMeIcon'/>
                   </div>
-                  <div className='AboutMeSkillgraphBox'>
+                  <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
                     <p>MySQL, xml</p>
-                    <div className='graph'>
-                      <span className='graph80'></span>
+                    <div className='graph w-100'>
+                      <span className='graph80 w-50'></span>
                     </div>
                   </div>
-                  <span class="graphTxtDiv">
+                  <span class="graphTxtDiv col-2">
                     50%
                   </span>
                 </li>

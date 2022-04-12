@@ -300,7 +300,6 @@ html {
 }
 
 #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeIconBox {
-  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,7 +317,6 @@ html {
 
 #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox {
   height: 40px;
-  width: auto;
   padding-left: 10px;
 }
 
@@ -394,6 +392,19 @@ html {
   100% {
     width: 90%;
     color: black;
+  }
+}
+
+@media (max-width: 767.78px) {
+  #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeIconBox .AboutMeIcon {
+    margin-bottom: unset;
+    height: 30px;
+  }
+}
+
+@media (max-width: 575.8px) {
+  #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeIconBox {
+    display: none;
   }
 }
 
