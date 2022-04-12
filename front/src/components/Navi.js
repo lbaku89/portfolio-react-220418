@@ -3,10 +3,25 @@ import $ from 'jquery';
 
 // react Component import 
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink, UncontrolledDropdown,
-        } from 'reactstrap';
+  DropdownToggle, DropdownMenu,DropdownItem,
+} from 'reactstrap';
 
 export default class Header extends Component {
+
   
+  constructor(props){
+    super(props);
+    this.state = { 
+      collapsed:false
+    }
+  }
+
+  toggle = () => { 
+    this.setState(
+      {collapsed:!this.state.collapsed}
+    )
+  }
+ 
   render() {
 
     // navigation scroll event 구현! 
@@ -50,20 +65,22 @@ export default class Header extends Component {
     
     
     return (
+  
       <div id="NaviWrap">
         <Navbar
-          color="light"
+          color="dark"
+          dark
           container="sm"
           expand="md"
           fixed="top"
-          light
           id='NaviNavbar'
         >
           <NavbarBrand href="/" className='navLogo'> 
             KHW.
           </NavbarBrand>
-          <NavbarToggler onClick={function noRefCheck(){}} />
-          <Collapse navbar id="NaviCollapse">
+          <NavbarToggler id="NaviNavbarToggler" onClick={this.toggle}
+           />
+          <Collapse id="NaviCollapse"  navbar isOpen={this.state.collapsed}> 
             <Nav
               className="me-auto"
               navbar
@@ -71,22 +88,22 @@ export default class Header extends Component {
             >
               <NavItem>
                 <NavLink href="/components/" className='NaviNavLink'>
-                  About me
+                  ABOUT ME
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap" className='NaviNavLink'>
-                  Portfolio
+                  PORTFOLIO
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/components/" className='NaviNavLink'>
-                  Pre Interview
+                  PRE INTERVIEW
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap" className='NaviNavLink'>
-                  Contact me
+                  CONTACT ME
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown

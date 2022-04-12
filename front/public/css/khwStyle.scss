@@ -52,9 +52,24 @@ html{
 }
 
 // Navi Component
+#NaviNavbarToggler{
+  color: rgba(255,255,255,0) !important;
+}
+#NaviNavbarToggler:focus{
+  box-shadow: none !important;
+}
+.navbar-toggler{ border: none !important;
+  .navbar-toggler-icon{
+    background-image: 
+    url("/img/icon/m_menu.png") !important;}
+}
+.navbar-toggler:hover {
+  border: none, !important;;
+}
+
 .navLogo{ font-size: 2.5rem !important;
           font-weight: 900;}
-#NaviNavbar{ padding-top: 0; padding-bottom: 0; transition: 1s; }
+#NaviNavbar{ padding-top: 0; padding-bottom: 0; transition: 1s;}
 .NaviNavUp{top:-70px !important;} // Scrooll down 시 Navi 사라지게 함
 #NaviCollapse{ 
   flex: unset;
@@ -65,26 +80,31 @@ html{
     font-size: 1.25rem;
   }
 }
-.NaviNavLink{transition: 0.5s !important;}
-.NaviNavLink:hover {transform: translateY(10px);
-  color: black;
-  font-weight: 500;
+.NaviNavLink{ color: white !important}
+.NaviNavLink:hover {
+  color: #0D6EFD !important;
 }
 
 /* 테블릿 */
 @media (max-width:991.98px){
- 
+
 }
 
 /* 스마트폰 */
 @media (max-width:767.78px){
-
+  #NaviCollapse{
+    flex-basis: 100% !important;
+    flex-grow: 1 !important;
+    .NaviNavLink{
+      font-size: 0.9rem;
+    }
+  }
 }
 
 
 // MainPage Component
 .MainPageMainImgWrap{
-  margin-top: 75px;
+  margin-top: 70px;
   width: auto;
   height: 912px;
   background-image: url('/img/mainimg1920x912.jpg');
@@ -97,10 +117,10 @@ html{
   left: 50%;
   transform: translate(-80%,-80%);
   text-align: end;
-  h3{font-size: 3rem; font-weight: 700; margin-bottom: 30px;}
-  p{font-size: 1.5rem; margin-right: 30px; margin-bottom: 5px;}
+  h3{font-size: 3rem; font-weight: 300; margin-bottom: 30px;}
+  p{font-size: 1.5rem; margin-right: 30px; margin-bottom: 5px; font-weight: 300;}
   p:last-child{margin-bottom: 0; margin-top: 25px; margin-right: 40px;
-    a{color: black; font-weight: 900; border-bottom: 2px solid black;}
+    a{color: black; font-weight: 300; border-bottom: 2px solid black;}
   }
 }
 
@@ -117,28 +137,69 @@ html{
   .MainPageMainImgWrap>.MainPageTxtWrap{
     h3{margin-top :50px;
       font-size:1.8rem;
-      width:480px;}
+      width:480px;
+      font-weight: 400;
+      margin-right: 28px;
+      span{font-size: 2rem;}}
     p{font-size: 1.25rem;
-      margin-right:50px;}
+      margin-right:60px;}
     p:last-child{
       a{margin-right: 45px;}
     }
   }
 }
 
-/* 스마트폰 */
+// Mobile 가로
 @media (max-width:767.78px) {
 .MainPageMainImgWrap{
+  background-color: #C2C2C2;
+  background-repeat: no-repeat;
+  height: 500px;
   width: auto;
-  background-image: url('/img/mainImg2_mobile.jpg');
-  background-position: center;
-  background-size: 100% auto;
+  background-image: url('/img/mainImg_mobile.jpg');
+  background-position: bottom;
+  background-size: auto
+  }
+.MainPageMainImgWrap>.MainPageTxtWrap{
+  transform:translate( -50%, -95% ); 
+  h3{
+    span{
+      font-size: 2.25rem;
+    }
   }
 }
 
+}
 
-// AboutMe Component
-#AboutMeWrap{height: 1060px; background-color: white; padding-top: 100px; padding-bottom: 100px;
+// Mobile 세로 
+@media (max-width:575.8px) {
+  .MainPageMainImgWrap>.MainPageTxtWrap{
+    transform:translate( -50%, -105% ); 
+    text-align: center ;
+    h3{
+      width: 310px;
+      font-size:1rem;
+      margin-bottom: 10px;
+      margin-right: 0;
+      span{
+        font-size: 1.25rem;
+      }
+    }
+    p{font-size: 0.9rem;
+      margin-right:0px;
+
+    }
+    p:last-child{
+      a{margin-right: -200px;
+      }
+    }
+  }
+  }
+
+
+
+///////////////// AboutMe Component
+#AboutMeWrap{background-color: white; padding-top: 100px; padding-bottom: 100px;
   #AboutMeTitleBox{
     align-items: center;
     justify-content: center;
@@ -149,7 +210,7 @@ html{
   }
   
   #AboutMeLeftDiv{
-    margin-right: 100px;
+
     div:first-child{
       p{font-size: 1.5rem;}
       ul{padding-left: 15px;}
@@ -173,7 +234,7 @@ html{
           .AboutMeIcon{height: 40px; margin-bottom: 20px; margin-right: 0; display: block;}
         }
       
-        .AboutMeSkillgraphBox{height: 40px; width: 400px; padding-left: 10px;
+        .AboutMeSkillgraphBox{height: 40px; width: auto; padding-left: 10px;
           p{height: 30px; margin-bottom: 0;}
           .graph{width: 100%;  margin-bottom:5px; height:5px; background-color: #ccc;
             span{width: 90%; height: 100%; background-color: black; display: block;

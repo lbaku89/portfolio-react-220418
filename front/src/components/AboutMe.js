@@ -1,19 +1,20 @@
-import React, { Component } from 'react'
 
-export default class AboutMe extends Component {
-  render() {
+import React from 'react'
+
+
+export default function AboutMe() {
     return (
-      <div id='AboutMeWrap'>
+      <div id='AboutMeWrap' className='container-lg'>
           {/*section title text */}
           <div id="AboutMeTitleBox" className="d-flex justify-contents-center"> 
             <div className='bg-primary'></div>
             <h3>About Me</h3>
             <img src='/logo/mySketch.png' className='display-inlineblock'></img>
           </div>
-          <div id="AboutMeContentsBox" className='d-flex justify-content-center'>
+          <div id="AboutMeContentsBox" className='row'>
             {/* contents 영역  */}
             {/* contents -left */}
-            <div id="AboutMeLeftDiv">
+            <div id="AboutMeLeftDiv" className='col-12 col-md-12 col-lg-4'>
               <div>
                 <p>- 인적사항 -</p>
                 <ul>
@@ -45,7 +46,7 @@ export default class AboutMe extends Component {
               </div>
             </div>
             {/* contents -right */}
-            <div id="AboutMeRightDiv">
+            <div id="AboutMeRightDiv" className='col-12 col-md-12 col-lg-8'>
               <p>- SKILLS -</p>
               <ul id="AboutMeSkillUl">
                 <li className='d-flex'>
@@ -182,5 +183,6 @@ export default class AboutMe extends Component {
           </div>
       </div>
     )
-  }
+  
 }
+

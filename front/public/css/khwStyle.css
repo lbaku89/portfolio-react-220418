@@ -54,6 +54,27 @@ html {
   text-decoration: none !important;
 }
 
+#NaviNavbarToggler {
+  color: rgba(255, 255, 255, 0) !important;
+}
+
+#NaviNavbarToggler:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("/img/icon/m_menu.png") !important;
+}
+
+.navbar-toggler:hover {
+  border: none, !important;
+}
+
 .navLogo {
   font-size: 2.5rem !important;
   font-weight: 900;
@@ -81,21 +102,30 @@ html {
 }
 
 .NaviNavLink {
-  -webkit-transition: 0.5s !important;
-  transition: 0.5s !important;
+  color: white !important;
 }
 
 .NaviNavLink:hover {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
-  color: black;
-  font-weight: 500;
+  color: #0D6EFD !important;
 }
 
 /* 테블릿 */
 /* 스마트폰 */
+@media (max-width: 767.78px) {
+  #NaviCollapse {
+    -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important;
+    -webkit-box-flex: 1 !important;
+        -ms-flex-positive: 1 !important;
+            flex-grow: 1 !important;
+  }
+  #NaviCollapse .NaviNavLink {
+    font-size: 0.9rem;
+  }
+}
+
 .MainPageMainImgWrap {
-  margin-top: 75px;
+  margin-top: 70px;
   width: auto;
   height: 912px;
   background-image: url("/img/mainimg1920x912.jpg");
@@ -113,7 +143,7 @@ html {
 
 .MainPageMainImgWrap > .MainPageTxtWrap h3 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 300;
   margin-bottom: 30px;
 }
 
@@ -121,6 +151,7 @@ html {
   font-size: 1.5rem;
   margin-right: 30px;
   margin-bottom: 5px;
+  font-weight: 300;
 }
 
 .MainPageMainImgWrap > .MainPageTxtWrap p:last-child {
@@ -131,7 +162,7 @@ html {
 
 .MainPageMainImgWrap > .MainPageTxtWrap p:last-child a {
   color: black;
-  font-weight: 900;
+  font-weight: 300;
   border-bottom: 2px solid black;
 }
 
@@ -148,28 +179,65 @@ html {
     margin-top: 50px;
     font-size: 1.8rem;
     width: 480px;
+    font-weight: 400;
+    margin-right: 28px;
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap h3 span {
+    font-size: 2rem;
   }
   .MainPageMainImgWrap > .MainPageTxtWrap p {
     font-size: 1.25rem;
-    margin-right: 50px;
+    margin-right: 60px;
   }
   .MainPageMainImgWrap > .MainPageTxtWrap p:last-child a {
     margin-right: 45px;
   }
 }
 
-/* 스마트폰 */
 @media (max-width: 767.78px) {
   .MainPageMainImgWrap {
+    background-color: #C2C2C2;
+    background-repeat: no-repeat;
+    height: 500px;
     width: auto;
-    background-image: url("/img/mainImg2_mobile.jpg");
-    background-position: center;
-    background-size: 100% auto;
+    background-image: url("/img/mainImg_mobile.jpg");
+    background-position: bottom;
+    background-size: auto;
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap {
+    -webkit-transform: translate(-50%, -95%);
+            transform: translate(-50%, -95%);
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap h3 span {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .MainPageMainImgWrap > .MainPageTxtWrap {
+    -webkit-transform: translate(-50%, -105%);
+            transform: translate(-50%, -105%);
+    text-align: center;
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap h3 {
+    width: 310px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap h3 span {
+    font-size: 1.25rem;
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap p {
+    font-size: 0.9rem;
+    margin-right: 0px;
+  }
+  .MainPageMainImgWrap > .MainPageTxtWrap p:last-child a {
+    margin-right: -200px;
   }
 }
 
 #AboutMeWrap {
-  height: 1060px;
   background-color: white;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -199,10 +267,6 @@ html {
 
 #AboutMeWrap #AboutMeTitleBox img {
   height: 70px;
-}
-
-#AboutMeWrap #AboutMeLeftDiv {
-  margin-right: 100px;
 }
 
 #AboutMeWrap #AboutMeLeftDiv div:first-child p {
@@ -254,7 +318,7 @@ html {
 
 #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox {
   height: 40px;
-  width: 400px;
+  width: auto;
   padding-left: 10px;
 }
 
