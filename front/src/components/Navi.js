@@ -8,14 +8,13 @@ import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink, Un
 
 export default class Header extends Component {
 
-  
   constructor(props){
     super(props);
     this.state = { 
       collapsed:false
     }
   }
-
+  
   toggle = () => { 
     this.setState(
       {collapsed:!this.state.collapsed}
@@ -66,7 +65,10 @@ export default class Header extends Component {
     
     return (
   
-      <div id="NaviWrap">
+
+
+
+       <div id="NaviWrap">
         <Navbar
           color="dark"
           dark
@@ -75,7 +77,7 @@ export default class Header extends Component {
           fixed="top"
           id='NaviNavbar'
         >
-          <NavbarBrand href="/" className='navLogo'> 
+          <NavbarBrand href="#mainPage" className='navLogo'> 
             KHW.
           </NavbarBrand>
           <NavbarToggler id="NaviNavbarToggler" onClick={this.toggle}
@@ -87,7 +89,7 @@ export default class Header extends Component {
               id="NaviNav"
             >
               <NavItem>
-                <NavLink href="/components/" className='NaviNavLink'>
+                <NavLink href="#AboutMeWrap" className='NaviNavLink'>
                   ABOUT ME
                 </NavLink>
               </NavItem>
@@ -115,6 +117,8 @@ export default class Header extends Component {
           </Collapse>
         </Navbar>
       </div>
+
+
     )
   }
 }

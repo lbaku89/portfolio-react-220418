@@ -35,6 +35,45 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --var-color1:#0D6EFD;
+  --var-color2:#E5E5E5;
+  --var-color3:#C4C4C4;
+  --var-color4:#6C757D;
+  --var-color5:#000000;
+  --var-white:#FFFFFF;
+  --var-black:#000000;
+}
+
+html {
+  font-size: 16px;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-color2 {
+  background-color: var(--var-color2);
+}
+
+.khysection1 {
+  width: auto;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.gmarket {
+  font-family: 'GmarketSansMedium';
+}
+
 .white {
   color: white;
 }
@@ -43,8 +82,44 @@
   color: #0D6EFD;
 }
 
-html {
-  font-size: 16px;
+.m-auto {
+  margin: 0 auto;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-55 {
+  width: 55%;
 }
 
 * {
@@ -149,7 +224,7 @@ html {
 
 .MainPageMainImgWrap > .MainPageTxtWrap p {
   font-size: 1.5rem;
-  margin-right: 30px;
+  margin-right: 0px;
   margin-bottom: 5px;
   font-weight: 300;
 }
@@ -157,7 +232,6 @@ html {
 .MainPageMainImgWrap > .MainPageTxtWrap p:last-child {
   margin-bottom: 0;
   margin-top: 25px;
-  margin-right: 40px;
 }
 
 .MainPageMainImgWrap > .MainPageTxtWrap p:last-child a {
@@ -175,12 +249,15 @@ html {
     background-position: center;
     background-size: auto;
   }
+  .MainPageMainImgWrap > .MainPageTxtWrap {
+    padding-right: 30px;
+  }
   .MainPageMainImgWrap > .MainPageTxtWrap h3 {
     margin-top: 50px;
     font-size: 1.8rem;
     width: 480px;
     font-weight: 400;
-    margin-right: 28px;
+    margin-right: 60px;
   }
   .MainPageMainImgWrap > .MainPageTxtWrap h3 span {
     font-size: 2rem;
@@ -188,9 +265,6 @@ html {
   .MainPageMainImgWrap > .MainPageTxtWrap p {
     font-size: 1.25rem;
     margin-right: 60px;
-  }
-  .MainPageMainImgWrap > .MainPageTxtWrap p:last-child a {
-    margin-right: 45px;
   }
 }
 
@@ -238,9 +312,7 @@ html {
 }
 
 #AboutMeWrap {
-  background-color: white;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  background-color: transparent;
 }
 
 #AboutMeWrap #AboutMeTitleBox {
@@ -250,7 +322,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 5rem;
 }
 
 #AboutMeWrap #AboutMeTitleBox div {
@@ -262,11 +334,11 @@ html {
 #AboutMeWrap #AboutMeTitleBox h3 {
   font-size: 2.5rem;
   margin-left: 10px;
-  margin-right: 20px;
 }
 
-#AboutMeWrap #AboutMeTitleBox img {
-  height: 70px;
+#AboutMeWrap #AboutMeLeftDiv > div {
+  width: 300px;
+  margin: 0 auto;
 }
 
 #AboutMeWrap #AboutMeLeftDiv div:first-child p {
@@ -289,9 +361,73 @@ html {
   padding-left: 15px;
 }
 
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack95 {
+  width: 95%;
+  -webkit-animation: stack95 2s 1;
+          animation: stack95 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack90 {
+  width: 90%;
+  -webkit-animation: stack90 2s 1;
+          animation: stack90 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack85 {
+  width: 85%;
+  -webkit-animation: stack85 2s 1;
+          animation: stack85 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack80 {
+  width: 80%;
+  -webkit-animation: stack80 2s 1;
+          animation: stack80 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack75 {
+  width: 75%;
+  -webkit-animation: stack75 2s 1;
+          animation: stack75 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack70 {
+  width: 70%;
+  -webkit-animation: stack70 2s 1;
+          animation: stack70 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack65 {
+  width: 65%;
+  -webkit-animation: stack65 2s 1;
+          animation: stack65 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack60 {
+  width: 60%;
+  -webkit-animation: stack60 2s 1;
+          animation: stack60 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack55 {
+  width: 55%;
+  -webkit-animation: stack55 2s 1;
+          animation: stack55 2s 1;
+}
+
+#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack50 {
+  width: 55%;
+  -webkit-animation: stack50 2s 1;
+          animation: stack50 2s 1;
+}
+
 #AboutMeWrap #AboutMeRightDiv > p {
   font-size: 1.5rem;
   text-align: center;
+}
+
+#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl {
+  padding-left: revert;
 }
 
 #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li {
@@ -333,20 +469,22 @@ html {
 }
 
 #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox .graph span {
-  width: 90%;
   height: 100%;
   background-color: black;
   display: block;
-  -webkit-animation: stack90 2s 1;
-          animation: stack90 2s 1;
 }
 
 #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .graphTxtDiv {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   padding-left: 10px;
   padding-top: 10px;
   -webkit-animation: show 2s 1;
           animation: show 2s 1;
+}
+
+.graphTxtDiv span {
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
 }
 
 @-webkit-keyframes show {
@@ -373,6 +511,182 @@ html {
   }
 }
 
+@-webkit-keyframes stack50 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 55%;
+    color: black;
+  }
+}
+
+@keyframes stack50 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 55%;
+    color: black;
+  }
+}
+
+@-webkit-keyframes stack55 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 55%;
+    color: black;
+  }
+}
+
+@keyframes stack55 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 55%;
+    color: black;
+  }
+}
+
+@-webkit-keyframes stack60 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 60%;
+    color: black;
+  }
+}
+
+@keyframes stack60 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 60%;
+    color: black;
+  }
+}
+
+@-webkit-keyframes stack65 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 65%;
+    color: black;
+  }
+}
+
+@keyframes stack65 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 65%;
+    color: black;
+  }
+}
+
+@-webkit-keyframes stack70 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 70%;
+    color: black;
+  }
+}
+
+@keyframes stack70 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 70%;
+    color: black;
+  }
+}
+
+@-webkit-keyframes stack75 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 75%;
+    color: black;
+  }
+}
+
+@keyframes stack75 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 75%;
+    color: black;
+  }
+}
+
+@-webkit-keyframes stack80 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 80%;
+    color: black;
+  }
+}
+
+@keyframes stack80 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 80%;
+    color: black;
+  }
+}
+
+@-webkit-keyframes stack85 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 85%;
+    color: black;
+  }
+}
+
+@keyframes stack85 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 85%;
+    color: black;
+  }
+}
+
 @-webkit-keyframes stack90 {
   0% {
     width: 0;
@@ -395,6 +709,28 @@ html {
   }
 }
 
+@-webkit-keyframes stack95 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 95%;
+    color: black;
+  }
+}
+
+@keyframes stack95 {
+  0% {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    width: 95%;
+    color: black;
+  }
+}
+
 @media (max-width: 767.78px) {
   #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeIconBox .AboutMeIcon {
     margin-bottom: unset;
@@ -403,12 +739,53 @@ html {
 }
 
 @media (max-width: 575.8px) {
+  #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl {
+    padding-left: 0px;
+  }
   #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeIconBox {
     display: none;
   }
 }
 
+#PorfolioTitleBox {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5rem;
+}
+
+#PorfolioTitleBox div {
+  width: 20px;
+  height: 40px;
+  background-color: #0D6EFD;
+}
+
+#PorfolioTitleBox h3 {
+  font-size: 2.5rem;
+  margin-left: 10px;
+}
+
 .FooterWrap {
-  height: 50px;
-  background-color: transparent;
+  height: 8rem;
+  background-color: black;
+}
+
+.FooterWrap .FooterCopyright {
+  color: white;
+  text-align: center;
+}
+
+#FooterIconBox {
+  width: 320px;
+}
+
+#FooterIconBox > a {
+  display: block;
+}
+
+#FooterIconBox > a .FooterIcon {
+  height: 2.5rem;
 }

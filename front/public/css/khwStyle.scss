@@ -35,19 +35,60 @@
   font-style: normal;
 }
 
+// G마켓 산스
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 // 기기별 media query 
 // @media (max-width:991.98px){}
 // @media (max-width:767.78px){}
 // @media (max-width:575.8px){}
 
 // common class 
-.white{color: white;}
-.primary{color: #0D6EFD;}
-
+:root{
+  --var-color1:#0D6EFD;
+  --var-color2:#E5E5E5;
+  --var-color3:#C4C4C4;
+  --var-color4:#6C757D;
+  --var-color5:#000000;
+  --var-white:#FFFFFF;
+  --var-black:#000000;
+}
 
 html{
   font-size: 16px;
 }
+
+
+.bg-black{background-color: black;}
+.bg-color2{background-color: var(--var-color2);}
+
+// section 구획
+.khysection1{width: auto; padding-top: 12rem; padding-bottom:12rem;}
+
+.gmarket{  font-family: 'GmarketSansMedium';}
+
+.white{color: white;}
+.primary{color: #0D6EFD;}
+
+.m-auto{margin: 0 auto;}
+
+.w-95{width: 95%;}
+.w-90{width: 90%;}
+.w-85{width: 85%;}
+.w-80{width: 80%;}
+.w-75{width: 75%;}
+.w-70{width: 70%;}
+.w-65{width: 65%;}
+.w-60{width: 60%;}
+.w-55{width: 55%;}
+
+
 
 *{
   padding: 0;
@@ -123,8 +164,8 @@ html{
   transform: translate(-80%,-80%);
   text-align: end;
   h3{font-size: 3rem; font-weight: 300; margin-bottom: 30px;}
-  p{font-size: 1.5rem; margin-right: 30px; margin-bottom: 5px; font-weight: 300;}
-  p:last-child{margin-bottom: 0; margin-top: 25px; margin-right: 40px;
+  p{font-size: 1.5rem; margin-right: 0px; margin-bottom: 5px; font-weight: 300;}
+  p:last-child{margin-bottom: 0; margin-top: 25px;
     a{color: black; font-weight: 300; border-bottom: 2px solid black;}
   }
 }
@@ -140,17 +181,16 @@ html{
   }
 
   .MainPageMainImgWrap>.MainPageTxtWrap{
+    padding-right: 30px;
     h3{margin-top :50px;
       font-size:1.8rem;
       width:480px;
       font-weight: 400;
-      margin-right: 28px;
+      margin-right: 60px;
       span{font-size: 2rem;}}
     p{font-size: 1.25rem;
       margin-right:60px;}
-    p:last-child{
-      a{margin-right: 45px;}
-    }
+
   }
 }
 
@@ -204,18 +244,20 @@ html{
 
 
 ///////////////// AboutMe Component
-#AboutMeWrap{background-color: white; padding-top: 100px; padding-bottom: 100px;
+#AboutMeWrap{background-color: transparent;
   #AboutMeTitleBox{
     align-items: center;
     justify-content: center;
     div{width:20px; height: 40px; background-color:#0D6EFD;}
-    h3{font-size: 2.5rem; margin-left: 10px; margin-right: 20px;}
-    img{height: 70px;}
-    margin-bottom:3.5rem ;
+    h3{font-size: 2.5rem; margin-left: 10px;}
+    margin-bottom:5rem ;
   }
   
   #AboutMeLeftDiv{
-
+    >div{
+      width: 300px;
+      margin: 0 auto;
+    }
     div:first-child{
       p{font-size: 1.5rem;}
       ul{padding-left: 15px;}
@@ -227,10 +269,27 @@ html{
     }
   }
 
+  #AboutMeRightDiv.aos-animate{
+    .AboutMeSkillgraphBox{
+      .graph{
+        span.stack95{width: 95%; animation: stack95 2s 1; }
+        span.stack90{width: 90%; animation: stack90 2s 1; }
+        span.stack85{width: 85%; animation: stack85 2s 1; }
+        span.stack80{width: 80%; animation: stack80 2s 1; }
+        span.stack75{width: 75%; animation: stack75 2s 1; }
+        span.stack70{width: 70%; animation: stack70 2s 1; }
+        span.stack65{width: 65%; animation: stack65 2s 1; }
+        span.stack60{width: 60%; animation: stack60 2s 1; }
+        span.stack55{width: 55%; animation: stack55 2s 1; }
+        span.stack50{width: 55%; animation: stack50 2s 1; }
+      }
+    }
+  }
 
   #AboutMeRightDiv{
     >p{font-size: 1.5rem; text-align: center;}
     #AboutMeSkillUl{
+      padding-left: revert;
       li{
         height: 40px;
         margin-bottom: 30px;
@@ -241,17 +300,17 @@ html{
           .AboutMeIcon{height: 40px; margin-bottom: 20px; margin-right: 0; display: block;}
         }
       
+        
         .AboutMeSkillgraphBox{height: 40px; padding-left: 10px;
           p{height: 30px; margin-bottom: 0;}
           .graph{width: 100%;  margin-bottom:5px; height:5px; background-color: #ccc;
-            span{width: 90%; height: 100%; background-color: black; display: block;
-                 animation: stack90 2s 1;    
+            span{ height: 100%; background-color: black; display: block; 
             }
 
           }
         }
         .graphTxtDiv{
-          font-size: 1.25rem;
+          font-size: 1.4rem;
           padding-left: 10px;
           padding-top: 10px;
           animation: show 2s 1;
@@ -259,8 +318,14 @@ html{
       }
     }
   }
-  
 }
+.graphTxtDiv{
+  span{
+    margin-left: 0.25rem;
+    font-size: 0.75rem;
+  }
+}
+
 // graphTxt show 
 @keyframes show {
   0%{color: rgba(0,0,0,0);}
@@ -268,9 +333,45 @@ html{
   100%{color: rgba(0,0,0,1);}
 }
 // skillgraph stack
+@keyframes stack50 {
+  0% {width: 0; color: rgba(0,0,0,0);}
+  100% {width: 55%; color: rgba(0,0,0,1);}
+}
+@keyframes stack55 {
+  0% {width: 0; color: rgba(0,0,0,0);}
+  100% {width: 55%; color: rgba(0,0,0,1);}
+}
+@keyframes stack60 {
+  0% {width: 0; color: rgba(0,0,0,0);}
+  100% {width: 60%; color: rgba(0,0,0,1);}
+}
+@keyframes stack65 {
+  0% {width: 0; color: rgba(0,0,0,0);}
+  100% {width: 65%; color: rgba(0,0,0,1);}
+}
+@keyframes stack70 {
+  0% {width: 0; color: rgba(0,0,0,0);}
+  100% {width: 70%; color: rgba(0,0,0,1);}
+}
+@keyframes stack75 {
+  0% {width: 0; color: rgba(0,0,0,0);}
+  100% {width: 75%; color: rgba(0,0,0,1);}
+}
+@keyframes stack80 {
+  0% {width: 0; color: rgba(0,0,0,0);}
+  100% {width: 80%; color: rgba(0,0,0,1);}
+}
+@keyframes stack85 {
+  0% {width: 0; color: rgba(0,0,0,0);}
+  100% {width: 85%; color: rgba(0,0,0,1);}
+}
 @keyframes stack90 {
   0% {width: 0; color: rgba(0,0,0,0);}
   100% {width: 90%; color: rgba(0,0,0,1);}
+}
+@keyframes stack95 {
+  0% {width: 0; color: rgba(0,0,0,0);}
+  100% {width: 95%; color: rgba(0,0,0,1);}
 }
 
 // @media (max-width:991.98px){}
@@ -297,8 +398,9 @@ html{
     #AboutMeRightDiv{
 
       #AboutMeSkillUl{
+        padding-left: 0px;
         li{
-  
+
           .AboutMeIconBox{
             display: none;
           }
@@ -308,5 +410,34 @@ html{
   }
 }
 
+// @Porfolio.js Component
+// #PorfolioTitleBox{
+
+// }
+#PorfolioTitleBox{
+  align-items: center;
+  justify-content: center;
+  div{width:20px; height: 40px; background-color:#0D6EFD;}
+  h3{font-size: 2.5rem; margin-left: 10px;}
+  margin-bottom:5rem ;
+}
+
+
 // Footer Component 
-.FooterWrap{height: 50px; background-color: transparent;}
+.FooterWrap{height: 8rem; background-color: black;
+    
+  .FooterCopyright{
+    color: white;
+    text-align: center
+  }
+}
+#FooterIconBox{
+  width: 320px;
+  >a{display: block;
+    .FooterIcon{
+      height: 2.5rem;
+    }
+  }
+  
+ 
+}
