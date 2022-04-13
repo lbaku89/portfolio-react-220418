@@ -25,32 +25,22 @@ export default function AboutMe() {
           {/* contents 영역  */}
           {/* contents -left */}
           <div id="AboutMeLeftDiv" className='col-12 col-md-12 col-lg-6'>
-              <ul>
-                <li className='fs-2'>권현우 ( 1993.04.10 )
-                </li>
-                <li>010-6372-9168</li>
-                <li>khj930410@naver.com</li>
-              </ul>
-              <ul>
-                <li>서울과학기술대 졸업 ( 공과대학 )</li>
-                <li>MCNEX 기구설계 엔지니어 2년근무</li>
-                <li>PWA 프론트엔드 과정( 6개월 )수료</li>
-                <li>PWA 교육과정 우수훈련생 발탁</li>
-              </ul>
-              <ul>
-                <li>GTQ 포토샵 1급</li>
-                <li>웹디자인기능사</li>
-                <br></br>
-                <li>컴퓨터활용 능력 2급</li>
-                <li>ITQ 아래한글</li>
-                <li>ITQ 한글엑셀</li>
-                <li>ITQ 한글파워포인트</li>
-                <li>ITQ 인터넷</li>
-                <br></br>
-                <li>구글애널리틱스</li>
-                <li>한국사 능력검정시험 2급</li>
-                <li>운전면허</li>
-              </ul>
+            <div className='d-flex'>
+              <div className='col-6 profileImgBox'></div>
+              <div className='col-6 ms-4'>
+                <div className='fs-2'>권현우<span className='fs-5'>( 1993.4.10 )</span></div>
+                <ul className='ps-0 mt-3'>
+                  <li>경기도 부천시 거주</li>
+                  <li>010-6372-9168</li>
+                  <li>khj930410@naver.com</li>
+                </ul>
+                <ul className='ps-0 mt-3'>
+                  <li>서울과학기술대 졸업(공학계열)</li>
+                  <li>MCENX 기구설계 엔지니어 2년 근무</li>
+                  <li>PWA 프론트엔드 6개월 과정 수료</li>
+                </ul>
+              </div>
+            </div>
           </div>
           {/* contents -right */}
           <div id="AboutMeRightDiv" data-aos="fade-up" data-aos-duration="3000" className='col-12 col-md-12 col-lg-6'>

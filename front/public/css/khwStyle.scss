@@ -244,7 +244,9 @@ html{
 
 
 ///////////////// AboutMe Component
-#AboutMeWrap{background-color: transparent;
+#AboutMeWrap{
+  background-color: transparent;
+  max-width: 1140px !important;
   #AboutMeTitleBox{
     align-items: center;
     justify-content: center;
@@ -254,17 +256,15 @@ html{
   }
   
   #AboutMeLeftDiv{
-    ul:first-child{
-      img{
-        height:100px;top:0%; left:50%; transform:translate(0%,0%) ;}
-    }
-    div:first-child{
-      p{font-size: 1.5rem;}
-      ul{padding-left: 15px;}
-    }
-    div:last-child{
-      p{font-size: 1.5rem;}
-      ul{padding-left: 15px;}
+    >div{
+      .profileImgBox{
+        border-radius: 5px;
+        background-image: url("/img/AboutMe/myPicture.jpg");
+        background-position: top;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+
     }
   }
 

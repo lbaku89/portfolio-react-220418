@@ -313,6 +313,7 @@ html {
 
 #AboutMeWrap {
   background-color: transparent;
+  max-width: 1140px !important;
 }
 
 #AboutMeWrap #AboutMeTitleBox {
@@ -336,28 +337,12 @@ html {
   margin-left: 10px;
 }
 
-#AboutMeWrap #AboutMeLeftDiv ul:first-child img {
-  height: 100px;
-  top: 0%;
-  left: 50%;
-  -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
-}
-
-#AboutMeWrap #AboutMeLeftDiv div:first-child p {
-  font-size: 1.5rem;
-}
-
-#AboutMeWrap #AboutMeLeftDiv div:first-child ul {
-  padding-left: 15px;
-}
-
-#AboutMeWrap #AboutMeLeftDiv div:last-child p {
-  font-size: 1.5rem;
-}
-
-#AboutMeWrap #AboutMeLeftDiv div:last-child ul {
-  padding-left: 15px;
+#AboutMeWrap #AboutMeLeftDiv > div .profileImgBox {
+  border-radius: 5px;
+  background-image: url("/img/AboutMe/myPicture.jpg");
+  background-position: top;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 }
 
 #AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack95 {
