@@ -19,25 +19,24 @@ export default function AboutMe() {
         {/*section title text */}
         <div id="AboutMeTitleBox" className="d-flex justify-contents-center align-items-start"> 
           <div className='bg-primary'></div>
-          <h3 className='gmarket align-text-bottom'>권현우는 이런사람</h3>
+          <h3 className='gmarket align-text-bottom'>저를 소개해요</h3>
         </div>
         <div id="AboutMeContentsBox" className='row'>
           {/* contents 영역  */}
           {/* contents -left */}
-          <div id="AboutMeLeftDiv" className='col-12 col-md-12 col-lg-5'>
-            <div>
+          <div id="AboutMeLeftDiv" className='col-12 col-md-12 col-lg-6'>
               <ul>
-                <li>권현우 ( 1993.04.10 ) </li>
+                <li className='fs-2'>권현우 ( 1993.04.10 )
+                </li>
                 <li>010-6372-9168</li>
                 <li>khj930410@naver.com</li>
-                <br></br>
+              </ul>
+              <ul>
                 <li>서울과학기술대 졸업 ( 공과대학 )</li>
                 <li>MCNEX 기구설계 엔지니어 2년근무</li>
                 <li>PWA 프론트엔드 과정( 6개월 )수료</li>
                 <li>PWA 교육과정 우수훈련생 발탁</li>
               </ul>
-            </div>
-            <div>
               <ul>
                 <li>GTQ 포토샵 1급</li>
                 <li>웹디자인기능사</li>
@@ -52,10 +51,9 @@ export default function AboutMe() {
                 <li>한국사 능력검정시험 2급</li>
                 <li>운전면허</li>
               </ul>
-            </div>
           </div>
           {/* contents -right */}
-          <div id="AboutMeRightDiv" data-aos="fade-up" data-aos-duration="3000" className='col-12 col-md-12 col-lg-7'>
+          <div id="AboutMeRightDiv" data-aos="fade-up" data-aos-duration="3000" className='col-12 col-md-12 col-lg-6'>
             <ul id="AboutMeSkillUl">
               <li className='row'>
                 <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>

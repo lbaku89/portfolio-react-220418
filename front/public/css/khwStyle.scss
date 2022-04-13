@@ -254,16 +254,15 @@ html{
   }
   
   #AboutMeLeftDiv{
-    >div{
-      width: 300px;
-      margin: 0 auto;
+    ul:first-child{
+      img{
+        height:100px;top:0%; left:50%; transform:translate(0%,0%) ;}
     }
     div:first-child{
       p{font-size: 1.5rem;}
       ul{padding-left: 15px;}
     }
     div:last-child{
-      margin-top: 80px;
       p{font-size: 1.5rem;}
       ul{padding-left: 15px;}
     }

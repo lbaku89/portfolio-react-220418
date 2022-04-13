@@ -336,9 +336,12 @@ html {
   margin-left: 10px;
 }
 
-#AboutMeWrap #AboutMeLeftDiv > div {
-  width: 300px;
-  margin: 0 auto;
+#AboutMeWrap #AboutMeLeftDiv ul:first-child img {
+  height: 100px;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
 }
 
 #AboutMeWrap #AboutMeLeftDiv div:first-child p {
@@ -347,10 +350,6 @@ html {
 
 #AboutMeWrap #AboutMeLeftDiv div:first-child ul {
   padding-left: 15px;
-}
-
-#AboutMeWrap #AboutMeLeftDiv div:last-child {
-  margin-top: 80px;
 }
 
 #AboutMeWrap #AboutMeLeftDiv div:last-child p {
