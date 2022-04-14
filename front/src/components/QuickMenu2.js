@@ -5,34 +5,31 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default class QuickMenu2 extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state={
-      willOpen:false,
+      willOpen:true,
     }
   }
 
-  render() {
+  render(){
 
-    const openFunction= (index) =>{
-      this.setState({willOpen:!index})
+    const openFunction = () => {
+      console.log(this.state.willOpen);
+      this.setState({willOpen:!this.state.willOpen})
       console.log(this.state.willOpen);
       if(this.state.willOpen){
-       var check = document.getElementsByClassName("QuickMenuLi")
-       console.log(check);
-       for(var i=0; i<check.length ;i++){
-        check[i].classList.add('show');
-       }
-      }else{
-
+        var liArray =document.getElementsByClassName('QuickMenuLi')
+        console.log(liArray);
+        liArray.forEach(element =>element.classList.add('show'))
+        }
       }
-    }
-
+    
     
 
 
     return (
       <div class="d-flex flex-column-reverse" id="QuickMenuWrap">
-          <button className="d-flex align-items-center justify-content-center" id="QuickMenuButton" onClick={ e =>{ openFunction(this.state.willOpen); } }>
+          <button className="d-flex align-items-center justify-content-center" id="QuickMenuButton" onClick={ e =>{ openFunction() } }>
             <FontAwesomeIcon icon={faPlus} className="quickbutton"/>
           </button>
           <ul id="QuickMenuUl"className='mb-0 d-flex flex-column-reverse position-relative p-0'>
