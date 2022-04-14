@@ -429,60 +429,64 @@ html{
 // QuickMenu Component
 
 #QuickMenuWrap{
+  position: fixed;
+  bottom: 0;
+  right: 0;
   padding: 25px;
-    ul{ 
-     
-        margin: 0;
-      li:first-child{
-        visibility: visible;
-        width: 50px;
-        height: 50px;
-        background: var(--var-black);
-        border-radius: 50%;
-        .quickbutton{color: white;
-        width: 50%;
-        height: 50%;
-        }
-      }
-      li:nth-child(2){
-        bottom: 58px;
-        animation: quickAni1 2s 1;
-      }
-      li:nth-child(3){
-        bottom: calc(58px * 2);
-        animation: quickAni2 2s 1;
-      }
-      li:nth-child(4){
-        bottom: calc(58px * 3);
-        animation: quickAni3 2s 1;
-      }
-      li:nth-child(5){
-        bottom: calc(58px * 4);
-        animation: quickAni4 2s 1;
-      }
-      li{
-        position: absolute;
-        right: 0%;
-        // visibility: hidden;
-        a{
-          img{
-            height: 50px;
-          }
+  >button{width: 50px; height: 50px; border-radius: 50%;
+    background-color: var(--var-color1);
+    border: none;
+    .quickbutton{
+      width: 50%; height: 50%;
+      color: white;
+    }
+  }
+  ul{
+    li{
+      transition: 1s;
+      width: 50px; height: 50px;
+      position: absolute;
+      left: 0;
+      bottom:-58px;
+      visibility: hidden;
+
+      a{
+        display: block;
+        width: 100%; height: 100%;
+        img{
+          display: block;
+          width: 100%; height: 100%;
         }
       }
     }
+    li.show{visibility: visible;}
 
+    
+    li:nth-child(1).show{
+      bottom: 0px;
+    }
+    li:nth-child(2).show{
+      bottom: 58px;
+    }
+    li:nth-child(3).show{
+      bottom: calc(58px*2);
+    }
+    li:nth-child(4).show{
+      bottom: calc(58px*3);
+    }
+
+  }
 }
 
 // animation
 @keyframes quickAni1{
   0%{
     opacity: 0;
-    bottom: 0;
+    bottom:-58px
   }
   100%{
     opacity: 1;
-    bottom: calc(58px*1);
+    bottom: 0px;
   }
 }
 @keyframes quickAni2{
@@ -492,7 +496,7 @@ html{
   }
   100%{
     opacity: 1;
-    bottom: calc(58px*2);
+    bottom: calc(58px*1);
   }
 }
 @keyframes quickAni3{
@@ -502,7 +506,7 @@ html{
   }
   100%{
     opacity: 1;
-    bottom: calc(58px*3);
+    bottom: calc(58px*2);
   }
 }
 @keyframes quickAni4{
@@ -512,7 +516,7 @@ html{
   }
   100%{
     opacity: 1;
-    bottom: calc(58px*4);
+    bottom: calc(58px*3);
   }
 }
 
