@@ -763,17 +763,24 @@ html {
 }
 
 #QuickMenuWrap > button {
+  z-index: 1000;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: var(--var-color1);
-  border: none;
+  border: white;
 }
 
 #QuickMenuWrap > button .quickbutton {
   width: 50%;
   height: 50%;
   color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#QuickMenuWrap ul {
+  z-index: 990;
 }
 
 #QuickMenuWrap ul li {
@@ -799,24 +806,49 @@ html {
   height: 100%;
 }
 
-#QuickMenuWrap ul li.show {
+#QuickMenuWrap ul li:nth-child(1) {
+  z-index: 999;
+}
+
+#QuickMenuWrap ul li:nth-child(2) {
+  z-index: 998;
+}
+
+#QuickMenuWrap ul li:nth-child(3) {
+  z-index: 997;
+}
+
+#QuickMenuWrap ul li:nth-child(4) {
+  z-index: 996;
+}
+
+#QuickMenuWrap.show > button .quickbutton {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#QuickMenuWrap.show ul li {
   visibility: visible;
 }
 
-#QuickMenuWrap ul li:nth-child(1).show {
+#QuickMenuWrap.show ul li:nth-child(1) {
+  z-index: 999;
   bottom: 0px;
 }
 
-#QuickMenuWrap ul li:nth-child(2).show {
+#QuickMenuWrap.show ul li:nth-child(2) {
   bottom: 58px;
+  z-index: 998;
 }
 
-#QuickMenuWrap ul li:nth-child(3).show {
+#QuickMenuWrap.show ul li:nth-child(3) {
   bottom: calc(58px*2);
+  z-index: 997;
 }
 
-#QuickMenuWrap ul li:nth-child(4).show {
+#QuickMenuWrap.show ul li:nth-child(4) {
   bottom: calc(58px*3);
+  z-index: 996;
 }
 
 @-webkit-keyframes quickAni1 {

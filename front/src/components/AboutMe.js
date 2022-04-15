@@ -55,7 +55,7 @@ export default function AboutMe() {
                     <span className='stack90'></span>
                   </div>
                 </div>
-                <span class="graphTxtDiv col-2">
+                <span className="graphTxtDiv col-2">
                   90<span>%</span>
                 </span>
               </li>
@@ -70,7 +70,7 @@ export default function AboutMe() {
                     <span className='stack95'></span>
                   </div>
                 </div>
-                <span class="graphTxtDiv col-2">
+                <span className="graphTxtDiv col-2">
                   95<span>%</span>
                 </span>
               </li>
@@ -85,7 +85,7 @@ export default function AboutMe() {
                     <span className='stack90'></span>
                   </div>
                 </div>
-                <span class="graphTxtDiv col-2">
+                <span className="graphTxtDiv col-2">
                   90<span>%</span>
                 </span>
               </li>
@@ -99,7 +99,7 @@ export default function AboutMe() {
                     <span className='stack60'></span>
                   </div>
                 </div>
-                <span class="graphTxtDiv col-2">
+                <span className="graphTxtDiv col-2">
                   60<span>%</span>
                 </span>
               </li>
@@ -113,7 +113,7 @@ export default function AboutMe() {
                     <span className='stack70'></span>
                   </div>
                 </div>
-                <span class="graphTxtDiv col-2">
+                <span className="graphTxtDiv col-2">
                   70<span>%</span>
                 </span>
               </li>
@@ -127,7 +127,7 @@ export default function AboutMe() {
                     <span className='stack70'></span>
                   </div>
                 </div>
-                <span class="graphTxtDiv col-2">
+                <span className="graphTxtDiv col-2">
                   70<span>%</span>
                 </span>
               </li>               
@@ -141,7 +141,7 @@ export default function AboutMe() {
                     <span className='stack60'></span>
                   </div>
                 </div>
-                <span class="graphTxtDiv col-2">
+                <span className="graphTxtDiv col-2">
                   60<span>%</span>
                 </span>
               </li>              
@@ -155,7 +155,7 @@ export default function AboutMe() {
                     <span className='stack90'></span>
                   </div>
                 </div>
-                <span class="graphTxtDiv col-2">
+                <span className="graphTxtDiv col-2">
                   90<span>%</span>
                 </span>
               </li>
@@ -170,7 +170,7 @@ export default function AboutMe() {
                     <span className='stack50'></span>
                   </div>
                 </div>
-                <span class="graphTxtDiv col-2">
+                <span className="graphTxtDiv col-2">
                   50<span>%</span>
                 </span>
               </li>

@@ -4,7 +4,7 @@ import MainPage from './components/MainPage'
 import AboutMe from './components/AboutMe';
 import Portfolio from './components/Portfolio';
 // import PreInterview from './components/PreInterview';
-import QuickMenu from './components/QuickMenu2';
+import QuickMenu from './components/QuickMenu';
 import Footer from './components/Footer';
 
 

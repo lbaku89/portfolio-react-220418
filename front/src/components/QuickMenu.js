@@ -3,107 +3,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 
-
 export default class QuickMenu extends Component {
-
   constructor(props){
     super(props);
-    this.state = {
-      isClick : true,
-      classNm : ' mt-2'
-     
+    this.state={
+      willOpen:true
     }
+  }
+
+  openFunction = () =>{
+    var QuickMenuWrapTag = document.getElementById("QuickMenuWrap")
+    if(this.state.willOpen){
+      QuickMenuWrapTag.classList.add("show")
+    }
+    else{
+      QuickMenuWrapTag.classList.remove("show")
+    }
+    this.setState({willOpen:!this.state.willOpen})
   }
 
   
 
- 
-
-  render() {
-
-  const  toggleStatu = () => {
-      this.setState({ isClick : !this.state.isClick})   
-      if(this.state.isClick){
-        this.setState({ classNm :  'show mt-2' })
-      }
-      else{
-        this.setState({ classNm :  'mt-2' })
-      }
-      //alert(this.state.isClick)  
-  
-    }
-  
-
-    // var isOpen = false;
-    // var Quickbutton = document.getElementById("QuickMenuButton")
-
-    // Quickbutton.onclick(function(){
-    //   isOpen=!isOpen;
-    //   if(isOpen){
-    //     document.getElementsByClassName('QuickMenuLi').classList.add('show');
-    //   }else{
-    //     document.getElementsByClassName('QuickMenuLi').classList.remove('show');
-    //   }
-    // });
-    // var isOpen = false;
-    // var Quickbutton = document.getElementById("QuickMenuButton")
-
-    // Quickbutton.onclick(function(){
-    //   isOpen=!isOpen;
-    //   if(isOpen){
-    //     document.getElementsByClassName('QuickMenuLi').classList.add('show');
-    //   }else{
-    //     document.getElementsByClassName('QuickMenuLi').classList.remove('show');
-    //   }
-    // });
-
-
-  
+  render(){
     return (
-
-      <div className='fixed-bottom d-flex justify-content-end' id="QuickMenuWrap">
-        <button className={ this.state.classNm } id="QuickMenuButton" onClick={ e =>{ toggleStatu() } }>
-          <a href='#none' className='w-100 h-100 d-flex justify-content-center align-items-center d-block'>
-          <FontAwesomeIcon icon={faPlus} className="quickbutton"/>
-          </a>
-        </button>
-      <ul className='d-flex flex-column-reverse position-relative'>
-        <li className='mt-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/git-hub.png'></img></a></li>
-        <li className='mt-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/instagram.png'></img></a></li>
-        <li className='mt-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/kakaotalkIcon.png'></img></a></li>
-        <li className='QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/tistory.png'></img></a></li>
-      </ul>
-  </div>
-
-    //   <div className='fixed-bottom d-flex justify-content-end' id="QuickMenuWrap">
-    //     <ul className='d-flex flex-column-reverse position-relative'>
-    //       <li className='mt-2' id="QuickMenuButton">
-    //         <a href='#none' className='w-100 h-100 d-flex justify-content-center align-items-center d-block'>
-    //         <FontAwesomeIcon icon={faPlus} className="quickbutton"/>
-    //         </a>
-    //       </li>
-    //       <li className='mt-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/git-hub.png'></img></a></li>
-    //       <li className='mt-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/instagram.png'></img></a></li>
-    //       <li className='mt-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/kakaotalkIcon.png'></img></a></li>
-    //       <li className='QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/tistory.png'></img></a></li>
-    //     </ul>
-    // </div>
+      <div className="d-flex flex-column-reverse" id="QuickMenuWrap">
+          <button className="d-flex align-items-center justify-content-center" id="QuickMenuButton" onClick={ e =>{ this.openFunction() } }>
+            <FontAwesomeIcon icon={faPlus} className="quickbutton"/>
+          </button>
+          <ul id="QuickMenuUl"className='mb-0 d-flex flex-column-reverse position-relative p-0'>
+            <li className='mb-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/git-hub.png'></img></a></li>
+            <li className='mb-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/instagram.png'></img></a></li>
+            <li className='mb-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/kakaotalkIcon.png'></img></a></li>
+            <li className='mb-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/tistory.png'></img></a></li>
+          </ul>
+      </div>
     )
-  }//// render
+  }
 }
-
-
-
-
-
-// export default function QuickMenu() {
-  
-
-
-
-    
-//   return (
-    
-
-//   )
-// }
