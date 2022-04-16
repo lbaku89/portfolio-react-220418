@@ -346,61 +346,71 @@ html {
   background-repeat: no-repeat;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack95 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack95 {
   width: 95%;
   -webkit-animation: stack95 2s 1;
           animation: stack95 2s 1;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack90 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack90 {
   width: 90%;
   -webkit-animation: stack90 2s 1;
           animation: stack90 2s 1;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack85 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack85 {
   width: 85%;
   -webkit-animation: stack85 2s 1;
           animation: stack85 2s 1;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack80 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack80 {
   width: 80%;
   -webkit-animation: stack80 2s 1;
           animation: stack80 2s 1;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack75 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack75 {
   width: 75%;
   -webkit-animation: stack75 2s 1;
           animation: stack75 2s 1;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack70 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack70 {
   width: 70%;
   -webkit-animation: stack70 2s 1;
           animation: stack70 2s 1;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack65 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack65 {
   width: 65%;
   -webkit-animation: stack65 2s 1;
           animation: stack65 2s 1;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack60 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack60 {
   width: 60%;
   -webkit-animation: stack60 2s 1;
           animation: stack60 2s 1;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack55 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack55 {
   width: 55%;
   -webkit-animation: stack55 2s 1;
           animation: stack55 2s 1;
 }
 
-#AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack50 {
+#AboutMeWrap bak
+#AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack50 {
   width: 55%;
   -webkit-animation: stack50 2s 1;
           animation: stack50 2s 1;
@@ -751,6 +761,27 @@ html {
 }
 
 #PorfolioTitleBox h3 {
+  font-size: 2.5rem;
+  margin-left: 10px;
+}
+
+#PreInterviewTitleBox {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5rem;
+}
+
+#PreInterviewTitleBox div {
+  width: 20px;
+  height: 40px;
+  background-color: #0D6EFD;
+}
+
+#PreInterviewTitleBox h3 {
   font-size: 2.5rem;
   margin-left: 10px;
 }

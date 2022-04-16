@@ -269,6 +269,7 @@ html{
 
     }
   }
+  bak
 
   #AboutMeRightDiv.aos-animate{
     .AboutMeSkillgraphBox{
@@ -425,6 +426,15 @@ html{
   margin-bottom:5rem ;
 }
 
+// PreInterview Component
+#PreInterviewTitleBox{
+  align-items: center;
+  justify-content: center;
+  div{width:20px; height: 40px; background-color:#0D6EFD;}
+  h3{font-size: 2.5rem; margin-left: 10px;}
+  margin-bottom:5rem ;
+}
+
 
 // QuickMenu Component
 
@@ -562,4 +572,3 @@ html{
 }
 
   
- 

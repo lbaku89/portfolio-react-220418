@@ -1,13 +1,26 @@
 import React from 'react';
-import {Accordion,AccordionItem,AccordionHeader,AccordionBody} from 'reactstrap'
+import {UncontrolledAccordion, Accordion,AccordionItem,AccordionHeader,AccordionBody} from 'reactstrap'
 
-export default function PreInterview() {
+export default function PreInterview(){
+
+
+
+
+
   return (   
-    <div>
-      <Accordion
-        open="1"
-        toggle={function noRefCheck(){}}
-      >
+    <div className='khysection1'>
+      <div className='container-lg'>
+        <div id="PreInterviewTitleBox" className="d-flex justify-contents-center align-items-start"> 
+          <div className='bg-primary'></div>
+          <h3 className='gmarket align-text-bottom'>솔직하게 적어봤어요</h3>
+        </div>
+        <UncontrolledAccordion
+          defaultOpen={[
+            '1',
+            '2'
+          ]}
+          stayOpen
+          >
         <AccordionItem>
           <AccordionHeader targetId="1">
             Accordion Item 1
@@ -16,7 +29,7 @@ export default function PreInterview() {
             <strong>
               This is the first item's accordion body.
             </strong>
-          1
+            You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
             <code>
               .accordion-body
             </code>
@@ -31,7 +44,7 @@ export default function PreInterview() {
             <strong>
               This is the second item's accordion body.
             </strong>
-            2
+            You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
             <code>
               .accordion-body
             </code>
@@ -46,14 +59,15 @@ export default function PreInterview() {
             <strong>
               This is the third item's accordion body.
             </strong>
-          3
+            You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
             <code>
               .accordion-body
             </code>
             , though the transition does limit overflow.
           </AccordionBody>
         </AccordionItem>
-      </Accordion>
+        </UncontrolledAccordion>
+      </div>
     </div>
   )
 }

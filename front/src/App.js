@@ -3,7 +3,7 @@ import Navi from './components/Navi'
 import MainPage from './components/MainPage'
 import AboutMe from './components/AboutMe';
 import Portfolio from './components/Portfolio';
-// import PreInterview from './components/PreInterview';
+import PreInterview from './components/PreInterview';
 import QuickMenu from './components/QuickMenu';
 import Footer from './components/Footer';
 
@@ -20,7 +20,7 @@ function App() {
       <MainPage></MainPage>
       <AboutMe></AboutMe>
       <Portfolio></Portfolio>
-      {/* <PreInterview></PreInterview> */}
+      <PreInterview></PreInterview>
       <QuickMenu></QuickMenu>
       <Footer></Footer>
     </div>

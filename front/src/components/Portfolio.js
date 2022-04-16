@@ -19,39 +19,66 @@ export default function Portfolio() {
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>권현우 작업물</h3>
         </div>
-      </div>
-
-      <Swiper slidesPerView={1} pagination={{clickable:true}} modules={[Pagination]} className="mySwiper">
+        <Swiper slidesPerView={1} pagination={{clickable:true}} modules={[Pagination]} className="mySwiper">
         <SwiperSlide>
         <div className='container-xl'>
           <div className="row mb-5">
             <div className='col-12 col-md-6'>
               <img src='/img/Porfolio/port0.png' className='d-block w-100'></img>
             </div>
-            <div className='col-12 col-md-6' style={{"border":"1px solid black"}}>
-  
+            <div className='col-12 col-md-6' >
+              <div>
+                <h3>반응형 광고 페이지</h3>
+                <h4>단독작업/제작기간 1주일</h4>
+                <h5>제작특징</h5>
+                <p>Boostrap5를 이용하여 제작기간 단축</p>
+                <p>Client를 고려한 반응형 제작</p>
+                <p>Contents 관리를 위한 CMS구축</p>
+              </div>
             </div>
           </div>
         </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>
+        <div className='container-xl'>
+          <div className="row mb-5">
+            <div className='col-12 col-md-6'>
+              <img src='/img/Porfolio/port0.png' className='d-block w-100'></img>
+            </div>
+            <div className='col-12 col-md-6' >
+              <div>
+                <h3>반응형 광고 페이지</h3>
+                <h4>단독작업/제작기간 1주일</h4>
+                <h5>제작특징</h5>
+                <p>Boostrap5를 이용하여 제작기간 단축</p>
+                <p>Client를 고려한 반응형 제작</p>
+                <p>Contents 관리를 위한 CMS구축</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className='container-xl'>
+          <div className="row mb-5">
+            <div className='col-12 col-md-6'>
+              <img src='/img/Porfolio/port0.png' className='d-block w-100'></img>
+            </div>
+            <div className='col-12 col-md-6' >
+              <div>
+                <h3>반응형 광고 페이지</h3>
+                <h4>단독작업/제작기간 1주일</h4>
+                <h5>제작특징</h5>
+                <p>Boostrap5를 이용하여 제작기간 단축</p>
+                <p>Client를 고려한 반응형 제작</p>
+                <p>Contents 관리를 위한 CMS구축</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </SwiperSlide>
       </Swiper>
-
-
-       {/* <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide>
-   
-      </SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      ...
-    </Swiper>  */}
+      </div>
     </div>
   )
 }
