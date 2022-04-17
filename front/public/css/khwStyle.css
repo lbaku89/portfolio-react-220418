@@ -241,6 +241,11 @@ html {
   border-bottom: 2px solid black;
 }
 
+.MainPageMainImgWrap > .MainPageTxtWrap p:last-child a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
 /* 테블릿 */
 @media (max-width: 991.98px) {
   .MainPageMainImgWrap {
@@ -811,6 +816,45 @@ html {
   margin-left: 10px;
 }
 
+#ContactMeFormDiv {
+  max-width: 800px;
+}
+
+#ContactMeFormTag .FormGroupTag {
+  background-color: white;
+  margin: 0;
+  padding: 0.5rem;
+  border: 2px solid var(--var-color4);
+  border-radius: 5px;
+}
+
+#ContactMeFormTag .FormGroupTag .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#ContactMeFormTag .FormControlTag {
+  border: none;
+}
+
+#ContactMeFormTag #ContactMeSubmitBtn {
+  background-color: none;
+  border-bottom: 2px solid black;
+  font-size: 1.5rem;
+  padding: 0;
+  border-radius: 0;
+}
+
+#ContactMeFormTag #ContactMeSubmitBtn:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+#ContactMeFormTag #ContactMeSubmitBtn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #QuickMenuWrap {
   position: fixed;
   bottom: 0;
@@ -823,7 +867,7 @@ html {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--var-color1);
+  background-color: var(--var-color5);
   border: white;
 }
 

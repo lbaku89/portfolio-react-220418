@@ -94,17 +94,17 @@ export default class Header extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap" className='NaviNavLink'>
+                <NavLink href="#PortfolioWrap" className='NaviNavLink'>
                   PORTFOLIO
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/" className='NaviNavLink'>
+                <NavLink href="#PreInterviewWrap" className='NaviNavLink'>
                   PRE INTERVIEW
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap" className='NaviNavLink'>
+                <NavLink href="#ContactMeWrap" className='NaviNavLink'>
                   CONTACT ME
                 </NavLink>
               </NavItem>

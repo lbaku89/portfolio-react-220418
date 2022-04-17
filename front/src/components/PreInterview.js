@@ -6,7 +6,7 @@ export default function PreInterview(){
 
 
   return (   
-    <div className='khysection1'>
+    <div className='khysection1' id="PreInterviewWrap">
       <div className='container-md'>
         <div id="PreInterviewTitleBox" className="d-flex justify-contents-center align-items-start"> 
           <div className='bg-primary'></div>

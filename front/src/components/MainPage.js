@@ -8,7 +8,7 @@ export default function MainPage() {
         <p>체계적이고 효율적인 CODE구현을 좋아합니다</p>
         <p>UX/UI와 기획의도를  중시합니다</p>
         <p>기억보다는 기록을 좋아합니다</p>
-        <p><a href='#AboutMe'>View More</a></p>
+        <p><a href='#AboutMeWrap'>View More</a></p>
       </div>
     </div>
   )

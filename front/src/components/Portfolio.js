@@ -13,7 +13,7 @@ import { Pagination } from "swiper";
 
 export default function Portfolio() {
   return (
-    <div className='khysection1 bg-color2'>
+    <div className='khysection1 bg-color2' id="PortfolioWrap">
       <div className='container-lg'>
         <div id="PorfolioTitleBox" className="d-flex justify-contents-center align-items-start"> 
           <div className='bg-primary'></div>
