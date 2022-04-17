@@ -434,7 +434,19 @@ html{
   h3{font-size: 2.5rem; margin-left: 10px;}
   margin-bottom:5rem ;
 }
+#PreInterviewAccordionDiv{
+  max-width: 1000px;
+}
 
+// ContactMe Component
+
+#ContactMeTitleBox{
+  align-items: center;
+  justify-content: center;
+  div{width:20px; height: 40px; background-color:#0D6EFD;}
+  h3{font-size: 2.5rem; margin-left: 10px;}
+  margin-bottom:5rem ;
+}
 
 // QuickMenu Component
 
@@ -559,6 +571,8 @@ html{
     bottom: calc(58px*3);
   }
 }
+
+
 
 
 // Footer Component 

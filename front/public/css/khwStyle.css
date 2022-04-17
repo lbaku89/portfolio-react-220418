@@ -786,6 +786,31 @@ html {
   margin-left: 10px;
 }
 
+#PreInterviewAccordionDiv {
+  max-width: 1000px;
+}
+
+#ContactMeTitleBox {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5rem;
+}
+
+#ContactMeTitleBox div {
+  width: 20px;
+  height: 40px;
+  background-color: #0D6EFD;
+}
+
+#ContactMeTitleBox h3 {
+  font-size: 2.5rem;
+  margin-left: 10px;
+}
+
 #QuickMenuWrap {
   position: fixed;
   bottom: 0;
