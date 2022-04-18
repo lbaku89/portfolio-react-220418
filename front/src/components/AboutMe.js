@@ -12,8 +12,6 @@ export default function AboutMe() {
     AOS.init();
   })
   
-
-
   return (
     <div id='AboutMeWrap'  className='container-lg khysection1'>
         {/*section title text */}

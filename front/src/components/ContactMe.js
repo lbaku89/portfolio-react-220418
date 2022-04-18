@@ -96,14 +96,14 @@ export default function ContactMe() {
               </div>
             </Form.Group>
             <Form.Group className="mb-3 FormGroupTag" controlId="exampleForm.ControlTextarea1">
-              <Form.Label className='ps-3 pe-3'>전하고 싶은 말을 적어주세요</Form.Label>
+              <Form.Label className='ps-3 pe-3'>남기고 싶은 말을 적어주세요</Form.Label>
               <Form.Control className="FormControlTag ps-3 pe-3"as="textarea" rows={3} />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="개인정보 정책 동의" />
             </Form.Group>
             <Button variant="" type="submit" className='m-auto d-block' id="ContactMeSubmitBtn">
-             제출하기
+             제안하기
             </Button>
           </Form>
         </div>
