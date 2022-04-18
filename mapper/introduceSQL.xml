@@ -19,7 +19,7 @@
             )
             values (
                  #{wr_subject}
-                ,  #{wr_hp}
+                , #{wr_hp}
                 , #{interview_date}
                 , #{position}
                 , #{skills}

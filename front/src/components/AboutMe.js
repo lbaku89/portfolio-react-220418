@@ -6,7 +6,73 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
+
 export default function AboutMe() {
+
+  const myAbility = [
+    { imgSrc:"/img/icon/figma2Icon.svg", 
+      alt:"figma icon", 
+      skillNm:"Figma", 
+      stack:"stack90", 
+      graphPercent:"90"},
+
+    { imgSrc1:"/img/icon/illustratorIcon.png", 
+      imgSrc2:"/img/icon/photoshopIcon.png",
+      alt1:"illustrator icon",
+      alt2:"photoshop icon", 
+      skillNm:"Photoshop, Illustrator", 
+      stack:"stack95", 
+      graphPercent:"95"},
+
+    { imgSrc1:"/img/icon/htmlIcon.png", 
+      imgSrc2:"/img/icon/cssIcon.png",
+      alt1:"html icon",
+      alt2:"css icon", 
+      skillNm:"HTML, CSS", 
+      stack:"stack90", 
+      graphPercent:"90"},
+    
+    { imgSrc:"/img/icon/sassIcon.png", 
+    alt:"sass icon", 
+    skillNm:"Sass", 
+    stack:"stack60", 
+    graphPercent:"60"},
+
+    { imgSrc:"/img/icon/javascriptIcon.png", 
+    alt:"javascript icon", 
+    skillNm:"Javascript", 
+    stack:"stack70", 
+    graphPercent:"70"},
+
+    { imgSrc:"/img/icon/reactIcon.png", 
+    alt:"react icon", 
+    skillNm:"React", 
+    stack:"stack70", 
+    graphPercent:"70"},
+
+    { imgSrc:"/img/icon/nodeIcon.png", 
+    alt:"node icon", 
+    skillNm:"Node", 
+    stack:"stack60", 
+    graphPercent:"60"},
+
+    { imgSrc:"/img/icon/jquery.gif", 
+    alt:"jquery icon", 
+    skillNm:"jquery", 
+    stack:"stack90", 
+    graphPercent:"90"},
+
+    { imgSrc1:"/img/icon/mysqlIcon.png", 
+      imgSrc2:"/img/icon/xml.svg",
+      alt1:"mysql icon",
+      alt2:"xml icon", 
+      skillNm:"Mysql, xml", 
+      stack:"stack50", 
+      graphPercent:"50"},
+  ]
+
+  
 
   useEffect(() => {
     AOS.init();
@@ -43,135 +109,86 @@ export default function AboutMe() {
           {/* contents -right */}
           <div id="AboutMeRightDiv" data-aos="fade-up" data-aos-duration="3000" className='col-12 col-md-12 col-lg-6'>
             <ul id="AboutMeSkillUl">
-              <li className='row'>
-                <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                  <img src="/img/icon/figma2Icon.svg" alt="figma Icon" className='AboutMeIcon'/>
-                </div>
-                <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                  <p>Figma</p>
-                  <div className='graph w-100'>
-                    <span className='stack90'></span>
-                  </div>
-                </div>
-                <span className="graphTxtDiv col-2">
-                  90<span>%</span>
-                </span>
-              </li>
-              <li className='row'>
-                <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                  <img src="/img/icon/illustratorIcon.png" alt="figma Icon" className='AboutMeIcon me-1'/>
-                  <img src="/img/icon/photoshopIcon.png" alt="figma Icon" className='AboutMeIcon'/> 
-                </div>
-                <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                  <p>Photoshop, Illustrator</p>
-                  <div className='graph w-100'>
-                    <span className='stack95'></span>
-                  </div>
-                </div>
-                <span className="graphTxtDiv col-2">
-                  95<span>%</span>
-                </span>
-              </li>
-              <li className='row'>
-                <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                  <img src="/img/icon/htmlIcon.png" alt="figma Icon" className='AboutMeIcon me-1'/>
-                  <img src="/img/icon/cssIcon.png" alt="figma Icon" className='AboutMeIcon'/>
-                </div>
-                <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                  <p>HTML, CSS</p>
-                  <div className='graph w-100'>
-                    <span className='stack90'></span>
-                  </div>
-                </div>
-                <span className="graphTxtDiv col-2">
-                  90<span>%</span>
-                </span>
-              </li>
-              <li className='row'>
-                <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                  <img src="/img/icon/sassIcon.png" alt="figma Icon" className='AboutMeIcon'/>
-                </div>
-                <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                  <p>Sass</p>
-                  <div className='graph w-100'>
-                    <span className='stack60'></span>
-                  </div>
-                </div>
-                <span className="graphTxtDiv col-2">
-                  60<span>%</span>
-                </span>
-              </li>
-              <li className='row'>
-                <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                  <img src="/img/icon/javascriptIcon.png" alt="figma Icon" className='AboutMeIcon'/>
-                </div>
-                <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                  <p>Javascript</p>
-                  <div className='graph w-100'>
-                    <span className='stack70'></span>
-                  </div>
-                </div>
-                <span className="graphTxtDiv col-2">
-                  70<span>%</span>
-                </span>
-              </li>
-              <li className='row'>
-                <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                  <img src="/img/icon/reactIcon.png" alt="figma Icon" className='AboutMeIcon'/>
-                </div>
-                <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                  <p>React</p>
-                  <div className='graph w-100'>
-                    <span className='stack70'></span>
-                  </div>
-                </div>
-                <span className="graphTxtDiv col-2">
-                  70<span>%</span>
-                </span>
-              </li>               
-              <li className='row'>
-                <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                  <img src="/img/icon/nodeIcon.png" alt="figma Icon" className='AboutMeIcon'/>
-                </div>
-                <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                  <p>Node</p>
-                  <div className='graph w-100'>
-                    <span className='stack60'></span>
-                  </div>
-                </div>
-                <span className="graphTxtDiv col-2">
-                  60<span>%</span>
-                </span>
-              </li>              
-              <li className='row'>
-                <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                  <img src="/img/icon/jquery.gif" alt="figma Icon" className='AboutMeIcon'/>
-                </div>
-                <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                  <p>jQuery</p>
-                  <div className='graph w-100'>
-                    <span className='stack90'></span>
-                  </div>
-                </div>
-                <span className="graphTxtDiv col-2">
-                  90<span>%</span>
-                </span>
-              </li>
-              <li className='row'>
-                <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                  <img src="/img/icon/mysqlIcon.png" alt="figma Icon" className='AboutMeIcon me-1'/>
-                  <img src="/img/icon/xml.svg" alt="figma Icon" className='AboutMeIcon'/>
-                </div>
-                <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                  <p>MySQL, xml</p>
-                  <div className='graph w-100'>
-                    <span className='stack50'></span>
-                  </div>
-                </div>
-                <span className="graphTxtDiv col-2">
-                  50<span>%</span>
-                </span>
-              </li>
+              {myAbility.map((content,i)=>{
+                if(i===1||i===2||i===8){
+                  return(
+                    
+                    <li className='row'>
+                    <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
+                      <img src={content.imgSrc1} alt={content.alt1} className='AboutMeIcon me-1'/>
+                      <img src={content.imgSrc2} alt={content.alt2} className='AboutMeIcon'/> 
+                    </div>
+                    <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
+                      <p>{content.skillNm}</p>
+                      <div className='graph w-100'>
+                        <span className={content.stack} ></span>
+                      </div>
+                    </div>
+                    <span className="graphTxtDiv col-2">
+                    {content.graphPercent}<span>%</span>
+                    </span>
+                  </li>
+                  )
+                }
+                else{
+                  return(
+                    <li className='row'>
+                    <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
+                      <img src={content.imgSrc} alt={content.alt} className='AboutMeIcon'/> 
+                    </div>
+                    <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
+                      <p>{content.skillNm}</p>
+                      <div className='graph w-100'>
+                        <span className={content.stack}></span>
+                      </div>
+                    </div>
+                    <span className="graphTxtDiv col-2">
+                    {content.graphPercent}<span>%</span>
+                    </span>
+                  </li>
+                  )
+                  
+                }
+              })
+              }
+
+
+              {/* {myAbility.map((content,i)=>{
+                  return(
+                    <li className='row'>
+                    <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
+                      if(i===1||i===2||i===8){
+                        return(
+                          <img src={content.imgSrc1} alt={content.alt1} className='AboutMeIcon me-1'/>
+                          <img src={content.imgSrc2} alt={content.alt2} className='AboutMeIcon'/> 
+                        )
+                      }                     
+                      else{
+                          return(
+                            <img src={content.imgSrc} alt={content.alt} className='AboutMeIcon'/>
+                          )
+                      }
+                    
+                    </div>
+                    <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
+                      <p>{content.skillNm}</p>
+                      <div className='graph w-100'>
+                        <span className={content.stack}></span>
+                      </div>
+                    </div>
+                    <span className="graphTxtDiv col-2">
+                    {content.graphPercent}<span>%</span>
+                    </span>
+                  </li>
+                  )
+                })
+              } */}
+            
+      
+              
+
+              
+              
             </ul>
           </div>
         </div>

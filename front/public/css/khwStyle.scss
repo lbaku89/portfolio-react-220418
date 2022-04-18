@@ -309,6 +309,11 @@ html{
           .graph{width: 100%;  margin-bottom:5px; height:5px; background-color: #ccc;
             span{ height: 100%; background-color: black; display: block; 
             }
+            span.stack50{ width: 50%; animation: stack50 2s 1;}
+            span.stack60{ width: 50%; animation: stack50 2s 1;}
+            span.stack70{ width: 70%; animation: stack70 2s 1;}
+            span.stack90{ width: 90%; animation: stack90 2s 1;}
+            span.stack95{ width: 95%; animation: stack95 2s 1;}
 
           }
         }
