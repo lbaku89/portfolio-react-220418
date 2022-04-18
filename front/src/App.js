@@ -7,6 +7,7 @@ import PreInterview from './components/PreInterview';
 import ContactMe from './components/ContactMe';
 import QuickMenu from './components/QuickMenu';
 import Footer from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
 
 
 // bootstrap
@@ -22,7 +23,16 @@ function App() {
       <AboutMe></AboutMe>
       <Portfolio></Portfolio>
       <PreInterview></PreInterview>
-      <ContactMe></ContactMe>
+      <Routes>
+        <Route path='/' element={<ContactMe dbinfo={{
+          titlenm : '리액트스트랩 모듈로 만든 폼 아마존과연동', 
+          botable : 'interviewWrite',
+          crud : 'insert',
+          mapper : 'introduceSQL',
+          mapperid : 'interviewInsert'
+          }}></ContactMe>}>
+        </Route>
+      </Routes>     
       <QuickMenu></QuickMenu>
       <Footer></Footer>
     </div>

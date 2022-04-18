@@ -1,13 +1,12 @@
-var express = require('express');
-var projectlink = require('./routes/router');
-var app = express();
+var app = require('express')()
 
-app.listen(5000,function(){
-  console.log("localhost:5000");
+var reactapi = require('./api/dbconnect')
+
+// node server.js entry point Port 8080 
+app.listen(8080,function(){
+  console.log("localhost:8080");
 });
 
-app.use('/mylink',projectlink);
+// 8080/api 로 접속시 api로 연결 
+app.use('/api',reactapi);
 
-app.get('/',function(req,res){
-  res.send("안녕");
-});
