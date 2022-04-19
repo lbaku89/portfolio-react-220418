@@ -22,7 +22,15 @@ function App() {
       <MainPage></MainPage>
       <AboutMe></AboutMe>
       <Portfolio></Portfolio>
-      <PreInterview></PreInterview>
+      <PreInterview dbinfo={{
+        titlenm:'아마존 인터뷰목록',
+        botable:'interviewList',
+        crud:'select',
+        mapper:'introduceSQL',
+        mapperid : 'interviewList'
+      }}>
+
+      </PreInterview>
       <Routes>
         <Route path='/' element={<ContactMe dbinfo={{
           titlenm : '리액트스트랩 모듈로 만든 폼 아마존과연동', 

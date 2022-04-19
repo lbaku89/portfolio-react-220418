@@ -406,7 +406,7 @@ html {
 }
 
 #AboutMeWrap #AboutMeRightDiv.aos-animate .AboutMeSkillgraphBox .graph span.stack50 {
-  width: 55%;
+  width: 50%;
   -webkit-animation: stack50 2s 1;
           animation: stack50 2s 1;
 }
@@ -481,7 +481,7 @@ html {
 }
 
 #AboutMeSkillUl li.aos-animate .AboutMeSkillgraphBox .graph span.stack60 {
-  width: 50%;
+  width: 60%;
   -webkit-animation: stack50 2s 1;
           animation: stack50 2s 1;
 }
