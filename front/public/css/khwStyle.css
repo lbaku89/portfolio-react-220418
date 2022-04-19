@@ -343,6 +343,10 @@ html {
   margin-left: 10px;
 }
 
+#AboutMeWrap #AboutMeLeftDiv #certificateWrap {
+  margin-top: 5.5rem;
+}
+
 #AboutMeWrap #AboutMeLeftDiv .certificateDiv {
   -webkit-box-pack: end;
       -ms-flex-pack: end;

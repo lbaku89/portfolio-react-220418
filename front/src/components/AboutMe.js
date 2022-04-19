@@ -105,7 +105,7 @@ export default function AboutMe() {
                 </ul>
               </div>
             </div>
-            <div className='gmarket mt-5'>
+            <div id="certificateWrap"className='gmarket'>
               <h3 className='text-center mb-5'>자격증</h3>
               <div className='certificateDiv d-flex'>
                 <div className='ms-5'>
