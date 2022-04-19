@@ -88,10 +88,10 @@ export default function AboutMe() {
         <div id="AboutMeContentsBox" className='row'>
           {/* contents 영역  */}
           {/* contents -left */}
-          <div id="AboutMeLeftDiv" className='col-12 col-md-12 col-lg-6'>
-            <div className='d-flex'>
-              <div className='col-6 profileImgBox'></div>
-              <div className='col-6 ms-4'>
+          <div id="AboutMeLeftDiv" className='col-12 col-md-12 col-lg-6 mb-5 mb-lg-0'>
+            <div className='d-flex gmarket'>
+              <div className='col-6 profileImgBox me-0'></div>
+              <div className='col-6 ms-3 ms-md-0'>
                 <div className='fs-2'>권현우<span className='fs-5'>( 1993.4.10 )</span></div>
                 <ul className='ps-0 mt-3'>
                   <li>경기도 부천시 거주</li>
@@ -105,6 +105,44 @@ export default function AboutMe() {
                 </ul>
               </div>
             </div>
+            <div className='gmarket mt-5'>
+              <h3 className='text-center mb-5'>자격증</h3>
+              <div className='certificateDiv d-flex'>
+                <div className='ms-5'>
+                  <h5>직무관련</h5>
+                  <p>2022년</p>
+                  <ul>
+                    <li>GTQ 포토샵</li>
+                    <li>웹디자인기능사</li>
+                  </ul>
+                </div>
+                <div className='ms-5'>
+                  <h5>OA</h5>
+                  <p>2016~2018년</p>
+                  <ul>
+                    <li>컴활 2급</li>
+                    <li>ITQ 아래한글</li>
+                    <li>ITQ 한글엑셀</li>
+                    <li>ITQ 파워포인트</li>
+                    <li>ITQ 인터넷</li>
+                  </ul>
+                </div>
+                <div className='ms-5'>
+                  <h5>그외</h5>
+                  <p>2016~2022년</p>
+                  <ul>
+                    <li>구글애널리틱스</li>
+                    <li>한국사 2급</li>
+                    <li>운전면허</li>
+                    <li>토익 915점(만료)
+                    </li>
+                    <li>토익 스피킹 Lv6(만료)</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+  
           </div>
           {/* contents -right */}
           <div id="AboutMeRightDiv"  className='col-12 col-md-12 col-lg-6'>

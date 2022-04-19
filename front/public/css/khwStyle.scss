@@ -259,11 +259,15 @@ html{
   }
   
   #AboutMeLeftDiv{
+    .certificateDiv{
+      justify-content: end;
+      ul{padding: 0;}
+    }
     >div{
       .profileImgBox{
-        border-radius: 5px;
+
         background-image: url("/img/AboutMe/myPicture.jpg");
-        background-position: top;
+        background-position: center;
         background-size: auto 100%;
         background-repeat: no-repeat;
       }
@@ -395,9 +399,24 @@ html{
   100% {width: 95%; color: rgba(0,0,0,1);}
 }
 
-// @media (max-width:991.98px){}
+@media (max-width:991.98px){
+  #AboutMeLeftDiv{
+    .certificateDiv{
+      justify-content: center !important;
+    }
+    >div{
+      .profileImgBox{
+        background-position: 80% 50% !important;
+      }
+
+    }
+  }
+}
 @media (max-width:767.78px){
   #AboutMeWrap{
+
+  
+
     #AboutMeRightDiv{
 
       #AboutMeSkillUl{

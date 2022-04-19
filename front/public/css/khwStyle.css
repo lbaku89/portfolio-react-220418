@@ -343,10 +343,19 @@ html {
   margin-left: 10px;
 }
 
+#AboutMeWrap #AboutMeLeftDiv .certificateDiv {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+#AboutMeWrap #AboutMeLeftDiv .certificateDiv ul {
+  padding: 0;
+}
+
 #AboutMeWrap #AboutMeLeftDiv > div .profileImgBox {
-  border-radius: 5px;
   background-image: url("/img/AboutMe/myPicture.jpg");
-  background-position: top;
+  background-position: center;
   background-size: auto 100%;
   background-repeat: no-repeat;
 }
@@ -750,6 +759,17 @@ html {
   100% {
     width: 95%;
     color: black;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #AboutMeLeftDiv .certificateDiv {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  #AboutMeLeftDiv > div .profileImgBox {
+    background-position: 80% 50% !important;
   }
 }
 
