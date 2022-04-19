@@ -464,36 +464,6 @@ html {
   display: block;
 }
 
-#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox .graph span.stack50 {
-  width: 50%;
-  -webkit-animation: stack50 2s 1;
-          animation: stack50 2s 1;
-}
-
-#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox .graph span.stack60 {
-  width: 50%;
-  -webkit-animation: stack50 2s 1;
-          animation: stack50 2s 1;
-}
-
-#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox .graph span.stack70 {
-  width: 70%;
-  -webkit-animation: stack70 2s 1;
-          animation: stack70 2s 1;
-}
-
-#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox .graph span.stack90 {
-  width: 90%;
-  -webkit-animation: stack90 2s 1;
-          animation: stack90 2s 1;
-}
-
-#AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeSkillgraphBox .graph span.stack95 {
-  width: 95%;
-  -webkit-animation: stack95 2s 1;
-          animation: stack95 2s 1;
-}
-
 #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .graphTxtDiv {
   font-size: 1.3rem;
   font-family: 'GmarketSansMedium';
@@ -502,6 +472,36 @@ html {
   padding-top: 10px;
   -webkit-animation: show 2s 1;
           animation: show 2s 1;
+}
+
+#AboutMeSkillUl li.aos-animate .AboutMeSkillgraphBox .graph span.stack50 {
+  width: 50%;
+  -webkit-animation: stack50 2s 1;
+          animation: stack50 2s 1;
+}
+
+#AboutMeSkillUl li.aos-animate .AboutMeSkillgraphBox .graph span.stack60 {
+  width: 50%;
+  -webkit-animation: stack50 2s 1;
+          animation: stack50 2s 1;
+}
+
+#AboutMeSkillUl li.aos-animate .AboutMeSkillgraphBox .graph span.stack70 {
+  width: 70%;
+  -webkit-animation: stack70 2s 1;
+          animation: stack70 2s 1;
+}
+
+#AboutMeSkillUl li.aos-animate .AboutMeSkillgraphBox .graph span.stack90 {
+  width: 90%;
+  -webkit-animation: stack90 2s 1;
+          animation: stack90 2s 1;
+}
+
+#AboutMeSkillUl li.aos-animate .AboutMeSkillgraphBox .graph span.stack95 {
+  width: 95%;
+  -webkit-animation: stack95 2s 1;
+          animation: stack95 2s 1;
 }
 
 .graphTxtDiv span {

@@ -100,7 +100,7 @@ export default class Header extends Component {
               </NavItem>
               <NavItem>
                 <NavLink href="#PreInterviewWrap" className='NaviNavLink'>
-                  PRE INTERVIEW
+                  PRE-INTERVIEW
                 </NavLink>
               </NavItem>
               <NavItem>

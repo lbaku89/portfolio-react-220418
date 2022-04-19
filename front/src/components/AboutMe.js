@@ -107,17 +107,16 @@ export default function AboutMe() {
             </div>
           </div>
           {/* contents -right */}
-          <div id="AboutMeRightDiv" data-aos="fade-up" data-aos-duration="3000" className='col-12 col-md-12 col-lg-6'>
+          <div id="AboutMeRightDiv"  className='col-12 col-md-12 col-lg-6'>
             <ul id="AboutMeSkillUl">
               {myAbility.map((content,i)=>{
                 if(i===1||i===2||i===8){
                   return(
-                    
-                    <li className='row'>
-                    <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                      <img src={content.imgSrc1} alt={content.alt1} className='AboutMeIcon me-1'/>
-                      <img src={content.imgSrc2} alt={content.alt2} className='AboutMeIcon'/> 
-                    </div>
+                    <li className='row' data-aos="fade-up" data-aos-duration={300*i}>
+                      <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
+                        <img src={content.imgSrc1} alt={content.alt1} className='AboutMeIcon me-1'/>
+                        <img src={content.imgSrc2} alt={content.alt2} className='AboutMeIcon'/> 
+                      </div>
                     <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
                       <p>{content.skillNm}</p>
                       <div className='graph w-100'>
@@ -132,7 +131,7 @@ export default function AboutMe() {
                 }
                 else{
                   return(
-                    <li className='row'>
+                    <li className='row' data-aos="fade-up" data-aos-duration={300*i}>
                     <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
                       <img src={content.imgSrc} alt={content.alt} className='AboutMeIcon'/> 
                     </div>
