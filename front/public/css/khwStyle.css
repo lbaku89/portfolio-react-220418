@@ -67,8 +67,8 @@ html {
 
 .khysection1 {
   width: auto;
-  padding-top: 12rem;
-  padding-bottom: 12rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .gmarket {
@@ -836,7 +836,26 @@ html {
 }
 
 #PreInterviewAccordionDiv {
-  max-width: 1000px;
+  max-width: 800px;
+}
+
+#PreInterviewAccordion {
+  font-family: var(--var-gmarket);
+}
+
+#PreInterviewAccordion .AccordionItem:first-child {
+  border-top: 2px solid var(--var-color3);
+}
+
+#PreInterviewAccordion .AccordionItem {
+  border: 2px solid var(--var-color3);
+  border-top: none;
+}
+
+#PreInterviewAccordion .accordion-button:focus {
+  border-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #ContactMeTitleBox {

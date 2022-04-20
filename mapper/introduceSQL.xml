@@ -5,7 +5,7 @@
         select 
             *
         from form.Preinterview
-        where no = 1; 
+
     </select>
     <insert id="interviewInsert">
         insert into 

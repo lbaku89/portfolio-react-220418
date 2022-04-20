@@ -13,23 +13,24 @@ class PreInterview extends Component{
       deleteDB : async (no) => {
         try{
             axios.post('/api?type=interviewDelete', {
-                
-                body :{ 
+               
+                body :{
                         no : no,
                         crud : 'delete',
                         mapper : this.props.dbinfo.mapper,
                         mapperid :'interviewDelete'
                  }
-    
-            }).then( res => {                 
-                console.log(res.data) //데이터 콘솔에서 확인            
+   
+            }).then( res => {              
+                   
+                 //데이터 콘솔에서 확인            
                 try{                  
                     this.setState({ message : '삭제되었습니다. '});
                 }
                 catch(err){
                     this.setState({ message : 'DB데이터타입검수바람 ' +  err});
                 }
-    
+   
             }).catch( err => {
                 this.setState({ message : '접속하였으나 처리하지 못함 ' +  err});
             })
@@ -49,10 +50,11 @@ class PreInterview extends Component{
           body : { ...this.props.dbinfo }
         }
       )
-      .then( res => { 
-        console.log(res.data) //데이터 콘솔에서 확인
+      .then( res => {
+
+        console.log("resend 확인", res.data) //데이터 콘솔에서 확인
         try{
-            this.setState({ interviewData : [...res.data] }) 
+            this.setState({ interviewData : [...res.data] })
             // array는 대체되는 정보로 쓸수없기때문에 대입식불가
             // 기존의 [] 빈정렬과 res.data을 합하는 식임
             console.log(this.state.interviewData) //리액트 변수에 데이터옮겨짐 데이터타입이 정렬이므로 map으로 풀어버림
@@ -69,44 +71,41 @@ class PreInterview extends Component{
    }
    catch(err){
        this.setState({ message : '서버접속불가 ' +  err});
-   } 
+   }
   }
 
 
   render(){
-  return (   
+  return (  
     <div className='khysection1' id="PreInterviewWrap">
       <div className='container-md'>
-        <div id="PreInterviewTitleBox" className="d-flex justify-contents-center align-items-start"> 
+        <div id="PreInterviewTitleBox" className="d-flex justify-contents-center align-items-start">
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>솔직하게 적어봤어요</h3>
         </div>
         <div className='m-auto' id='PreInterviewAccordionDiv'>
-        <Accordion defaultActiveKey="">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>1.전공과 다른 직무를 선택한 이유는 무엇인가요?</Accordion.Header>
-            <Accordion.Body>
-            
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>2.프론트엔드 학습을 하면서 가장 힘든점은 무엇이었나요?</Accordion.Header>
-            <Accordion.Body>
-             
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>3.개발 언어 중에 관심있는 언어와 잘하는 언어는? </Accordion.Header>
-            <Accordion.Body>
-          
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>4.자신이 생각하는 성격의 장단점은 무엇인가요?</Accordion.Header>
-            <Accordion.Body>
-             
-            </Accordion.Body>
-          </Accordion.Item>
+        <Accordion defaultActiveKey="0" id="PreInterviewAccordion">
+          {this.state.interviewData.map((content,i)=>{
+            return(
+              <Accordion.Item eventKey={i.toString()} className="AccordionItem">
+                <Accordion.Header className='AccordionHeader'>{content.question}</Accordion.Header>
+                <Accordion.Body className="AccordionBody">
+                  <div className='row'>
+                    <div className='col-2'>
+                      <img src="/img/AboutMe/mySketch.png" className="d-block w-100" alt="myIcon"/>    
+                    </div>
+                    <div className='col-10 pt-3 pb-3'>
+                      <p>답변</p>
+                      {content.answer}
+                    </div>
+                  </div>
+                  
+                </Accordion.Body>
+              </Accordion.Item>
+                )
+              }
+            )
+          }
         </Accordion>
       </div>
       </div>
