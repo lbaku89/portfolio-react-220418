@@ -119,6 +119,7 @@ export default function AboutMe() {
                   <li>서울과학기술대 졸업(공학계열)</li>
                   <li>MCNEX 기구설계 엔지니어 2년 근무</li>
                   <li>PWA 프론트엔드 5개월 과정 수료</li>
+                  <li>우수 교육생 선발</li>
                 </ul>
               </div>
             </div>

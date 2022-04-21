@@ -75,7 +75,7 @@ class PreInterview extends Component{
   }
 
 
-  render(){
+  render(){ 
   return (  
     <div className='khysection1' id="PreInterviewWrap">
       <div className='container-md'>
@@ -86,16 +86,17 @@ class PreInterview extends Component{
         <div className='m-auto' id='PreInterviewAccordionDiv'>
         <Accordion defaultActiveKey="0" id="PreInterviewAccordion">
           {this.state.interviewData.map((content,i)=>{
+            console.log(typeof(content.date))
             return(
               <Accordion.Item eventKey={i.toString()} className="AccordionItem">
-                <Accordion.Header className='AccordionHeader'>{content.question}</Accordion.Header>
+                <Accordion.Header className='AccordionHeader'><div>{i+1+". "}{content.question}</div></Accordion.Header>
                 <Accordion.Body className="AccordionBody">
                   <div className='row'>
                     <div className='col-2'>
                       <img src="/img/AboutMe/mySketch.png" className="d-block w-100" alt="myIcon"/>    
                     </div>
                     <div className='col-10 pt-3 pb-3'>
-                      <p>답변</p>
+                      <p>답변 ({content.date.substr(0,10)})</p>
                       {content.answer}
                     </div>
                   </div>
