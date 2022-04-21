@@ -6,6 +6,7 @@ import Portfolio from './components/Portfolio';
 import PreInterview from './components/PreInterview';
 import ContactMe from './components/ContactMe';
 import QuickMenu from './components/QuickMenu';
+import Comment from './components/Comment';
 import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 
@@ -42,6 +43,7 @@ function App() {
         </Route>
       </Routes>     
       <QuickMenu></QuickMenu>
+      <Comment></Comment>
       <Footer></Footer>
     </div>
   );
