@@ -47,7 +47,7 @@ export default function ContactMe(props){
             "Content-Type": `application/json`
             },
             body : Json_data
-          })
+        })
           .then( result =>  {  
             //console.log(result); 
             if(result.data == 'succ')  {

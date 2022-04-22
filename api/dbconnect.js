@@ -7,13 +7,13 @@ var pool = mysql.createPool(dbconfig);
 
 
 var mybatisMapper = require('mybatis-mapper')
-
 mybatisMapper.createMapper(['./mapper/introduceSQL.xml'])
 var format = { language : 'sql', indent : '  '}
 
 //주소창에 담긴 변수를 읽기
 router.use(express.urlencoded({ extended : true }))
 router.use(express.json())
+//json형식의 request.body data parsing 하기 위해 사용 
 
 router.post('/',(req, res) => {
   var type = req.query.type; 

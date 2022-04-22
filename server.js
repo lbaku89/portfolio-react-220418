@@ -1,6 +1,6 @@
 var app = require('express')()
-
-var reactapi = require('./api/dbconnect')
+var reactapi = require('./api/dbconnect');
+var commentApi = require('./api/commentApi');
 
 // node server.js entry point Port 8080 
 app.listen(8080,function(){
@@ -9,4 +9,5 @@ app.listen(8080,function(){
 
 // 8080/api 로 접속시 api로 연결 
 app.use('/api',reactapi);
+app.use('/commentApi',commentApi)
 

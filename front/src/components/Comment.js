@@ -6,9 +6,14 @@ import {Form, Button, Col, Row} from 'react-bootstrap'
 
 export default function Comment() {
 
+const[message, setMessage] = useState('');
+useEffect((e)=>{
+  submitComment()
+},[message])
+
 const submitComment = async() => {
 
-  const[message, setMessage] = useState('');
+  
 
   var formData = decodeURIComponent($("[name=CommetForm]").serialize());
   // Form Data 담은 후 Data Decode 진행
@@ -17,13 +22,14 @@ const submitComment = async() => {
       formDataJson = '{' + Json_data.replace(/=/gi, '\":\"') + '}'
   // Decode된 Form Data Json화 
   try{
-    axios.post('/api?type='+apiType,{
+    axios.post('/commentApi?type='+commentInsert,{
       header:{ "Content-Type":"application/json"},
+      // HTTP DATA통신 DATA TYPE 설정 
       body:formDataJson
     })
     .then(
       (result)=>{
-        if(result.dat=='success'){setMessage('노드에 data insert완료')}
+        if(result.data=='success'){setMessage('노드에 data insert완료')}
       }
     )
     .catch((error)=>{
@@ -37,20 +43,27 @@ const submitComment = async() => {
   }
 }
 
+
+
   return (
     <div id="CommentComponentWrap" className='container-lg'>
       <Form name="CommetForm">
+          <Form.Group>
+            <input type='hidden' name='crud' value="insert"/>
+            <input type='hidden' name='nameSpace' value="commentMapper"/>
+            <input type='hidden' name='crudId' value="insertComment" />
+          </Form.Group>
         <Form.Group className="mb-3" controlId="formNickname">
           <Form.Label>닉네임</Form.Label>
-          <Form.Control type="text" minlength="4" maxlength="10" placeholder="" />
+          <Form.Control name="wr_name" type="text"  minlength="4" maxlength="10" placeholder="" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPassword">
           <Form.Label>게시글 비밀번호</Form.Label>
-          <Form.Control type="password" minlength="4" maxlength="10" placeholder="" />
+          <Form.Control name="wr_password" type="password"  minlength="4" maxlength="10" placeholder="" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formTextArea">
           <Form.Label>남기고 싶은말을 적어주세요</Form.Label>
-          <Form.Control as="textarea" rows={3} />
+          <Form.Control name="wr_comment" as="textarea"  rows={3} />
         </Form.Group>
         <Button variant="primary" type="submit" onClick={(e)=>{submitComment()}}>
           등록하기
