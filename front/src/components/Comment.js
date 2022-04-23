@@ -2,73 +2,140 @@ import React, { Fragment } from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import {Form, Button, Col, Row} from 'react-bootstrap'
+import $ from 'jquery'
 
 
 export default function Comment() {
 
-const[message, setMessage] = useState('');
-useEffect((e)=>{
-  submitComment()
-},[message])
+  const [commentList, commentListUpdate]= useState([])
 
-const submitComment = async() => {
 
-  
 
-  var formData = decodeURIComponent($("[name=CommetForm]").serialize());
-  // Form Data 담은 후 Data Decode 진행
-
-  var formDataJson = JSON.stringify(formData).replace(/\&/g, '\",\"')
-      formDataJson = '{' + Json_data.replace(/=/gi, '\":\"') + '}'
-  // Decode된 Form Data Json화 
-  try{
-    axios.post('/commentApi?type='+commentInsert,{
-      header:{ "Content-Type":"application/json"},
-      // HTTP DATA통신 DATA TYPE 설정 
-      body:formDataJson
-    })
-    .then(
-      (result)=>{
-        if(result.data=='success'){setMessage('노드에 data insert완료')}
-      }
-    )
-    .catch((error)=>{
-      setMessage('query혹은 xml접속 문제')
-    })
+ 
+  const fnValidate = () => {
+    if(document.getElementsById("wr_name").value==""){document.getElementsById("wr_name").focus(); return false};
+    if(document.getElementsById("wr_password").value==""){return false};
+    if(document.getElementsById("wr_comment").value==""){return false};
+    return true;
   }
-  catch(error){
-    (error)=>{
-      setMessage('')  
+
+  const submitComment = async() => {
+    // 유효성 검사 
+
+    if(fnValidate()){
+      // Form Data 담은 후 Data Decode 진행
+      var formData = decodeURIComponent($("[name=CommentForm]").serialize());
+
+      // Decode된 Form Data Json화
+      var formDataJson = JSON.stringify(formData).replace(/\&/g, '\",\"')
+          formDataJson = '{' + formDataJson.replace(/=/gi, '\":\"') + '}'
+ 
+      try{
+        axios.post('/commentApi?crud=insert',{
+          header:{ "Content-Type":"application/json"},
+          // HTTP DATA통신 DATA TYPE 설정 
+          body:formDataJson
+        })
+        .then(
+          res=>{
+            console.log(res.data);
+            console.log("commentInsert성공")
+           
+          })
+        .catch((err)=>{
+          console.log("query or xml 문제"+err)
+        })
+      }
+      catch(err){
+        console.log('서버연결안됨')
+      }
     }
   }
-}
 
+  const commentDelete = async(no) =>{
+    try{
+      axios.post("/commentApi?crud=delete",
+      {
+        header:{'Content-Type' : 'application/json'},
+        body:{
+          "no":no,
+          "crudId":"commentDelete"}
+      })
+      .then(
+        res=>{
+          console.log("commentDelete res.data:", res.data)
+          commentSelectFn();
+        }
 
+      )
+      .catch(err=>{
+        console.log("node에서 data react로 data반환 실패 :", err)
+      })
+    }
+    catch(err){
+      console.log("node로 data전달 실패", err)
+    }
+  }
+
+  const commentSelectFn= async()=>{
+    try{
+      axios.post("/commentApi?crud=select",
+      {
+        header:{'Content-Type' : 'application/json'},
+        body:{"crudId":"commentSelect"}
+      })
+      .then(
+        res=>{
+          console.log("commentSelect res.data:", res.data)
+          commentListUpdate([...res.data])
+        }
+      )
+      .catch(err=>{
+        console.log("node에서 data react로 data반환 실패 :", err)
+      })
+    }
+    catch(err){
+      console.log("node로 data전달 실패", err)
+    }
+  }
+
+  useEffect( ()=>{
+    commentSelectFn();
+  },[])
 
   return (
     <div id="CommentComponentWrap" className='container-lg'>
-      <Form name="CommetForm">
+      <Form name="CommentForm">
           <Form.Group>
-            <input type='hidden' name='crud' value="insert"/>
-            <input type='hidden' name='nameSpace' value="commentMapper"/>
-            <input type='hidden' name='crudId' value="insertComment" />
+            <input type='hidden' name='crudId' value="commentInsert"/>
           </Form.Group>
         <Form.Group className="mb-3" controlId="formNickname">
           <Form.Label>닉네임</Form.Label>
-          <Form.Control name="wr_name" type="text"  minlength="4" maxlength="10" placeholder="" />
+          <Form.Control name="wr_name" type="text" id="wr_name" minlength="2" maxlength="10" placeholder="" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPassword">
           <Form.Label>게시글 비밀번호</Form.Label>
-          <Form.Control name="wr_password" type="password"  minlength="4" maxlength="10" placeholder="" />
+          <Form.Control name="wr_password" type="password" id="wr_password" minlength="4" maxlength="10" placeholder="" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formTextArea">
           <Form.Label>남기고 싶은말을 적어주세요</Form.Label>
-          <Form.Control name="wr_comment" as="textarea"  rows={3} />
+          <Form.Control name="wr_comment" as="textarea" id="wr_comment" rows={1} />
         </Form.Group>
         <Button variant="primary" type="submit" onClick={(e)=>{submitComment()}}>
           등록하기
         </Button>
       </Form>
+      <div>
+        <div>
+          {commentList.map(
+            (content)=>{
+              return(
+                <div className='commentWrap'>{content.wr_name}<button onClick={e=>commentDelete(content.no)}>글삭제하기</button></div>
+              )
+            }
+          )}
+        </div>
+      </div>
     </div>
   )
 }

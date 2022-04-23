@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="commentMapper">
-    <insert id="insertComment">
+<mapper namespace="reactPortfolioNamespace">
+    <select id="preInterviewSelect">
+        select 
+            *
+        from form.Preinterview
+
+    </select>
+    <insert id="interviewSuggetionInsert">
+        insert into 
+            form.InterviewSuggetion (
+                wr_company                
+                , wr_hp
+                , interview_time
+                , position
+                , skills
+                , text
+            )
+            values (
+                 #{wr_subject}
+                , #{wr_hp}
+                , #{interview_date}
+                , #{position}
+                , #{skills}
+                , #{wr_text}
+            )
+    </insert> 
+    <insert id="commentInsert">
         insert into 
             form.Comment (
                 wr_name                
@@ -14,5 +39,12 @@
                 , #{wr_comment}
             )
     </insert> 
+    <select id="commentSelect">
+        select * from 
+            form.Comment order by no desc limit 8;
+    </select>
+    <select id="commentDelete">
+        DELETE FROM form.Comment where no = #{no}
+    </select>
 </mapper>
 

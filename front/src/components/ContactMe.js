@@ -26,7 +26,6 @@ export default function ContactMe(props){
         setMessage("연락처를 남겨주세요");       
         return false;
       }                  
-
       return true;  
     }
 
@@ -160,7 +159,7 @@ export default function ContactMe(props){
             </Form.Group>
             <Button variant="" type="submit" className='m-auto d-block' id="ContactMeSubmitBtn"
             onClick={e=>{submitInterview(props.dbinfo.botable,e)}}>
-             제안하기
+             면접제안
             </Button>
           </Form>
         </div>
