@@ -57,12 +57,31 @@ html {
   font-size: 16px;
 }
 
+.h-30px {
+  height: 30px;
+}
+
 .bg-black {
   background-color: black;
 }
 
 .bg-color2 {
   background-color: var(--var-color2);
+}
+
+.buttonStyle1 {
+  color: black !important;
+  background-color: transparent !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid black !important;
+  border-radius: 0 !important;
+}
+
+.buttonStyle1:hover {
+  color: var(--var-color4) !important;
+  border-bottom: 2px solid var(--var-color4) !important;
 }
 
 .khysection1 {
@@ -1102,9 +1121,17 @@ html {
   }
 }
 
+#CommentComponentWrap {
+  max-width: 1000px;
+}
+
+#CommentComponentWrap .CommentMyIcon {
+  height: 4rem;
+}
+
 .FooterWrap {
   height: 5rem;
-  background-color: white;
+  background-color: var(--var-color2);
 }
 
 .FooterWrap .FooterCopyright {

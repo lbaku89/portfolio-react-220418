@@ -12,15 +12,17 @@ export default function Comment() {
 
 
  
-  const fnValidate = () => {
-    if(document.getElementsById("wr_name").value==""){document.getElementsById("wr_name").focus(); return false};
-    if(document.getElementsById("wr_password").value==""){return false};
-    if(document.getElementsById("wr_comment").value==""){return false};
-    return true;
-  }
+
 
   const submitComment = async() => {
     // 유효성 검사 
+    console.log("submitComment 시작 ")
+    const fnValidate = () => {
+      if(document.getElementsByName("wr_name")[0].value==""){return false};
+      if(document.getElementsByName("wr_password")[0].value==""){return false};
+      if(document.getElementsByName("wr_comment")[0].value==""){return false};
+      return true;
+    }
 
     if(fnValidate()){
       // Form Data 담은 후 Data Decode 진행
@@ -104,36 +106,50 @@ export default function Comment() {
   },[])
 
   return (
-    <div id="CommentComponentWrap" className='container-lg'>
-      <Form name="CommentForm">
-          <Form.Group>
-            <input type='hidden' name='crudId' value="commentInsert"/>
+    <div id="CommentComponentWrap" className='container-lg mt-5 mb-5 gmarket'>
+      <div className='p-2 d-flex align-items-center'>
+        <img src="/img/AboutMe/mySketch.png" className="CommentMyIcon" alt="myIcon"/>   
+        <h3 className='ms-2 mb-0'>잘 보셨나요?</h3>
+      </div>
+      <div className='row p-2'>
+        <Form name="CommentForm" className='col-12 col-md-4 mb-5'>
+            <Form.Group>
+              <input type='hidden' name='crudId' value="commentInsert"/>
+            </Form.Group>
+          <Form.Group className="mb-3" controlId="formNickname">
+            {/* <Form.Label>닉네임</Form.Label> */}
+            <Form.Control name="wr_name" type="text" minlength="2" maxlength="10" placeholder="닉네임" />
           </Form.Group>
-        <Form.Group className="mb-3" controlId="formNickname">
-          <Form.Label>닉네임</Form.Label>
-          <Form.Control name="wr_name" type="text" id="wr_name" minlength="2" maxlength="10" placeholder="" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formPassword">
-          <Form.Label>게시글 비밀번호</Form.Label>
-          <Form.Control name="wr_password" type="password" id="wr_password" minlength="4" maxlength="10" placeholder="" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formTextArea">
-          <Form.Label>남기고 싶은말을 적어주세요</Form.Label>
-          <Form.Control name="wr_comment" as="textarea" id="wr_comment" rows={1} />
-        </Form.Group>
-        <Button variant="primary" type="submit" onClick={(e)=>{submitComment()}}>
-          등록하기
-        </Button>
-      </Form>
-      <div>
-        <div>
-          {commentList.map(
-            (content)=>{
-              return(
-                <div className='commentWrap'>{content.wr_name}<button onClick={e=>commentDelete(content.no)}>글삭제하기</button></div>
-              )
-            }
-          )}
+          <Form.Group className="mb-3" controlId="formPassword">
+            {/* <Form.Label>게시글 비밀번호</Form.Label> */}
+            <Form.Control name="wr_password" type="password" minlength="4" maxlength="10" placeholder="게시글 비밀번호" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formTextArea">
+            {/* <Form.Label>남기고 싶은말을 적어주세요</Form.Label> */}
+            <Form.Control name="wr_comment" as="textarea" rows={1} placeholder="남길말"/>
+          </Form.Group>
+          <Button variant="primary" className='buttonStyle1' type="submit" onClick={e=>{submitComment()}}>
+            등록하기
+          </Button>
+        </Form>
+        <div className='col-12 col-md-8'>
+          <div>
+            {commentList.map(
+              (content)=>{
+                return(
+                  <>
+                    <div className='d-flex justify-content-start p-2'>
+                      <div className='col-2'>{content.wr_name}</div>
+                      <div className='col-8'>{content.wr_comment}</div>
+                      <div className='col-2 d-flex justify-content-end'>
+                        <button onClick={e=>commentDelete(content.no)} className='buttonStyle1 h-30px mt-0'>삭제</button>
+                      </div>
+                    </div>
+                  </>
+                )
+              }
+            )}
+          </div>
         </div>
       </div>
     </div>
