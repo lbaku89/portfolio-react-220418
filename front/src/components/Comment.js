@@ -7,12 +7,15 @@ import $ from 'jquery'
 
 export default function Comment() {
 
+
+
+
   const [commentList, commentListUpdate]= useState([])
 
-
-
- 
-
+  const openPrompt = () => {
+    let promptObj = prompt ("비밀번호를 입력하세요","");
+    return (promptObj);
+  }
 
   const submitComment = async() => {
     // 유효성 검사 
@@ -54,28 +57,35 @@ export default function Comment() {
     }
   }
 
-  const commentDelete = async(no) =>{
-    try{
-      axios.post("/commentApi?crud=delete",
-      {
-        header:{'Content-Type' : 'application/json'},
-        body:{
-          "no":no,
-          "crudId":"commentDelete"}
-      })
-      .then(
-        res=>{
-          console.log("commentDelete res.data:", res.data)
-          commentSelectFn();
-        }
+  const commentDelete = async(no,password) =>{
+    var inputValue = openPrompt()
+    if(inputValue==password){
+      try{
+        axios.post("/commentApi?crud=delete",
+        {
+          header:{'Content-Type' : 'application/json'},
+          body:{
+            "no":no,
+            "crudId":"commentDelete"}
+        })
+        .then(
+          res=>{
+            console.log("commentDelete res.data:", res.data)
+            commentSelectFn();
+          }
 
-      )
-      .catch(err=>{
-        console.log("node에서 data react로 data반환 실패 :", err)
-      })
-    }
-    catch(err){
-      console.log("node로 data전달 실패", err)
+        )
+        .catch(err=>{
+          console.log("node에서 data react로 data반환 실패 :", err)
+        })
+      }
+      catch(err){
+        console.log("node로 data전달 실패", err)
+      }
+    }else if(inputValue==null){
+
+    }else{
+      alert("비밀번호가 틀렸습니다.")
     }
   }
 
@@ -142,7 +152,7 @@ export default function Comment() {
                       <div className='col-2'>{content.wr_name}</div>
                       <div className='col-8'>{content.wr_comment}</div>
                       <div className='col-2 d-flex justify-content-end'>
-                        <button onClick={e=>commentDelete(content.no)} className='buttonStyle1 h-30px mt-0'>삭제</button>
+                        <button onClick={e=>commentDelete(content.no,content.wr_password)} className='buttonStyle1 h-30px mt-0'>삭제</button>
                       </div>
                     </div>
                   </>
