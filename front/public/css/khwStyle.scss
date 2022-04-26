@@ -527,6 +527,10 @@ html{
 }
 
 #ContactMeFormTag{
+  .skillRankBox{ border-radius: 5px; font-weight: 600;}
+  .subText{
+    font-size: 0.8rem;
+  }
   .FormGroupTag{
     background-color: white;
     margin: 0;
@@ -556,7 +560,11 @@ html{
   }
 }
 
-
+@media (max-width:575.8px){
+  #ContactMeFormTag{
+    .skillRankBox{ font-size: 0.8rem; }
+  }
+}
 
 // QuickMenu Component
 

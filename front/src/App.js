@@ -8,7 +8,7 @@ import ContactMe from './components/ContactMe';
 import QuickMenu from './components/QuickMenu';
 import Comment from './components/Comment';
 import Footer from './components/Footer';
-import Test from './components/Test'
+// import Test from './components/Test'
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -45,7 +45,7 @@ function App() {
       <QuickMenu></QuickMenu>
       <Comment></Comment>
       <Footer></Footer>
-      <Test></Test>
+      {/* <Test></Test> */}
     </div>
   );
 }

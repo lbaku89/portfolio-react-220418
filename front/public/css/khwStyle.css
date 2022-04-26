@@ -902,6 +902,15 @@ html {
   max-width: 800px;
 }
 
+#ContactMeFormTag .skillRankBox {
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+#ContactMeFormTag .subText {
+  font-size: 0.8rem;
+}
+
 #ContactMeFormTag .FormGroupTag {
   background-color: white;
   margin: 0;
@@ -935,6 +944,12 @@ html {
 #ContactMeFormTag #ContactMeSubmitBtn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+@media (max-width: 575.8px) {
+  #ContactMeFormTag .skillRankBox {
+    font-size: 0.8rem;
+  }
 }
 
 #QuickMenuWrap {

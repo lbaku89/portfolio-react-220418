@@ -71,12 +71,20 @@ export default function ContactMe(props){
     
   } //// submitInterview
 
+  const [checkedValueList,checkedValueListUpdate] = useState([]);
+  const inputCheckedValueFn = (isChecked, checkedValue)=>{
+    if(isChecked){
+      checkedValueListUpdate([...checkedValueList,checkedValue]);
+    }else{
+      checkedValueListUpdate(checkedValueList.filter( (el) => el!==checkedValue));
+    }
+    setTimeout(()=>{},1)
+    setTimeout(() => console.log("checkedSkillArray:"+checkedValueList), 2000);
+    setMessage("inputCheckedValueFn 실행완료")  
+  }
 
 
-
-  useEffect((e)=>{      
-    submitInterview(props.dbinfo.botable, e)
-  }, [message])
+  useEffect(()=>{}, [message])
 
   return (
     <div className='khysection1  bg-color2' id='ContactMeWrap'>
@@ -91,6 +99,7 @@ export default function ContactMe(props){
               <input type='hidden' name='crud' value={props.dbinfo.crud} />
               <input type='hidden' name='mapper' value={props.dbinfo.mapper} />
               <input type='hidden' name='mapperid' value={props.dbinfo.mapperid} />
+              <input type='hidden' name='skills' value={checkedValueList} />
             </Form.Group>
             <Form.Group as={Row} className="mb-3 FormGroupTag" controlId="wr_subject" >
               <Form.Label column sm="3" className='ps-3 pe-3'>
@@ -135,17 +144,25 @@ export default function ContactMe(props){
             </Form.Group>
             <Form.Group className='FormGroupTag mb-3'>
               <Form.Label className='mb-2 ps-3 pe-3'  >
-                희망 업무 능력순위
+                희망 업무 능력순위 <span className='subText'>( 순서대로 체크 )</span>
               </Form.Label>
+              <div className='d-flex mb-3'>
+                  {checkedValueList.map((content,i)=>{
+                    return(
+                      <div className='ms-3 px-3 py-1 bg-primary white text-center skillRankBox'>{i+1}순위 : {content}</div>
+                    )
+                  })}
+                </div>
               <div className='d-flex justify-content-around'>
-              {['html,css', 'jquery', 'node,mysql', 'react'].map((type) => (
+              {['html+css', 'jquery','node,mysql','react'].map((type) => (
                 <div key={`default-${type}`} className="">
                   <Form.Check
                     type="checkbox"
                     id={`${type}`}
                     label={`${type}`}
-                    name="skills"
+                    name="skillNm"
                     value={type}
+                    onChange={e=>{inputCheckedValueFn(e.currentTarget.checked,e.currentTarget.value)}}
                   />
                 </div>
               ))}
