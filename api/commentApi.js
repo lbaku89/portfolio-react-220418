@@ -9,15 +9,23 @@ var mybatisMapper = require('mybatis-mapper')
 mybatisMapper.createMapper(['./mapper/mapper.xml'])
 var format = { language : 'sql', indent : '  '}
 
+// url code화 진행
 router.use(express.urlencoded({ extended : true }));
+// api 통신간 json 문법 사용
 router.use(express.json())
 
+// post 방식으로 request 받고 resend 진행  
 router.post('/',(req, res) => {
+
   var crudType = req.query.crud
+  //확인 code 
   console.log("req.query.crud:"+req.query.crud);
   var params = req.body
+  // 확인 code
   console.log("req.body:"+req.body)
   console.log("req.body.body:"+req.body.body)
+  
+  // insert인 경우 form 에서 받은 data json으로 해서 
   if(crudType=="insert"){
       var paramsobj = JSON.parse(params.body);
   }else{
@@ -25,6 +33,7 @@ router.post('/',(req, res) => {
     var paramsobj = params.body;
   }
 
+  // ./mapper query문 생성 
   var query = mybatisMapper.getStatement('reactPortfolioNamespace', paramsobj.crudId,paramsobj,format );
   console.log('쿼리문:', query);
   
