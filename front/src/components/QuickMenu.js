@@ -7,7 +7,25 @@ export default class QuickMenu extends Component {
   constructor(props){
     super(props);
     this.state={
-      willOpen:true
+      willOpen:true,
+      quickMenuInfo:[
+        {
+          href:'https://github.com/lbaku89',
+          imgSrc:'/img/QuickMenu/git-hub.png'
+        },
+        {
+          href:'https://www.instagram.com/hyeok_junggg/',
+          imgSrc:'/img/QuickMenu/instagram.png',
+        },
+        {
+          href:'#none',
+          imgSrc:'/img/QuickMenu/kakaotalkIcon.png',
+        },
+        {
+          href:'https://khj930410.tistory.com/',
+          imgSrc:'/img/QuickMenu/tistory.png',
+        },
+      ]
     }
   }
 
@@ -31,10 +49,13 @@ export default class QuickMenu extends Component {
             <FontAwesomeIcon icon={faPlus} className="quickbutton"/>
           </button>
           <ul id="QuickMenuUl"className='mb-0 d-flex flex-column-reverse position-relative p-0'>
-            <li className='mb-2 QuickMenuLi'><a href='https://github.com/lbaku89' target="_blank"><img src='/img/QuickMenu/git-hub.png'></img></a></li>
-            <li className='mb-2 QuickMenuLi'><a href='https://www.instagram.com/hyeok_junggg/' target="_blank"><img src='/img/QuickMenu/instagram.png'></img></a></li>
-            <li className='mb-2 QuickMenuLi'><a href='#none'><img src='/img/QuickMenu/kakaotalkIcon.png' target="_blank"></img></a></li>
-            <li className='mb-2 QuickMenuLi'><a href='https://khj930410.tistory.com/' target="_blank"><img src='/img/QuickMenu/tistory.png'></img></a></li>
+            {
+              this.state.quickMenuInfo.map((content,i)=>{
+                return(
+                  <li className='mb-2 QuickMenuLi'><a href={content.href} target="_blank"><img src={content.imgSrc}></img></a></li>
+                )
+              })
+            }
           </ul>
       </div>
     )

@@ -21,9 +21,9 @@ export default function Comment() {
     // 유효성 검사 
     console.log("submitComment 시작 ")
     const fnValidate = () => {
-      if(document.getElementsByName("wr_name")[0].value==""){return false};
-      if(document.getElementsByName("wr_password")[0].value==""){return false};
-      if(document.getElementsByName("wr_comment")[0].value==""){return false};
+      if(document.getElementsByName("wr_name")[0].value==""){ alert("닉네임을 입력하세요"); return false};
+      if(document.getElementsByName("wr_password")[0].value==""){alert("패스워드를 입력하세요"); return false};
+      if(document.getElementsByName("wr_comment")[0].value==""){alert("남길말을 적어주세요"); return false};
       return true;
     }
 

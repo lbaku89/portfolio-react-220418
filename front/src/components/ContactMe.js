@@ -12,19 +12,25 @@ export default function ContactMe(props){
 
     const  fnValidate = () =>{ 
       if(!$('#agreeTerm').is(':checked')){ 
-          setMessage("동의하시게나");
+          alert("개인정보 정책 동의해주세요");
           return false;
       }       
       if($('#wr_subject').val() == '' ){
         $('#wr_subject').focus();
-        setMessage("제목넣기");       
+        alert("회사명을 적어주세요");    
         return false;
       } 
       if($('#wr_hp').val() == '' ){
         $('#wr_hp').focus();
-        setMessage("연락처를 남겨주세요");       
+        alert("연락처를 적어주세요");        
         return false;
-      }                  
+      }
+      if($('#interview_time').val() == '' ){
+        $('#interview_time').focus();
+        alert("면접시간을 적어주세요");        
+        return false;
+      }                                 
+
       return true;  
     }
 
@@ -69,6 +75,7 @@ export default function ContactMe(props){
       }
     }
     
+    return false ;
   } //// submitInterview
 
   const [checkedValueList,checkedValueListUpdate] = useState([]);
@@ -106,7 +113,7 @@ export default function ContactMe(props){
                 회사명
               </Form.Label>
               <Col sm="9">
-                <Form.Control className="FormControlTag"type="text" placeholder="회사명"name="wr_subject"/>
+                <Form.Control className="FormControlTag"type="text" id="wr_subject" placeholder="회사명" name="wr_subject"/>
               </Col>
             </Form.Group>
             <Form.Group as={Row} className="mb-3 FormGroupTag" controlId="wr_hp" >
@@ -114,7 +121,7 @@ export default function ContactMe(props){
                 담당자 연락처
               </Form.Label>
               <Col sm="9">
-                <Form.Control className="FormControlTag"type="text" placeholder="010-6372-9168" name="wr_hp"/>
+                <Form.Control className="FormControlTag"type="text" id="wr_hp" placeholder="010-6372-9168" name="wr_hp"/>
               </Col>
             </Form.Group>
             <Form.Group as={Row} className="mb-3 FormGroupTag" controlId="interview_date" >
@@ -122,7 +129,7 @@ export default function ContactMe(props){
                 면접날짜, 시간
               </Form.Label>
               <Col sm="9">
-                <Form.Control className="FormControlTag"type="text" placeholder="6/10 오후2시" name="interview_date"/>
+                <Form.Control className="FormControlTag"type="text" id="interview_time" placeholder="6/10 오후2시" name="interview_date"/>
               </Col>
             </Form.Group>
             <Form.Group className='FormGroupTag mb-3'>
@@ -172,8 +179,8 @@ export default function ContactMe(props){
               <Form.Label className='ps-3 pe-3'>남기고 싶은 말을 적어주세요</Form.Label>
               <Form.Control className="FormControlTag ps-3 pe-3"as="textarea" rows={3} name="wr_text" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="agreeTerm">
-              <Form.Check type="checkbox" label="개인정보 정책 동의"/>
+            <Form.Group className="mb-3">
+              <Form.Check type="checkbox" label="개인정보 정책 동의"  id="agreeTerm"/>
             </Form.Group>
             <Button variant="" type="submit" className='m-auto d-block' id="ContactMeSubmitBtn"
             onClick={e=>{submitInterview(props.dbinfo.botable,e)}}>
