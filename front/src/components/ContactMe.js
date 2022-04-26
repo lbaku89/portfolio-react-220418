@@ -8,7 +8,6 @@ import axios from 'axios'
 export default function ContactMe(props){
 
   const [message, setMessage]=useState('');
-  
   const submitInterview = async (type, e) => { //버튼클릭시 실행
 
     const  fnValidate = () =>{ 
@@ -72,6 +71,9 @@ export default function ContactMe(props){
     
   } //// submitInterview
 
+
+
+
   useEffect((e)=>{      
     submitInterview(props.dbinfo.botable, e)
   }, [message])
@@ -123,7 +125,6 @@ export default function ContactMe(props){
                 <div key={`default-${type}`} className="">
                   <Form.Check 
                     type="radio"
-
                     label={`${type}`}
                     name="position"
                     value={type}

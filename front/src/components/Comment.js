@@ -128,11 +128,11 @@ export default function Comment() {
             </Form.Group>
           <Form.Group className="mb-3" controlId="formNickname">
             {/* <Form.Label>닉네임</Form.Label> */}
-            <Form.Control name="wr_name" type="text" minlength="2" maxlength="10" placeholder="닉네임" />
+            <Form.Control name="wr_name" type="text" minlength="2" maxlength="8" placeholder="닉네임" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPassword">
             {/* <Form.Label>게시글 비밀번호</Form.Label> */}
-            <Form.Control name="wr_password" type="password" minlength="4" maxlength="10" placeholder="게시글 비밀번호" />
+            <Form.Control name="wr_password" type="password" minlength="2" maxlength="8" placeholder="게시글 비밀번호" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTextArea">
             {/* <Form.Label>남기고 싶은말을 적어주세요</Form.Label> */}
