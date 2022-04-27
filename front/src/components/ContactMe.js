@@ -7,10 +7,12 @@ import axios from 'axios'
 
 export default function ContactMe(props){
 
-  const [message, setMessage]=useState('');
-  const submitInterview = async (type, e) => { //버튼클릭시 실행
+  const [message,setMessage] =useState('')
 
-    const  fnValidate = () =>{ 
+
+
+  const submitInterview = async (type, e) => { //버튼클릭시 실행
+    const  fnValidate = () =>{  
       if(!$('#agreeTerm').is(':checked')){ 
           alert("개인정보 정책 동의해주세요");
           return false;
@@ -29,7 +31,21 @@ export default function ContactMe(props){
         $('#interview_time').focus();
         alert("면접시간을 적어주세요");        
         return false;
-      }                                 
+      }
+      if ($('input[name=position]:checked').length==0) {
+        alert("position 선택해주세요");
+        return false;
+      }
+      if(checkedValueList.length===0){
+        alert("희망업무능력 순위를 선택해주세요");
+        return false;
+      }
+      // if($('#interview_time').val() == '' ){
+      //   $('#interview_time').focus();
+      //   alert("면접시간을 적어주세요");        
+      //   return false;
+      // }                                               
+
 
       return true;  
     }
@@ -55,13 +71,14 @@ export default function ContactMe(props){
           .then( result =>  {  
             //console.log(result); 
             if(result.data == 'succ')  {
+              alert("제안요청 완료");
+              $('.form-control').val('');
+              $('.form-check-input').prop("checked",false);
+              checkedValueListUpdate([]);
               setMessage('노드에 잘 접속되고 전달되었음');
-              $('.formStyle [name]').val('');
-
             } else{
               setMessage('쿼리 혹은 xml 접속문제')
             }
-
               }
           ).catch(
             (err) => { 
@@ -73,6 +90,7 @@ export default function ContactMe(props){
       catch(err){
         setMessage('서버연결도 안됨 '+err )
       }
+
     }
     
     return false ;
@@ -182,7 +200,7 @@ export default function ContactMe(props){
             <Form.Group className="mb-3">
               <Form.Check type="checkbox" label="개인정보 정책 동의"  id="agreeTerm"/>
             </Form.Group>
-            <Button variant="" type="submit" className='m-auto d-block' id="ContactMeSubmitBtn"
+            <Button variant="" className='m-auto d-block' id="ContactMeSubmitBtn"
             onClick={e=>{submitInterview(props.dbinfo.botable,e)}}>
              면접제안
             </Button>

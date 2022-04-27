@@ -9,7 +9,7 @@ export default function Comment() {
 
 
 
-
+  const [message, setMessage] = useState('')
   const [commentList, commentListUpdate]= useState([])
 
   const openPrompt = () => {
@@ -21,9 +21,18 @@ export default function Comment() {
     // 유효성 검사 
     console.log("submitComment 시작 ")
     const fnValidate = () => {
-      if(document.getElementsByName("wr_name")[0].value==""){ alert("닉네임을 입력하세요"); return false};
-      if(document.getElementsByName("wr_password")[0].value==""){alert("패스워드를 입력하세요"); return false};
-      if(document.getElementsByName("wr_comment")[0].value==""){alert("남길말을 적어주세요"); return false};
+      if(document.getElementsByName("wr_name")[0].value==""){
+          document.getElementsByName("wr_name")[0].focus()
+          alert("닉네임을 입력하세요"); return false
+        };
+      if(document.getElementsByName("wr_password")[0].value==""){
+        document.getElementsByName("wr_password")[0].focus()
+        alert("패스워드를 입력하세요"); return false
+      };
+      if(document.getElementsByName("wr_comment")[0].value==""){
+        document.getElementsByName("wr_comment")[0].focus()
+        alert("남길말을 적어주세요"); return false
+      };
       return true;
     }
 
@@ -44,11 +53,12 @@ export default function Comment() {
         .then(
           res=>{
             console.log(res.data);
-            console.log("commentInsert성공")
-           
+            alert("commentInsert성공!");
+            $('.form-control[name]').val('');
+            setMessage('comment insert후 reRendering');
           })
         .catch((err)=>{
-          console.log("query or xml 문제"+err)
+          alert("query or xml 문제"+err)
         })
       }
       catch(err){
@@ -113,7 +123,7 @@ export default function Comment() {
 
   useEffect( ()=>{
     commentSelectFn();
-  },[])
+  },[message])
 
   return (
     <div id="CommentComponentWrap" className='container-lg mt-5 mb-5 gmarket'>
@@ -122,23 +132,23 @@ export default function Comment() {
         <h3 className='ms-2 mb-0'>잘 보셨나요?</h3>
       </div>
       <div className='row p-2'>
-        <Form name="CommentForm" className='col-12 col-md-4 mb-5'>
+        <Form name="CommentForm" className='col-12 col-md-4 mb-5' >
             <Form.Group>
               <input type='hidden' name='crudId' value="commentInsert"/>
             </Form.Group>
           <Form.Group className="mb-3" controlId="formNickname">
             {/* <Form.Label>닉네임</Form.Label> */}
-            <Form.Control name="wr_name" type="text" minlength="2" maxlength="8" placeholder="닉네임" />
+            <Form.Control name="wr_name" type="text" placeholder="닉네임" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPassword">
             {/* <Form.Label>게시글 비밀번호</Form.Label> */}
-            <Form.Control name="wr_password" type="password" minlength="2" maxlength="8" placeholder="게시글 비밀번호" />
+            <Form.Control name="wr_password" type="password" placeholder="게시글 비밀번호" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTextArea">
             {/* <Form.Label>남기고 싶은말을 적어주세요</Form.Label> */}
             <Form.Control name="wr_comment" as="textarea" rows={1} placeholder="남길말"/>
           </Form.Group>
-          <Button variant="primary" className='buttonStyle1' type="submit" onClick={e=>{submitComment()}}>
+          <Button variant="primary" className='buttonStyle1' onClick={e=>{submitComment()}}>
             등록하기
           </Button>
         </Form>
