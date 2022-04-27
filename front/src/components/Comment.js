@@ -7,28 +7,9 @@ import Swal from 'sweetalert2'
 
 export default function Comment() {
 
-
-
   const [message, setMessage] = useState('')
   const [commentList, commentListUpdate]= useState([])
 
-  const openPrompt = () => {
-    // let promptObj = prompt ("비밀번호를 입력하세요","");
-    var enteredPasswordValue ;
-    Swal.fire({
-      input: 'password',
-      inputLabel: 'Password',
-      inputPlaceholder: '비밀번호를 입력하세요',
-      inputAttributes: {
-        maxlength: 10,
-        autocapitalize: 'off',
-        autocorrect: 'off'
-      }
-    }).then((result)=>{
-      enteredPasswordValue =result.value;
-    })
-    return enteredPasswordValue;
-  }
 
   const submitComment = async() => {
     // 유효성 검사 
@@ -76,11 +57,9 @@ export default function Comment() {
         .then(
           res=>{
             console.log(res.data);
-            Swal.fire({
-              title: 'comment 작성완료!',
-            })
-            
-            $('.form-control [name]').val('');
+            Swal.fire('comment 작성완료!')
+            $('.form-control[name]').val('');
+            // commentSelectFn();
             setMessage('comment insert후 reRendering');
           })
         .catch((err)=>{
@@ -97,37 +76,48 @@ export default function Comment() {
   }
 
   const commentDelete = async(no,password) =>{
-    var inputValue = openPrompt()
-    if(inputValue==password){
-      try{
-        axios.post("/commentApi?crud=delete",
-        {
-          header:{'Content-Type' : 'application/json'},
-          body:{
-            "no":no,
-            "crudId":"commentDelete"}
-        })
-        .then(
-          res=>{
-            console.log("commentDelete res.data:", res.data)
-            commentSelectFn();
-          }
+    Swal.fire({
+      input: 'password',
+      inputLabel: 'Password',
+      inputPlaceholder: '비밀번호를 입력하세요',
+      inputAttributes: {
+        maxlength: 10,
+        autocapitalize: 'off',
+        autocorrect: 'off'
+      }
+    }).then((inputValue)=>{
+      if(inputValue.value==password){
+        try{
+          axios.post("/commentApi?crud=delete",
+          {
+            header:{'Content-Type' : 'application/json'},
+            body:{
+              "no":no,
+              "crudId":"commentDelete"}
+          })
+          .then(
+            res=>{
+              console.log("commentDelete res.data:", res.data)
+              commentSelectFn();
+              Swal.fire('삭제완료')
+            }
 
-        )
-        .catch(err=>{
-          console.log("node에서 data react로 data반환 실패 :", err)
+          )
+          .catch(err=>{
+            console.log("node에서 data react로 data반환 실패 :", err)
+          })
+        }
+        catch(err){
+          console.log("node로 data전달 실패", err)
+        }
+      }else if(inputValue.value===''){
+        Swal.fire("비밀번호를 입력하세요.")
+      }else{
+        Swal.fire({
+          title: "비밀번호가 틀렸습니다."
         })
       }
-      catch(err){
-        console.log("node로 data전달 실패", err)
-      }
-    }else if(inputValue==null){
-
-    }else{
-      Swal.fire({
-        title: "비밀번호가 틀렸습니다."
-      })
-    }
+    })
   }
 
   const commentSelectFn= async()=>{
@@ -168,15 +158,12 @@ export default function Comment() {
               <input type='hidden' name='crudId' value="commentInsert"/>
             </Form.Group>
           <Form.Group className="mb-3" controlId="formNickname">
-            {/* <Form.Label>닉네임</Form.Label> */}
             <Form.Control name="wr_name" type="text" placeholder="닉네임" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPassword">
-            {/* <Form.Label>게시글 비밀번호</Form.Label> */}
             <Form.Control name="wr_password" type="password" placeholder="게시글 비밀번호" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTextArea">
-            {/* <Form.Label>남기고 싶은말을 적어주세요</Form.Label> */}
             <Form.Control name="wr_comment" as="textarea" rows={1} placeholder="남길말"/>
           </Form.Group>
           <Button variant="primary" className='buttonStyle1' onClick={e=>{submitComment()}}>
