@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import {Form, Button, Col, Row} from 'react-bootstrap'
 import $ from 'jquery'
-
+import Swal from 'sweetalert2'
 
 export default function Comment() {
 
@@ -13,25 +13,48 @@ export default function Comment() {
   const [commentList, commentListUpdate]= useState([])
 
   const openPrompt = () => {
-    let promptObj = prompt ("비밀번호를 입력하세요","");
-    return (promptObj);
+    // let promptObj = prompt ("비밀번호를 입력하세요","");
+    var enteredPasswordValue ;
+    Swal.fire({
+      input: 'password',
+      inputLabel: 'Password',
+      inputPlaceholder: '비밀번호를 입력하세요',
+      inputAttributes: {
+        maxlength: 10,
+        autocapitalize: 'off',
+        autocorrect: 'off'
+      }
+    }).then((result)=>{
+      enteredPasswordValue =result.value;
+    })
+    return enteredPasswordValue;
   }
 
   const submitComment = async() => {
     // 유효성 검사 
+
     console.log("submitComment 시작 ")
     const fnValidate = () => {
       if(document.getElementsByName("wr_name")[0].value==""){
           document.getElementsByName("wr_name")[0].focus()
-          alert("닉네임을 입력하세요"); return false
+          Swal.fire({
+            title: "닉네임을 입력하세요",
+          })
+          return false 
         };
       if(document.getElementsByName("wr_password")[0].value==""){
         document.getElementsByName("wr_password")[0].focus()
-        alert("패스워드를 입력하세요"); return false
+        Swal.fire({
+          title: "패스워드를 입력하세요",
+        })
+         return false
       };
       if(document.getElementsByName("wr_comment")[0].value==""){
         document.getElementsByName("wr_comment")[0].focus()
-        alert("남길말을 적어주세요"); return false
+        Swal.fire({
+          title: "남길말을 적어주세요",
+        })
+         return false
       };
       return true;
     }
@@ -53,12 +76,18 @@ export default function Comment() {
         .then(
           res=>{
             console.log(res.data);
-            alert("commentInsert성공!");
-            $('.form-control[name]').val('');
+            Swal.fire({
+              title: 'comment 작성완료!',
+            })
+            
+            $('.form-control [name]').val('');
             setMessage('comment insert후 reRendering');
           })
         .catch((err)=>{
-          alert("query or xml 문제"+err)
+          
+          Swal.fire({
+            title: "query or xml 문제"+err,
+          })
         })
       }
       catch(err){
@@ -95,7 +124,9 @@ export default function Comment() {
     }else if(inputValue==null){
 
     }else{
-      alert("비밀번호가 틀렸습니다.")
+      Swal.fire({
+        title: "비밀번호가 틀렸습니다."
+      })
     }
   }
 
