@@ -22,7 +22,6 @@ export default class Header extends Component {
   }
  
   render() {
-
     // navigation scroll event 구현! 
     $(document).ready(function(){
       // 변수선언
@@ -64,9 +63,6 @@ export default class Header extends Component {
     
     
     return (
-  
-
-
 
        <div id="NaviWrap">
         <Navbar
@@ -117,8 +113,6 @@ export default class Header extends Component {
           </Collapse>
         </Navbar>
       </div>
-
-
     )
   }
 }

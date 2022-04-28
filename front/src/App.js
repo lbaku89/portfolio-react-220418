@@ -32,16 +32,12 @@ function App() {
         mapperid : 'interviewList'
       }}>
       </PreInterview>
-      <Routes>
-        <Route path='/' element={<ContactMe dbinfo={{
-          titlenm : '리액트스트랩 모듈로 만든 폼 아마존과연동', 
+      <ContactMe dbinfo={{titlenm : '리액트스트랩 모듈로 만든 폼 아마존과연동', 
           botable : 'interviewWrite',
           crud : 'insert',
           mapper : 'introduceSQL',
-          mapperid : 'interviewInsert'
-          }}></ContactMe>}>
-        </Route>
-      </Routes>     
+          mapperid : 'interviewInsert'}}>
+      </ContactMe>   
       <QuickMenu></QuickMenu>
       <Comment></Comment>
       <Footer></Footer>

@@ -972,8 +972,20 @@ html {
   width: 50%;
   height: 50%;
   color: white;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+}
+
+#QuickMenuWrap > button .quickbutton:hover {
+  color: var(--var-color4);
+}
+
+#QuickMenuWrap > button .loginIcon {
+  width: 50%;
+  height: 50%;
+  color: white;
+}
+
+#QuickMenuWrap > button .loginIcon:hover {
+  color: var(--var-color4);
 }
 
 #QuickMenuWrap ul {

@@ -582,7 +582,16 @@ html{
     .quickbutton{
       width: 50%; height: 50%;
       color: white;
-      transition: 0.5s;
+    }
+    .quickbutton:hover{
+      color: var(--var-color4);
+    }
+    .loginIcon{
+      width: 50%; height: 50%;
+      color: white;
+    }
+    .loginIcon:hover{
+      color: var(--var-color4)
     }
   }
   ul{
@@ -625,7 +634,6 @@ html{
     .quickbutton{
       transform: rotate(45deg);
     }
-
   }
   ul{
     li{visibility: visible;}
@@ -645,6 +653,7 @@ html{
       bottom: calc(58px*3);
       z-index:996;
     }
+
   }
 }
 

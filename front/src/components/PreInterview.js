@@ -22,7 +22,6 @@ class PreInterview extends Component{
                  }
    
             }).then( res => {              
-                   
                  //데이터 콘솔에서 확인            
                 try{                  
                     this.setState({ message : '삭제되었습니다. '});
@@ -38,7 +37,6 @@ class PreInterview extends Component{
            catch(err){
                this.setState({ message : '서버접속불가 ' +  err});
            }  
-
       }
     }
   }
@@ -100,7 +98,6 @@ class PreInterview extends Component{
                       {content.answer}
                     </div>
                   </div>
-                  
                 </Accordion.Body>
               </Accordion.Item>
                 )
