@@ -56,14 +56,13 @@ export default class QuickMenu extends Component {
         return { login: login, password: password }
       }
     }).then((result) => {
+      console.log(result)
       Swal.fire(`
         Login: ${result.value.login}
         Password: ${result.value.password}
       `.trim())
     })
-  }
-
-  
+  }  
 
   render(){
     return (
