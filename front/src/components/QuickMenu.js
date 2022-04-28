@@ -67,7 +67,7 @@ export default class QuickMenu extends Component {
   render(){
     return (
       <div className="d-flex flex-column-reverse" id="QuickMenuWrap">
-          <button className='mt-2' onClick={e=>{this.loginFn()}}><FontAwesomeIcon icon={faRightToBracket} className="loginIcon"/></button>
+          <button className='mt-2 d-flex align-items-center justify-content-center' onClick={e=>{this.loginFn()}}><FontAwesomeIcon icon={faRightToBracket} className="loginIcon"/></button>
           <button className="d-flex align-items-center justify-content-center" id="QuickMenuButton" onClick={ e =>{ this.openFunction() } }>
             <FontAwesomeIcon icon={faPlus} className="quickbutton"/>
           </button>
