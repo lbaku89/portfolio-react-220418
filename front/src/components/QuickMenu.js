@@ -2,6 +2,7 @@ import React , { Component }from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom'
 
 export default class QuickMenu extends Component {
   constructor(props){
@@ -25,7 +26,11 @@ export default class QuickMenu extends Component {
           href:'https://khj930410.tistory.com/',
           imgSrc:'/img/QuickMenu/tistory.png',
         },
-      ]
+      ],
+      admin:{
+        id:"lbaku89",
+        password:"1569"
+      }
     }
   }
 
@@ -56,11 +61,22 @@ export default class QuickMenu extends Component {
         return { login: login, password: password }
       }
     }).then((result) => {
-      console.log(result)
-      Swal.fire(`
-        Login: ${result.value.login}
-        Password: ${result.value.password}
-      `.trim())
+      // Swal.fire(`
+      //   Login: ${result.value.login}
+      //   Password: ${result.value.password}
+      // `.trim())
+      
+      if(result.value.login == this.state.admin.id && result.value.password == this.state.admin.password)
+      {
+        Swal.fire(
+          <Link to={'/preInterviewModify/'}>접속</Link>
+        )    
+
+    
+      }
+      else{
+        Swal.fire("id와 password를 확인해주세요")
+      }
     })
   }  
 
