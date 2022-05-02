@@ -8,7 +8,8 @@ import ContactMe from './components/ContactMe';
 import QuickMenu from './components/QuickMenu';
 import Comment from './components/Comment';
 import Footer from './components/Footer';
-import Test from './components/Test'
+import Test from './components/Test';
+import Test2 from './components/Test2';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -42,6 +43,7 @@ function App() {
       <Comment></Comment>
       <Footer></Footer>
       <Test></Test>
+      <Test2></Test2>
     </div>
   );
 }

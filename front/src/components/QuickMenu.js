@@ -1,10 +1,13 @@
 import React , { Component }from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon,  } from '@fortawesome/react-fontawesome'
 import { faPlus, faRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
+import {useNavigate,Link,useParams} from 'react-router-dom'
 
 export default class QuickMenu extends Component {
+  
   constructor(props){
+    const navigate = useNavigate();
     super(props);
     this.state={
       willOpen:true,
@@ -25,9 +28,13 @@ export default class QuickMenu extends Component {
           href:'https://khj930410.tistory.com/',
           imgSrc:'/img/QuickMenu/tistory.png',
         },
-      ]
+      ],
     }
   }
+
+
+  
+  
 
   openFunction = () =>{
     var QuickMenuWrapTag = document.getElementById("QuickMenuWrap")
@@ -56,15 +63,12 @@ export default class QuickMenu extends Component {
         return { login: login, password: password }
       }
     }).then((result) => {
-      console.log(result)
-      Swal.fire(`
-        Login: ${result.value.login}
-        Password: ${result.value.password}
-      `.trim())
+      navigate("/modify");
     })
   }  
 
   render(){
+    const navigate = useNavigate();
     return (
       <div className="d-flex flex-column-reverse" id="QuickMenuWrap">
           <button className='mt-2 d-flex align-items-center justify-content-center' onClick={e=>{this.loginFn()}}><FontAwesomeIcon icon={faRightToBracket} className="loginIcon"/></button>
