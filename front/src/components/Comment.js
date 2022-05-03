@@ -13,7 +13,6 @@ export default function Comment() {
 
   const submitComment = async() => {
     // 유효성 검사 
-
     console.log("submitComment 시작 ")
     const fnValidate = () => {
       if(document.getElementsByName("wr_name")[0].value==""){

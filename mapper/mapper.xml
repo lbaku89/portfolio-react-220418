@@ -5,8 +5,21 @@
         select 
             *
         from form.Preinterview
-
     </select>
+    <select id="preInterviewDelete">
+        DELETE FROM form.Preinterview where no = #{no}
+    </select>
+    <insert id="preInterviewInsert">
+        insert into 
+        form.Preinterview (
+            question
+            , answer
+        )
+        values (
+            #{interviewQuestion}
+            , #{interviewAnswer}
+        )
+    </insert>
     <insert id="interviewSuggetionInsert">
         insert into 
             form.InterviewSuggetion (

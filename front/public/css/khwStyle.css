@@ -84,6 +84,18 @@ html {
   border-bottom: 2px solid var(--var-color4) !important;
 }
 
+.buttonStyle2 {
+  font-size: 0.8rem;
+  color: var(--var-color4) !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.buttonStyle2:hover {
+  color: var(--var-color5) !important;
+}
+
 .khysection1 {
   width: auto;
   padding-top: 10rem;
@@ -877,6 +889,15 @@ html {
           box-shadow: none;
 }
 
+#preInterviewInputDiv {
+  margin: 5rem auto 0;
+  max-width: 800px;
+}
+
+.preInterviewButtonBox {
+  min-width: 100px;
+}
+
 #ContactMeTitleBox {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -982,10 +1003,17 @@ html {
   width: 50%;
   height: 50%;
   color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 #QuickMenuWrap > button .loginIcon:hover {
   color: var(--var-color4);
+}
+
+#QuickMenuWrap > button .loginIcon.rotate180 {
+  -webkit-transform: rotate(180deg) !important;
+          transform: rotate(180deg) !important;
 }
 
 #QuickMenuWrap ul {

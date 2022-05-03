@@ -87,6 +87,23 @@ html{
   border-bottom: 2px solid var(--var-color4) !important;
 }
 
+
+.buttonStyle2{ 
+  font-size: 0.8rem;
+  color: var(--var-color4) !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+          }
+
+.buttonStyle2:hover{ 
+  color: var(--var-color5) !important;
+          }
+
+
+
+
+
 // section 구획
 .khysection1{width: auto; padding-top: 10rem; padding-bottom:10rem;}
 
@@ -508,6 +525,15 @@ html{
     box-shadow: none;
   }
 }
+#preInterviewInputDiv{
+  margin: 5rem auto 0 ;
+  max-width: 800px;
+
+}
+
+.preInterviewButtonBox{
+  min-width: 100px;
+}
 
 
 
@@ -568,6 +594,7 @@ html{
 
 // QuickMenu Component
 
+
 #QuickMenuWrap{
   position: fixed;
   bottom: 0;
@@ -589,9 +616,13 @@ html{
     .loginIcon{
       width: 50%; height: 50%;
       color: white;
+      transition: 1s;
     }
     .loginIcon:hover{
       color: var(--var-color4)
+    }
+    .loginIcon.rotate180{
+      transform: rotate(180deg) !important;
     }
   }
   ul{

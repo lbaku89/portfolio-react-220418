@@ -1,6 +1,6 @@
 var app = require('express')()
 var reactapi = require('./api/dbconnect');
-var commentApi = require('./api/commentApi');
+var commentApi = require('./api/api');
 
 // node server.js entry point Port 8080 
 app.listen(8080,function(){
