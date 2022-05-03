@@ -6,6 +6,10 @@
             *
         from form.Preinterview
     </select>
+    <select id="preInterviewModify">
+            select * from 
+            form.Preinterview where no = #{no}
+    </select>
     <select id="preInterviewDelete">
         DELETE FROM form.Preinterview where no = #{no}
     </select>

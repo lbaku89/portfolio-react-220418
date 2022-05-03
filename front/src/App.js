@@ -4,6 +4,7 @@ import MainPage from './components/MainPage'
 import AboutMe from './components/AboutMe';
 import Portfolio from './components/Portfolio';
 import PreInterview from './components/PreInterview';
+import InterviewModify from './components/InterviewModify'
 import PreInterviewAdmin from './components/PreInterviewAdmin';
 import ContactMe from './components/ContactMe';
 import QuickMenu3 from './components/QuickMenu3';
@@ -48,15 +49,8 @@ function App() {
               }}>
           </PreInterviewAdmin>}>
         </Route>
-        <Route path='/admin' element={
-          <PreInterviewAdmin dbinfo={{
-            titlenm:'아마존 인터뷰목록',
-            botable:'interviewList',
-            crud:'select',
-            mapper:'introduceSQL',
-            mapperid : 'interviewList'
-              }}>
-          </PreInterviewAdmin>}>
+        <Route path='/interviewModify/:no' element={
+         <InterviewModify></InterviewModify>}>
         </Route>  
       </Routes>
       <ContactMe dbinfo={{titlenm : '리액트스트랩 모듈로 만든 폼 아마존과연동', 
