@@ -96,6 +96,11 @@ html {
   color: var(--var-color5) !important;
 }
 
+.buttonStyle3 {
+  border: none;
+  font-size: 1rem;
+}
+
 .khysection1 {
   width: auto;
   padding-top: 10rem;
@@ -896,6 +901,31 @@ html {
 
 .preInterviewButtonBox {
   min-width: 100px;
+}
+
+.sectionTitleBox {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.sectionTitleBox div {
+  width: 20px;
+  height: 40px;
+  background-color: #0D6EFD;
+}
+
+.sectionTitleBox h3 {
+  font-size: 2.5rem;
+  margin-left: 10px;
+}
+
+.selectedPreInterviewWrap {
+  max-width: 800px;
 }
 
 #ContactMeTitleBox {

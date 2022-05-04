@@ -6,7 +6,14 @@
             *
         from form.Preinterview
     </select>
-    <select id="preInterviewModify">
+    <update id="modifySelectedPreInterview">
+        UPDATE form.Preinterview
+        SET 
+            question = #{interviewModifyQuestion}
+            , answer = #{interviewModifyAnswer}               
+        WHERE no = #{no}       
+    </update>
+    <select id="selectedPreInterview">
             select * from 
             form.Preinterview where no = #{no}
     </select>

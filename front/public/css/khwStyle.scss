@@ -99,6 +99,10 @@ html{
 .buttonStyle2:hover{ 
   color: var(--var-color5) !important;
           }
+.buttonStyle3{
+  border:none;
+  font-size: 1rem;
+}
 
 
 
@@ -537,7 +541,17 @@ html{
 
 
 
-
+// PreInterview/interviewModify
+.sectionTitleBox{
+  align-items: center;
+  justify-content: center;
+  div{width:20px; height: 40px; background-color:#0D6EFD;}
+  h3{font-size: 2.5rem; margin-left: 10px;}
+  margin-bottom:5rem ;
+}
+.selectedPreInterviewWrap{
+  max-width: 800px;
+}
 
 // ContactMe Component
 
