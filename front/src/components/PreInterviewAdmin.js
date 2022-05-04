@@ -11,34 +11,6 @@ export default class PreInterviewAdmin extends Component {
     this.state={
       message:'서비스요청을 기다리는 중...',
       interviewData : [],
-      deleteDB : async (no) => {
-        try{
-            axios.post('/api?type=interviewDelete', {
-               
-                body :{
-                        no : no,
-                        crud : 'delete',
-                        mapper : this.props.dbinfo.mapper,
-                        mapperid :'interviewDelete'
-                 }
-   
-            }).then( res => {              
-                 //데이터 콘솔에서 확인            
-                try{                  
-                    this.setState({ message : '삭제되었습니다. '});
-                }
-                catch(err){
-                    this.setState({ message : 'DB데이터타입검수바람 ' +  err});
-                }
-   
-            }).catch( err => {
-                this.setState({ message : '접속하였으나 처리하지 못함 ' +  err});
-            })
-           }
-           catch(err){
-               this.setState({ message : '서버접속불가 ' +  err});
-           }  
-      }
     }
   }
 
@@ -106,7 +78,6 @@ export default class PreInterviewAdmin extends Component {
           console.log("preInterviewDelete res.data:", res.data)
           Swal.fire('삭제완료')
         }
-
       )
       .catch(err=>{
         console.log("node에서 data react로 data반환 실패 :", err)
@@ -119,9 +90,9 @@ export default class PreInterviewAdmin extends Component {
 
   componentDidMount = async () => {
     try{
-      axios.post('/api?type='+this.props.dbinfo.botable, {
+      axios.post('/commentApi?crud=select', {
           headers :{ 'Content-Type' : 'application/json' },
-          body : { ...this.props.dbinfo }
+          body : { "crudId":"preInterviewSelect" }
         }
       )
       .then( res => {
@@ -134,17 +105,17 @@ export default class PreInterviewAdmin extends Component {
             console.log(this.state.interviewData) //리액트 변수에 데이터옮겨짐 데이터타입이 정렬이므로 map으로 풀어버림
         }
         catch(err){
-            this.setState({ message : 'DB데이터타입검수바람 ' +  err});
+            console.log('resend왔지만 에러' + err)
         }
         }
       )
       .catch( err => {
-        this.setState({ message : '접속하였으나 처리하지 못함 ' +  err});
+        console.log('post 요청 했지만 resend 받지 못함 ' + err)
         }
       )
    }
    catch(err){
-       this.setState({ message : '서버접속불가 ' +  err});
+      console.log('preinterview에서 서버접속실패' + err)
    }
   }
   

@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom'
 
 export default function QuickMenu2() {
 
-  const [willOpen,setWillOpen] = useState(0);
+  const [willOpen,setWillOpen] = useState(true);
   const [loginState,setLoginState] = useState(true)
   const navigate = useNavigate();
   

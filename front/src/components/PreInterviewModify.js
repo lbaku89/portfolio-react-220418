@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, useNavigate} from 'react-router-dom'
+import { useParams, useNavigate, Link} from 'react-router-dom'
 import {Form, Button} from 'react-bootstrap';
 import axios from 'axios';
 
@@ -7,7 +7,7 @@ export default function InterviewModify() {
 
   let params = useParams();
   const navigate = useNavigate();
-  
+    
   
   const interviewSelectFn= async()=>{
     try{
@@ -48,9 +48,9 @@ export default function InterviewModify() {
         <Button className='buttonStyle1'>
           수정하기
         </Button>
-        <Button className='buttonStyle1'>
+        <Link to="/admin" className='buttonStyle1'>
           목록
-        </Button>
+        </Link>
     </Form>
   </div>
   )
