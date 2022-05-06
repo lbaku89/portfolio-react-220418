@@ -148,7 +148,7 @@ export default function Comment() {
   // rendering 될때 마다 db속 comment data update
   useEffect( ()=>{
     commentSelectFn();
-  })
+  },[])
 
   return (
     <div id="CommentComponentWrap" className='container-lg mt-5 mb-5 gmarket'>
