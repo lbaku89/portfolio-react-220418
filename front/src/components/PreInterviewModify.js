@@ -8,10 +8,12 @@ import Swal from 'sweetalert2';
 
 export default function InterviewModify() {
 
+  // 주소창 읽기 위해 params 인스턴스 생성
   let params = useParams();
+  // 경로 바꾸기 위해 navigate instance 생성
   const navigate = useNavigate();
+  
   const [selectedPreInterView, setSelectedPreInterView ] = useState([]) 
-
 
   const modifyPreInterviewFn = async() => {
     // 유효성 검사 
@@ -40,7 +42,7 @@ export default function InterviewModify() {
       
 
       try{
-        axios.post('/commentApi?crud=update',{
+        axios.post('/api?crud=update',{
           header:{ "Content-Type":"application/json"},
           // HTTP DATA통신 DATA TYPE 설정 
           body:formDataJson
@@ -66,7 +68,7 @@ export default function InterviewModify() {
 
   const selectedpreInterviewFn = async()=>{
     try{
-      axios.post("/commentApi?crud=select",
+      axios.post("/api?crud=select",
       {
         header:{'Content-Type' : 'application/json'},
         body:{"crudId":"selectedPreInterview", "no":params.no}
@@ -92,11 +94,8 @@ export default function InterviewModify() {
     selectedpreInterviewFn();
   },[])
 
-  console.log(params.no);
   return (
-
-    <div className='khysection1' id="preInterviewModifyWrap">
-
+  <div className='khysection1' id="preInterviewModifyWrap">
     <div className='container-md'>
         <div  className="d-flex justify-contents-center align-items-start sectionTitleBox">
           <div className='bg-primary'></div>
@@ -131,8 +130,8 @@ export default function InterviewModify() {
            
       })}
       </div>
-  </div>
-
+    </div>
   </div>
   )
 }
+

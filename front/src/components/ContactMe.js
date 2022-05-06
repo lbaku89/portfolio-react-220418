@@ -1,57 +1,48 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {Form, Button, Col, Row} from 'react-bootstrap'
-
+import Swal from 'sweetalert2'
 import $ from 'jquery'
 import axios from 'axios'
 
-export default function ContactMe(props){
+export default function ContactMe(){
 
-  const [message,setMessage] =useState('')
-
-
-
-  const submitInterview = async (type, e) => { //버튼클릭시 실행
-    const  fnValidate = () =>{  
-      if(!$('#agreeTerm').is(':checked')){ 
-          alert("개인정보 정책 동의해주세요");
-          return false;
-      }       
-      if($('#wr_subject').val() == '' ){
-        $('#wr_subject').focus();
-        alert("회사명을 적어주세요");    
-        return false;
-      } 
-      if($('#wr_hp').val() == '' ){
-        $('#wr_hp').focus();
-        alert("연락처를 적어주세요");        
-        return false;
+  const submitInterview = async () => { 
+    // 면접제안 foam 유효성 검사 function
+    const  fnValidate = () =>{   
+      if(document.getElementsByName("agreeCheckBox")[0].checked===false){
+        document.getElementsByName("agreeCheckBox")[0].focus()
+        Swal.fire("개인정보 정책 동의 하세요")
+        return false
       }
-      if($('#interview_time').val() == '' ){
-        $('#interview_time').focus();
-        alert("면접시간을 적어주세요");        
-        return false;
+      if(document.getElementsByName("wr_subject")[0].value===''){
+        document.getElementsByName("wr_subject")[0].focus()
+        Swal.fire("회사명을 입력하세요.")
+        return false
+      }
+      if(document.getElementsByName("wr_hp")[0].value===''){
+        document.getElementsByName("wr_hp")[0].focus()
+        Swal.fire("연락처를 적어주세요.")
+        return false
+      }
+      if(document.getElementsByName("interview_date")[0].value===''){
+        document.getElementsByName("interview_date")[0].focus()
+        Swal.fire("면접시간을 적어주세요.")
+        return false
       }
       if ($('input[name=position]:checked').length==0) {
-        alert("position 선택해주세요");
+        Swal.fire("position 선택해주세요");
         return false;
       }
       if(checkedValueList.length===0){
-        alert("희망업무능력 순위를 선택해주세요");
+        Swal.fire("희망업무능력 순위를 선택해주세요");
         return false;
       }
-      // if($('#interview_time').val() == '' ){
-      //   $('#interview_time').focus();
-      //   alert("면접시간을 적어주세요");        
-      //   return false;
-      // }                                               
-
-
       return true;  
     }
 
     if( fnValidate() ){       
-    var jsonstr = decodeURIComponent($("[name='"+type+"']").serialize());
+    var jsonstr = decodeURIComponent($("[name=ContactMeFormTag]").serialize());
     console.log(jsonstr);
     console.log(typeof jsonstr);
 
@@ -60,42 +51,37 @@ export default function ContactMe(props){
         console.log(typeof Json_data);
 
       try{
-      axios.post('/api?type='+type,
+      axios.post('/api?crud=insert',
       //아래의 내용을 post전송한다. req.body객체임
         {         
             headers : {
+            // HTTP DATA통신 DATA TYPE 설정 
             "Content-Type": `application/json`
             },
+            //request.body.body에 formDataJons 담아 전송
             body : Json_data
+
         })
           .then( result =>  {  
-            //console.log(result); 
-            if(result.data == 'succ')  {
-              alert("제안요청 완료");
-              $('.form-control').val('');
-              $('.form-check-input').prop("checked",false);
-              checkedValueListUpdate([]);
-              setMessage('노드에 잘 접속되고 전달되었음');
-            } else{
-              setMessage('쿼리 혹은 xml 접속문제')
-            }
-              }
-          ).catch(
-            (err) => { 
-              setMessage('답을 못가져옴 서버어느파일인지 조사해야함 '+err )
+            console.log(result.data);
+            Swal.fire('면접제안 요청 완료!')
+            $('.form-control').val('');
+            $('.form-check-input').prop("checked",false);
+            checkedValueListUpdate([]);
+          })
+          .catch((err) => { 
+              Swal.fire('면접제안 !'+err)
             }
           )  
-        
         }
       catch(err){
-        setMessage('서버연결도 안됨 '+err )
+        Swal.fire('서버연결도 안됨 !'+err)
       }
-
     }
-    
     return false ;
-  } //// submitInterview
+  } 
 
+  // checked 된 희망업무 능력 순위 array 생성 
   const [checkedValueList,checkedValueListUpdate] = useState([]);
   const inputCheckedValueFn = (isChecked, checkedValue)=>{
     if(isChecked){
@@ -103,13 +89,9 @@ export default function ContactMe(props){
     }else{
       checkedValueListUpdate(checkedValueList.filter( (el) => el!==checkedValue));
     }
-    setTimeout(()=>{},1)
-    setTimeout(() => console.log("checkedSkillArray:"+checkedValueList), 2000);
-    setMessage("inputCheckedValueFn 실행완료")  
   }
 
 
-  useEffect(()=>{}, [message])
 
   return (
     <div className='khysection1  bg-color2' id='ContactMeWrap'>
@@ -119,11 +101,9 @@ export default function ContactMe(props){
           <h3 className='gmarket align-text-bottom'>귀사의 연락을 기다립니다</h3>
         </div>
         <div className='m-auto' id='ContactMeFormDiv'>
-          <Form id='ContactMeFormTag' name={props.dbinfo.botable}>
+          <Form id='ContactMeFormTag' name="ContactMeFormTag">
             <Form.Group>
-              <input type='hidden' name='crud' value={props.dbinfo.crud} />
-              <input type='hidden' name='mapper' value={props.dbinfo.mapper} />
-              <input type='hidden' name='mapperid' value={props.dbinfo.mapperid} />
+              <input type='hidden' name='crudId' value="interviewSuggetionInsert"/>
               <input type='hidden' name='skills' value={checkedValueList} />
             </Form.Group>
             <Form.Group as={Row} className="mb-3 FormGroupTag" controlId="wr_subject" >
@@ -198,10 +178,10 @@ export default function ContactMe(props){
               <Form.Control className="FormControlTag ps-3 pe-3"as="textarea" rows={3} name="wr_text" />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Check type="checkbox" label="개인정보 정책 동의"  id="agreeTerm"/>
+              <Form.Check type="checkbox" name="agreeCheckBox" label="개인정보 정책 동의"  id="agreeTerm"/>
             </Form.Group>
             <Button variant="" className='m-auto d-block' id="ContactMeSubmitBtn"
-            onClick={e=>{submitInterview(props.dbinfo.botable,e)}}>
+            onClick={e=>{submitInterview()}}>
              면접제안
             </Button>
           </Form>

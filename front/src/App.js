@@ -12,13 +12,11 @@ import Comment from './components/Comment';
 import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 
-
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
- 
   return (
     <div className='wrap'>
       <Navi></Navi>
@@ -39,12 +37,7 @@ function App() {
          </PreInterviewModify>}>
         </Route>  
       </Routes>
-      <ContactMe dbinfo={{titlenm : '리액트스트랩 모듈로 만든 폼 아마존과연동', 
-          botable : 'interviewWrite',
-          crud : 'insert',
-          mapper : 'introduceSQL',
-          mapperid : 'interviewInsert'}}>
-      </ContactMe>   
+      <ContactMe></ContactMe>   
       <QuickMenu></QuickMenu>
       <Comment></Comment>
       <Footer></Footer>

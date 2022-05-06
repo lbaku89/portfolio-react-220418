@@ -6,22 +6,16 @@ import Swal from 'sweetalert2';
 import $ from 'jquery';
 import {Link} from 'react-router-dom'
 export default class PreInterviewAdmin extends Component {
-
-  
   constructor(props){
     super(props)
     this.state={
-      message:'서비스요청을 기다리는 중...',
-      interviewData : [],
+      interviewData : []
     }
-    
   }
 
-  
-  
   preInterviewSelectFn = async()=>{
     try{
-      axios.post('/commentApi?crud=select', {
+      axios.post('/api?crud=select', {
           headers :{ 'Content-Type' : 'application/json' },
           body : { "crudId":"preInterviewSelect" }
         }
@@ -76,7 +70,7 @@ export default class PreInterviewAdmin extends Component {
           formDataJson = '{' + formDataJson.replace(/=/gi, '\":\"') + '}'
  
       try{
-        axios.post('/commentApi?crud=insert',{
+        axios.post('/api?crud=insert',{
           header:{ "Content-Type":"application/json"},
           // HTTP DATA통신 DATA TYPE 설정 
           body:formDataJson
@@ -111,9 +105,10 @@ export default class PreInterviewAdmin extends Component {
       cancelButtonText: '취소하기',
       confirmButtonText: '네, 삭제하겠습니다.'
     }).then((result) => {
+      // 삭제여부 재확인 후 인터뷰 항목 삭제 진행
       if (result.isConfirmed) {
         try{
-          axios.post("/commentApi?crud=delete",
+          axios.post("/api?crud=delete",
           {
             header:{'Content-Type' : 'application/json'},
             body:{

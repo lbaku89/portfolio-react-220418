@@ -1,19 +1,19 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import {Form, Button, Col, Row} from 'react-bootstrap'
+import {Form, Button} from 'react-bootstrap'
 import $ from 'jquery'
 import Swal from 'sweetalert2'
 
 export default function Comment() {
 
-  const [message, setMessage] = useState('')
+
   const [commentList, commentListUpdate]= useState([])
 
 
   const submitComment = async() => {
-    // 유효성 검사 
     console.log("submitComment 시작 ")
+    // 유효성 검사
     const fnValidate = () => {
       if(document.getElementsByName("wr_name")[0].value==""){
           document.getElementsByName("wr_name")[0].focus()
@@ -38,7 +38,6 @@ export default function Comment() {
       };
       return true;
     }
-
     if(fnValidate()){
       // Form Data 담은 후 Data Decode 진행
       var formData = decodeURIComponent($("[name=CommentForm]").serialize());
@@ -48,21 +47,23 @@ export default function Comment() {
           formDataJson = '{' + formDataJson.replace(/=/gi, '\":\"') + '}'
  
       try{
-        axios.post('/commentApi?crud=insert',{
-          header:{ "Content-Type":"application/json"},
+        axios.post('/api?crud=insert',{
           // HTTP DATA통신 DATA TYPE 설정 
+          header:{ "Content-Type":"application/json"},
+          //request.body.body에 formDataJons 담아 전송
           body:formDataJson
         })
         .then(
           res=>{
             console.log(res.data);
+            
             Swal.fire('comment 작성완료!')
-            $('.form-control[name]').val('');
-            // commentSelectFn();
-            setMessage('comment insert후 reRendering');
+            //form data 초기화
+            $('.form-control[name]').val('')
+            //삭제된 comment 반영하여 새로운 comment list 화면에 노출
+            commentSelectFn()
           })
         .catch((err)=>{
-          
           Swal.fire({
             title: "query or xml 문제"+err,
           })
@@ -74,6 +75,7 @@ export default function Comment() {
     }
   }
 
+  //comment삭제 function
   const commentDelete = async(no,password) =>{
     Swal.fire({
       input: 'password',
@@ -85,9 +87,10 @@ export default function Comment() {
         autocorrect: 'off'
       }
     }).then((inputValue)=>{
+      //입력한 password가 client가 설정한 비밀번호와 일치시 comment삭제
       if(inputValue.value==password){
         try{
-          axios.post("/commentApi?crud=delete",
+          axios.post("/api?crud=delete",
           {
             header:{'Content-Type' : 'application/json'},
             body:{
@@ -97,10 +100,10 @@ export default function Comment() {
           .then(
             res=>{
               console.log("commentDelete res.data:", res.data)
+              //삭제된 commentlist 반영하는 function 실행
               commentSelectFn();
               Swal.fire('삭제완료')
             }
-
           )
           .catch(err=>{
             console.log("node에서 data react로 data반환 실패 :", err)
@@ -119,9 +122,10 @@ export default function Comment() {
     })
   }
 
+  //db에서 comment data 불러오는 fn
   const commentSelectFn= async()=>{
     try{
-      axios.post("/commentApi?crud=select",
+      axios.post("/api?crud=select",
       {
         header:{'Content-Type' : 'application/json'},
         body:{"crudId":"commentSelect"}
@@ -141,9 +145,10 @@ export default function Comment() {
     }
   }
 
+  // rendering 될때 마다 db속 comment data update
   useEffect( ()=>{
     commentSelectFn();
-  },[message])
+  })
 
   return (
     <div id="CommentComponentWrap" className='container-lg mt-5 mb-5 gmarket'>

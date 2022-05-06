@@ -34,9 +34,6 @@ export default function QuickMenu2() {
     },
   ]
 
-
-
-  
   const openFunction = () =>{
     var QuickMenuWrapTag = document.getElementById("QuickMenuWrap")
     if(willOpen){

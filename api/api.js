@@ -25,7 +25,7 @@ router.post('/',(req, res) => {
   console.log("req.body:"+req.body)
   console.log("req.body.body:"+req.body.body)
   
-  // insert인 경우 form 에서 받은 data json으로 해서 
+  // insert인 경우 form 에서 받은 data json 형태로 parsing 
   if(crudType=="insert"||crudType=="update"){
       var paramsobj = JSON.parse(params.body);
   }else{

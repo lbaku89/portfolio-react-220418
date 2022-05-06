@@ -1,6 +1,4 @@
 import React from 'react'
-
-// AOS 사용 SETTING
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -9,14 +7,16 @@ import "aos/dist/aos.css";
 
 export default function AboutMe() {
 
+  // skill 능숙도 data
   const myAbility = [
-    { imgSrc:[
+    { 
+      imgSrc:[
       { img : "/img/icon/figma2Icon.svg",
         alt : 'figma icon'}],
       skillNm:"Figma",
       stack:"stack90",
-      graphPercent:"90"},
-
+      graphPercent:"90"
+    },
     {
       imgSrc:[
         { img : "/img/icon/illustratorIcon.png",
@@ -28,7 +28,6 @@ export default function AboutMe() {
       stack:"stack95",
       graphPercent:"95"
     },
-
     {
       imgSrc:[
         { img : "/img/icon/htmlIcon.png",
@@ -40,43 +39,46 @@ export default function AboutMe() {
       stack:"stack95",
       graphPercent:"95"
     },
-
-    { imgSrc:[
+    { 
+      imgSrc:[
       { img : "/img/icon/sassIcon.png",
         alt : "sass icon"}],
       skillNm:"Sass",
       stack:"stack60",
-      graphPercent:"60"},
-     
-    { imgSrc:[
+      graphPercent:"60"
+    }, 
+    { 
+      imgSrc:[
       { img : "/img/icon/javascriptIcon.png",
         alt : "javascript icon"}],
       skillNm:"Javascript",
       stack:"stack70",
-      graphPercent:"70"},
-
-    { imgSrc:[
+      graphPercent:"70"
+    },
+    { 
+      imgSrc:[
       { img : "/img/icon/reactIcon.png",
         alt : "react icon"}],
       skillNm:"React",
       stack:"stack70",
-      graphPercent:"70"},
-   
-    { imgSrc:[
+      graphPercent:"70"
+    },
+    { 
+      imgSrc:[
       { img : "/img/icon/nodeIcon.png",
         alt : "node icon"}],
       skillNm:"Node",
       stack:"stack60",
-      graphPercent:"60"},
-   
-    { imgSrc:[
+      graphPercent:"60"
+    },
+    { 
+      imgSrc:[
       { img : "/img/icon/jquery.gif",
         alt : "jquery icon"}],
       skillNm:"jquery",
       stack:"stack90",
-      graphPercent:"90"},
-
- 
+      graphPercent:"90"
+    },
     {
       imgSrc:[
         { img : "/img/icon/mysqlIcon.png",
@@ -88,7 +90,6 @@ export default function AboutMe() {
       stack:"stack50",
       graphPercent:"50"
     },
-
   ]
 
   useEffect(() => {
