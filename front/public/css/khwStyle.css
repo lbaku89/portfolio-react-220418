@@ -850,6 +850,11 @@ html {
   margin-left: 10px;
 }
 
+#mySwiper {
+  background-color: white;
+  border-radius: 10px;
+}
+
 #PreInterviewTitleBox {
   -webkit-box-align: center;
       -ms-flex-align: center;

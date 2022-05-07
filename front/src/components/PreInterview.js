@@ -61,7 +61,6 @@ class PreInterview extends Component{
                       <img src="/img/AboutMe/mySketch.png" className="d-block w-100" alt="myIcon"/>    
                     </div>
                     <div className='col-10 pt-3 pb-3'>
-                      <p>답변 ({content.date.substr(0,10)})</p>
                       {content.answer}
                     </div>
                   </div>

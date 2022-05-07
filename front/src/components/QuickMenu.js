@@ -1,4 +1,4 @@
-import React , { Component, useState }from 'react'
+import React , { useState }from 'react'
 import { FontAwesomeIcon,  } from '@fortawesome/react-fontawesome'
 import { faPlus, faRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
@@ -25,7 +25,7 @@ export default function QuickMenu2() {
       imgSrc:'/img/QuickMenu/instagram.png',
     },
     {
-      href:'#none',
+      href:'https://open.kakao.com/o/sIfY80ee',
       imgSrc:'/img/QuickMenu/kakaotalkIcon.png',
     },
     {
