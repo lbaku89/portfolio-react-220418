@@ -1,6 +1,6 @@
 # Restful api로 구현된 Single Page Application
   제작특징  
-- React를 이용한 SPA제작 불필요한 re-loading 제거하여 속도 향상, source 절약  
+- React를 이용한 SPA제작 -> 불필요한 re-loading 제거하여 속도 향상, source 절약  
 - Node, Mysql, React 연동하여 사용자와의 interaction 가능하도록 제작 ( Restful api )  
 - Form 유효성 검사 진행하여 양식에 맞지 않는 정보 차단 -> db source 낭비 방지
 - Bootstrap5, Reactstrap, React-bootstrap, scss 사용하여 신속한 작업  
