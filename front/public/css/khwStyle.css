@@ -36,8 +36,22 @@
 }
 
 @font-face {
+  font-family: 'GmarketSansLight';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'GmarketSansMedium';
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -67,6 +81,14 @@ html {
 
 .bg-color2 {
   background-color: var(--var-color2);
+}
+
+.bg-color3 {
+  background-color: var(--var-color3);
+}
+
+.bg-color4 {
+  background-color: var(--var-color4);
 }
 
 .buttonStyle1 {
@@ -101,14 +123,26 @@ html {
   font-size: 1rem;
 }
 
+.buttonStyle4 {
+  border-bottom: 2px solid var(--var-color1) !important;
+}
+
 .khysection1 {
   width: auto;
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
 
+.gmarketLight {
+  font-family: 'GmarketSansLight';
+}
+
 .gmarket {
   font-family: 'GmarketSansMedium';
+}
+
+.gmarketBold {
+  font-family: 'GmarketSansBold';
 }
 
 .white {
@@ -853,6 +887,10 @@ html {
 #mySwiper {
   background-color: white;
   border-radius: 10px;
+}
+
+.swiperPortfolioTitleNm {
+  font-size: 3.6rem;
 }
 
 #PreInterviewTitleBox {
