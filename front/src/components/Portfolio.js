@@ -52,18 +52,27 @@ export default function Portfolio() {
           <SwiperSlide>
           <div className='container-xl'>
             <div className="row mb-5">
-              <div className='col-12 col-md-6'>
-                <img src='/img/Porfolio/port0.png' className='d-block w-100'></img>
+              <div className='col-12 col-md-6 py-3 ps-3 ps-md-5 py-md-5'>
+                <img src='/img/Porfolio/portfolio2.jpg' className='d-block w-100'></img>
               </div>
-              <div className='col-12 col-md-6' >
-                <div>
-                  <h3>반응형 광고 페이지</h3>
-                  <h4>단독작업/제작기간 1주일</h4>
-                  <h5>제작특징</h5>
-                  <p>Boostrap5를 이용하여 제작기간 단축</p>
-                  <p>Client를 고려한 반응형 제작</p>
-                  <p>Contents 관리를 위한 CMS구축</p>
-                </div>
+              <div className='col-12 col-md-6 p-3 p-md-5'>
+                  <p className="gmarketBold mb-0 swiperPortfolioTitleNm">Contact Me!</p>
+                  <p className="fs-4 gmarket">Restful api를 이용한 Form 제작</p>
+                  <p className="bg-color3 d-inline-block p-2 gmarket white">단독작업 / 제작기간 2일</p>
+                  <ul className="ps-0 gmarket">
+                    <li>- Contents : 권현우 지원자에게 면접제안 </li>
+                    <li>- React 함수형 component 사용</li>
+                    <li>- Restful api 사용하여 사용자와 interaction 가능하도록 구현</li>
+                    <li>- react-bootstrap Component, Bootstrap5, scss 사용</li>
+                    <li>- Form에 입력된 Data 한번에 담기 위해 jquery serialize 사용</li>
+                    <li>- Form 유효성 검사를 통해 DB에 불필요한 Data 유입 방지</li>
+                    <li>- useState를 사용하여 array 관리 </li>
+                    <li>- 사용성 향상을 위해 sweetalert2 사용</li>
+                  </ul>
+                  <div>
+                    <a className="fs-5 primary gmarket me-3 buttonStyle4" href="https://drive.google.com/file/d/1NnG9GIwCindUhjNNa1y47BA_TqqFsLw4/view?usp=sharing" target="_blank">제작노트</a>
+                    <a className="fs-5 primary gmarket buttonStyle4" href="#ContactMeWrap">보러가기</a>
+                  </div>
               </div>
             </div>
           </div>
@@ -71,18 +80,28 @@ export default function Portfolio() {
           <SwiperSlide>
           <div className='container-xl'>
             <div className="row mb-5">
-              <div className='col-12 col-md-6'>
-                <img src='/img/Porfolio/port0.png' className='d-block w-100'></img>
+              <div className='col-12 col-md-6 py-3 ps-3 ps-md-5 py-md-5'>
+                <img src='/img/Porfolio/portfolio3.jpg' className='d-block w-100'></img>
               </div>
-              <div className='col-12 col-md-6' >
-                <div>
-                  <h3>반응형 광고 페이지</h3>
-                  <h4>단독작업/제작기간 1주일</h4>
-                  <h5>제작특징</h5>
-                  <p>Boostrap5를 이용하여 제작기간 단축</p>
-                  <p>Client를 고려한 반응형 제작</p>
-                  <p>Contents 관리를 위한 CMS구축</p>
-                </div>
+              <div className='col-12 col-md-6 p-3 p-md-5'>
+                  <p className="gmarketBold mb-0 swiperPortfolioTitleNm">Comment</p>
+                  <p className="fs-4 gmarket">Restful api를 이용한 후기게시판 제작</p>
+                  <p className="bg-color3 d-inline-block p-2 gmarket white">단독작업 / 제작기간 3일</p>
+                  <ul className="ps-0 gmarket">
+                    <li>- Contents : 방문후기 게시판 </li>
+                    <li>- React 함수형 component 사용</li>
+                    <li>- Restful api 사용하여 사용자와 interaction 가능하도록 구현</li>
+                    <li>- react-bootstrap Component, Bootstrap5, scss 사용</li>
+                    <li>- Form에 입력된 Data 한번에 담기 위해 jquery serialize 사용</li>
+                    <li>- Form 유효성 검사를 통해 DB에 불필요한 Data 유입 방지</li>
+                    <li>- 사용성 향상을 위해 sweetalert2 사용</li>
+                    <li>- useState를 사용하여 화면에 노출되는 Comment list관리</li>
+                    <li>- useEffect 사용하여 최신 Data 화면에 노출</li>
+                  </ul>
+                  <div>
+                    <a className="fs-5 primary gmarket me-3 buttonStyle4" href="https://drive.google.com/file/d/1zRQofxKjYaPM4COd7zI6vDsf6xG7WGsC/view?usp=sharing" target="_blank">제작노트</a>
+                    <a className="fs-5 primary gmarket buttonStyle4" href="#CommentComponentWrap">보러가기</a>
+                  </div>
               </div>
             </div>
           </div>
