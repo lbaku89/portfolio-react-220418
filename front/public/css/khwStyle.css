@@ -79,6 +79,10 @@ html {
   background-color: black;
 }
 
+.bg-color1 {
+  background-color: var(--var-color1);
+}
+
 .bg-color2 {
   background-color: var(--var-color2);
 }
@@ -151,6 +155,10 @@ html {
 
 .primary {
   color: #0D6EFD;
+}
+
+.black {
+  color: black;
 }
 
 .m-auto {
@@ -836,18 +844,49 @@ html {
   }
 }
 
+#AboutMeSkillUl {
+  margin-left: 1rem;
+}
+
+.profileMyPicture {
+  max-width: 350px;
+  width: 100%;
+}
+
+@media (max-width: 1198.98px) {
+  .profileMyPictureBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 991.98px) {
   #AboutMeLeftDiv .certificateDiv {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
-  #AboutMeLeftDiv > div .profileImgBox {
-    background-position: 80% 50% !important;
+  #AboutMeLeftDiv .profileMyPictureBox {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 @media (max-width: 767.78px) {
+  .myProfileContents {
+    text-align: center;
+    margin-top: 2rem;
+    padding-left: 0;
+  }
+  .profileMyPicture {
+    max-width: 250px;
+  }
   #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeIconBox .AboutMeIcon {
     margin-bottom: unset;
     height: 30px;
@@ -857,6 +896,7 @@ html {
 @media (max-width: 575.8px) {
   #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl {
     padding-left: 0px;
+    margin-left: 0;
   }
   #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl li .AboutMeIconBox {
     display: none;
@@ -891,6 +931,12 @@ html {
 
 .swiperPortfolioTitleNm {
   font-size: 3.6rem;
+}
+
+@media (max-width: 991.98px) {
+  .swiperPortfolioTitleNm {
+    font-size: 2rem;
+  }
 }
 
 #PreInterviewTitleBox {

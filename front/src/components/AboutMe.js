@@ -107,9 +107,11 @@ export default function AboutMe() {
           {/* contents 영역  */}
           {/* contents -left */}
           <div id="AboutMeLeftDiv" className='col-12 col-md-12 col-lg-6 mb-5 mb-lg-0'>
-            <div className='d-flex gmarket'>
-              <div className='col-6 profileImgBox me-0'></div>
-              <div className='col-6 ms-3 ms-md-0'>
+            <div className='d-flex row gmarket'>
+              <div className=' col-12 col-md-6 profileMyPictureBox'>
+                <img src='/img/AboutMe/myPicture.jpg' className='px-3 profileMyPicture d-block'></img>
+              </div>
+              <div className=' col-12 col-md-6 mt-3 mt-md-0 myProfileContents'>
                 <div className='fs-2'>권현우<span className='fs-5'>( 1993.4.10 )</span></div>
                 <ul className='ps-0 mt-3'>
                   <li>경기도 부천시 거주</li>
@@ -127,7 +129,7 @@ export default function AboutMe() {
             <div id="certificateWrap"className='gmarket'>
               <h3 className='text-center mb-5'>자격증</h3>
               <div className='certificateDiv d-flex'>
-                <div className='ms-5'>
+                <div className='ms-md-5'>
                   <h5>직무관련</h5>
                   <p>2022년</p>
                   <ul>

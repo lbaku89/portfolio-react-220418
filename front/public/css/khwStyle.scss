@@ -58,9 +58,11 @@
 
 
 // 기기별 media query 
+// @media (max-width:1198.98px){}
 // @media (max-width:991.98px){}
 // @media (max-width:767.78px){}
 // @media (max-width:575.8px){}
+
 
 // common class 
 :root{
@@ -83,6 +85,7 @@ html{
 
 
 .bg-black{background-color: black;}
+.bg-color1{background-color: var(--var-color1);}
 .bg-color2{background-color: var(--var-color2);}
 .bg-color3{background-color: var(--var-color3);}
 .bg-color4{background-color: var(--var-color4);}
@@ -136,6 +139,7 @@ html{
 
 .white{color: white;}
 .primary{color: #0D6EFD;}
+.black{color: black;}
 
 .m-auto{margin: 0 auto;}
 
@@ -306,6 +310,7 @@ html{
 
 
 ///////////////// AboutMe Component
+
 #AboutMeWrap{
   background-color: transparent;
   max-width: 1140px !important;
@@ -318,6 +323,9 @@ html{
   }
   
   #AboutMeLeftDiv{
+    // .profileMyPicture{
+      
+    // }
     #certificateWrap{ 
      margin-top: 5.5rem;
     }
@@ -336,6 +344,7 @@ html{
 
     }
   }
+
 
 
   #AboutMeRightDiv.aos-animate{
@@ -461,23 +470,37 @@ html{
   100% {width: 95%; color: rgba(0,0,0,1);}
 }
 
+#AboutMeSkillUl{margin-left: 1rem;}
+.profileMyPicture{ max-width: 350px; width: 100%;}
+
+// media query
+@media (max-width:1198.98px){
+  .profileMyPictureBox{
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+  }
+
+}
+
+
 @media (max-width:991.98px){
   #AboutMeLeftDiv{
     .certificateDiv{
       justify-content: center !important;
     }
-    >div{
-      .profileImgBox{
-        background-position: 80% 50% !important;
-      }
-
+    .profileMyPictureBox{
+      justify-content: center;
     }
+
   }
 }
 @media (max-width:767.78px){
-  #AboutMeWrap{
 
-  
+
+  .myProfileContents{ text-align: center; margin-top: 2rem; padding-left: 0;}
+  .profileMyPicture{max-width: 250px;}
+  #AboutMeWrap{
 
     #AboutMeRightDiv{
 
@@ -496,11 +519,14 @@ html{
   }
 }
 @media (max-width:575.8px){
+
+
   #AboutMeWrap{
     #AboutMeRightDiv{
 
       #AboutMeSkillUl{
         padding-left: 0px;
+        margin-left: 0;
         li{
 
           .AboutMeIconBox{
@@ -530,6 +556,13 @@ html{
 .swiperPortfolioTitleNm{
   font-size: 3.6rem;
   
+}
+
+
+@media (max-width:991.98px){
+  .swiperPortfolioTitleNm{
+    font-size: 2rem;
+  }
 }
 
 // PreInterview Component
