@@ -60,7 +60,7 @@ class PreInterview extends Component{
                     <div className='col-2'>
                       <img src="/img/AboutMe/mySketch.png" className="d-block w-100" alt="myIcon"/>    
                     </div>
-                    <div className='col-10 pt-3 pb-3'>
+                    <div className='col-10 pt-3 pb-3 preInterviewAnswerContent'>
                       {content.answer}
                     </div>
                   </div>

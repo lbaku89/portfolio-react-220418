@@ -99,7 +99,7 @@ export default function AboutMe() {
   return (
     <div id='AboutMeWrap'  className='container-lg khysection1'>
         {/*section title text */}
-        <div id="AboutMeTitleBox" className="d-flex justify-contents-center align-items-start">
+        <div className="sectionTitleBox d-flex justify-contents-center align-items-start">
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>저를 소개해요</h3>
         </div>
@@ -121,52 +121,50 @@ export default function AboutMe() {
                 <ul className='ps-0 mt-3'>
                   <li>서울과학기술대 졸업(공학계열)</li>
                   <li>MCNEX 기구설계 엔지니어 2년 근무</li>
-                  <li>PWA 프론트엔드 5개월 과정 수료</li>
+                  <li>PWA 프론트엔드 6개월 과정 수료</li>
                   <li>우수 교육생 선발</li>
                 </ul>
               </div>
             </div>
-            <div id="certificateWrap"className='gmarket'>
-              <h3 className='text-center mb-5'>자격증</h3>
-              <div className='certificateDiv d-flex'>
-                <div className='ms-md-5'>
-                  <h5>직무관련</h5>
-                  <p>2022년</p>
+            <div id="certificateWrap"className='gmarket px-3'>
+              <h3 className='fs-2 mb-4 text-center'>자격증</h3>
+              <div className='certificateDiv d-flex text-center'>
+                <div className='certificateBox'>
+                  <h5 >직무관련</h5>
+                  <p className='color4'>2022년</p>
                   <ul>
-                    <li>GTQ 포토샵</li>
-                    <li>웹디자인기능사</li>
+                    <li>- GTQ 포토샵</li>
+                    <li>- 웹디자인기능사</li>
                   </ul>
                 </div>
-                <div className='ms-5'>
+                <div className='certificateBox'>
                   <h5>OA</h5>
-                  <p>2016~2018년</p>
+                  <p className='color4'>2016~2018년</p>
                   <ul>
-                    <li>컴활 2급</li>
-                    <li>ITQ 아래한글</li>
-                    <li>ITQ 한글엑셀</li>
-                    <li>ITQ 파워포인트</li>
-                    <li>ITQ 인터넷</li>
+                    <li>- 컴활 2급</li>
+                    <li>- ITQ 아래한글</li>
+                    <li>- ITQ 한글엑셀</li>
+                    <li>- ITQ 파워포인트</li>
+                    <li>- ITQ 인터넷</li>
                   </ul>
                 </div>
-                <div className='ms-5'>
+                <div className='certificateBox'>
                   <h5>그외</h5>
-                  <p>2016~2022년</p>
+                  <p className='color4'>2016~2022년</p>
                   <ul>
-                    <li>구글애널리틱스</li>
-                    <li>한국사 2급</li>
-                    <li>운전면허</li>
-                    <li>토익 915점(만료)
-                    </li>
-                    <li>토익 스피킹 Lv6(만료)</li>
+                    <li>- 한국사 2급</li>
+                    <li>- 운전면허</li>
+                    <li>- 토익 915점(만료)</li>
+                    <li>- 토익 스피킹 Lv6(만료)</li>
                   </ul>
                 </div>
-
               </div>
             </div>
  
           </div>
           {/* contents -right */}
           <div id="AboutMeRightDiv"  className='col-12 col-md-12 col-lg-6'>
+            <p className='text-center fs-2 gmarket'>Skills</p>
             <ul id="AboutMeSkillUl">
               {myAbility.map((content,i)=>{
                   return(

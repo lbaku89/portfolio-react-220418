@@ -89,7 +89,7 @@ export default function Portfolio() {
   return (
     <div className='khysection1 bg-color2' id="PortfolioWrap">
       <div className='container-lg'>
-        <div id="PorfolioTitleBox" className="d-flex justify-contents-center align-items-start"> 
+        <div className="sectionTitleBox d-flex justify-contents-center align-items-start"> 
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>권현우 작업물</h3>
         </div>
@@ -98,12 +98,12 @@ export default function Portfolio() {
             return(
               <SwiperSlide>
                 <div className="row align-items-center px-3">
-                  <div className='col-12 col-md-6  mb-5 mb-lg-0 d-flex flex-column justify-content-center'>
+                  <div className='col-12 col-md-6  mb-5 mb-lg-0 d-flex flex-column justify-content-center portfolioLeftBox'>
                     <div className="gmarket text-center mb-4">
                       <p className="primary fs-3 mb-2">UI/UX 기획 및 설계</p>
                       <p className="bg-color1 white d-inline-block px-3 mb-2 pt-1">제작목적</p>
                       <p>{content.purposeTxt1}<br></br>
-                      {content.purposeTxt2}
+                      {content.purpsoeTxt2}
                       </p>
                     </div>
                     <div className="gmarket text-center mb-4">
@@ -127,14 +127,14 @@ export default function Portfolio() {
                         <ul className="ps-0 gmarket">
                           {
                             content.Explanation.map((subContent)=>{
-                              return(<li>{subContent}</li>)
+                              return(<li className="portfolioExplanation">{subContent}</li>)
                             })
                           }
                         </ul>
                         <div className="d-flex align-items-center ">
-                          <a className="fs-5 primary gmarket me-3 buttonStyle4" href={content.workNoteSrc} target="_blank">제작노트</a>
-                          <a className="fs-5 primary gmarket buttonStyle4 me-3" href={content.project}>보러가기</a>
-                          <a className="fs-5 primary gmarket buttonStyle4 me-3" href={content.gitHubSrc}>GitHub<FontAwesomeIcon icon={faGithub} className="ms-1"/></a>
+                          <a className="primary gmarket me-3 buttonStyle4 portfolioLink" href={content.workNoteSrc} target="_blank">제작노트</a>
+                          <a className="primary gmarket buttonStyle4 me-3 portfolioLink" href={content.project}>보러가기</a>
+                          <a className="primary gmarket buttonStyle4 me-3 portfolioLink" href={content.gitHubSrc}>GitHub<FontAwesomeIcon icon={faGithub} className="ms-1 black"/></a>
                         </div>
                       </div>
                   </div>
@@ -142,56 +142,6 @@ export default function Portfolio() {
               </SwiperSlide>
             )
           })}
-          {/* <SwiperSlide>
-            <div className="row align-items-center px-3">
-              <div className='col-12 col-md-6  mb-5 mb-lg-0 d-flex flex-column justify-content-center'>
-                <div className="gmarket text-center mb-4">
-                  <p className="primary fs-3 mb-2">UI/UX 기획 및 설계</p>
-                  <p className="bg-color1 white d-inline-block px-3 mb-2 pt-1">제작목적</p>
-                  <p>인사담당자가 '권현우'라는 구직자에게 궁금해 할 만한 사항들에<br></br>
-                    대한 대답을 미리 작성하여 보여주기 위해 제작
-                  </p>
-                </div>
-                <div className="gmarket text-center mb-4">
-                  <p className="primary fs-3 mb-2">DB설계</p>
-                  <p className="bg-color1 white d-inline-block px-3 mb-2 pt-1">제작환경</p>
-                  <p>DB : AWS RDS MySQL<br></br>
-                    MySQL Workbench 사용</p>
-                </div>
-                <div className="gmarket text-center mb-0">
-                  <p className="primary fs-3 mb-2">서버구축 및 연동</p>
-                  <p className="bg-color1 white d-inline-block px-3 mb-2 pt-1">제작환경</p>
-                  <p className="mb-0">React ( v17.0 )  + Node ( v16.14 ) + xml + MySQL
-                  </p>
-                </div>
-              </div>
-              <div className='col-12 col-md-6 d-flex'>
-                <div className="m-auto">
-                    <p className="gmarketBold mb-0 swiperPortfolioTitleNm">Pre-Interview</p>
-                    <p className="fs-4 gmarket">Restful api를 이용한 CMS구축</p>
-                    <p className="bg-color3 d-inline-block p-2 gmarket white">단독작업 / 제작기간 3일</p>
-                    <ul className="ps-0 gmarket">
-                      <li>- Contents : 권현우 가상면접 </li>
-                      <li>- React 함수형, 클래스형 component 사용</li>
-                      <li>- Restful api 사용하여 사용자와 interaction 가능하도록 구현</li>
-                      <li>- react-bootstrap Component, Bootstrap5, scss 사용</li>
-                      <li>- 로그인 시 Contents를 관리할 수 있도록 CMS 구축</li>
-                      <li>- 가독성 향상을 위해 fontawesome, sweetalert2 사용</li>
-                      <li>- useState를 이용한 변수관리 </li>
-                      <li>- useNavigate를 이용한 경로 변경</li>
-                      <li>- useParams 이용한 주소창 변수 추출</li>
-                      <li>- useNavigate, Link Component 사용하여 경로변경</li>
-                    </ul>
-                    <div className="d-flex align-items-center ">
-                      <a className="fs-5 primary gmarket me-3 buttonStyle4" href="https://drive.google.com/file/d/11nHxhbYnmd3PITEF34rBocgZfiyLDjsV/view?usp=sharing" target="_blank">제작노트</a>
-                      <a className="fs-5 primary gmarket buttonStyle4 me-3" href="#PreInterviewWrap">보러가기</a>
-                      <a className="fs-5 primary gmarket buttonStyle4 me-3" href="#PreInterviewWrap">GitHub<FontAwesomeIcon icon={faGithub} className="ms-1"/></a>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </SwiperSlide> */}
-
         </Swiper>
       </div>
     </div>

@@ -75,6 +75,22 @@ html {
   height: 30px;
 }
 
+.color1 {
+  color: var(--var-color1);
+}
+
+.color2 {
+  color: var(--var-color2);
+}
+
+.color3 {
+  color: var(--var-color3);
+}
+
+.color4 {
+  color: var(--var-color4);
+}
+
 .bg-black {
   background-color: black;
 }
@@ -421,14 +437,12 @@ html {
   margin-left: 10px;
 }
 
-#AboutMeWrap #AboutMeLeftDiv #certificateWrap {
-  margin-top: 5.5rem;
+#AboutMeWrap #AboutMeLeftDiv .certificateBox {
+  width: calc(33.3333%);
 }
 
-#AboutMeWrap #AboutMeLeftDiv .certificateDiv {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+#AboutMeWrap #AboutMeLeftDiv #certificateWrap {
+  margin-top: 5.5rem;
 }
 
 #AboutMeWrap #AboutMeLeftDiv .certificateDiv ul {
@@ -573,8 +587,8 @@ html {
 
 #AboutMeSkillUl li.aos-animate .AboutMeSkillgraphBox .graph span.stack60 {
   width: 60%;
-  -webkit-animation: stack50 2s 1;
-          animation: stack50 2s 1;
+  -webkit-animation: stack60 2s 1;
+          animation: stack60 2s 1;
 }
 
 #AboutMeSkillUl li.aos-animate .AboutMeSkillgraphBox .graph span.stack70 {
@@ -630,7 +644,7 @@ html {
     color: rgba(0, 0, 0, 0);
   }
   100% {
-    width: 55%;
+    width: 50%;
     color: black;
   }
 }
@@ -641,7 +655,7 @@ html {
     color: rgba(0, 0, 0, 0);
   }
   100% {
-    width: 55%;
+    width: 50%;
     color: black;
   }
 }
@@ -849,7 +863,7 @@ html {
 }
 
 .profileMyPicture {
-  max-width: 350px;
+  max-width: 300px;
   width: 100%;
 }
 
@@ -894,6 +908,9 @@ html {
 }
 
 @media (max-width: 575.8px) {
+  #AboutMeWrap .certificateBox {
+    font-size: 0.8rem;
+  }
   #AboutMeWrap #AboutMeRightDiv #AboutMeSkillUl {
     padding-left: 0px;
     margin-left: 0;
@@ -933,12 +950,25 @@ html {
   font-size: 3.6rem;
 }
 
+.portfolioLink {
+  font-size: 1.25rem;
+}
+
 @media (max-width: 991.98px) {
   .swiperPortfolioTitleNm {
     font-size: 2rem;
   }
-  .portfolioExplanation {
-    text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .portfolioLeftBox {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .portfolioLink {
+    font-size: 1rem;
   }
 }
 
@@ -1089,8 +1119,35 @@ html {
           box-shadow: none;
 }
 
+@media (max-width: 767.98px) {
+  .sectionTitleBox {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .sectionTitleBox div {
+    width: 10px;
+    height: 1.8rem;
+    background-color: #0D6EFD;
+  }
+  .sectionTitleBox h3 {
+    font-size: 1.8rem;
+    margin-left: 10px;
+  }
+}
+
 @media (max-width: 575.8px) {
   #ContactMeFormTag .skillRankBox {
+    font-size: 0.8rem;
+  }
+  .portfolioExplanation {
+    font-size: 0.8rem;
+  }
+  .preInterviewAnswerContent {
     font-size: 0.8rem;
   }
 }
