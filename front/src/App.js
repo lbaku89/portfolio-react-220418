@@ -1,3 +1,4 @@
+import React from 'react';
 // components
 import Navi from './components/Navi'
 import MainPage from './components/MainPage'

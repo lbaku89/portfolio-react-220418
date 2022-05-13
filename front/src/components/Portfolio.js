@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from "swiper";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -12,7 +13,6 @@ import "swiper/css/pagination";
 
 
 
-import { Pagination } from "swiper";
 
 
 

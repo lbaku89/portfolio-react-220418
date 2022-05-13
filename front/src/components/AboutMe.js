@@ -109,7 +109,7 @@ export default function AboutMe() {
           <div id="AboutMeLeftDiv" className='col-12 col-md-12 col-lg-6 mb-5 mb-lg-0'>
             <div className='d-flex row gmarket'>
               <div className=' col-12 col-md-6 profileMyPictureBox'>
-                <img src='/img/AboutMe/myPicture.jpg' className='px-3 profileMyPicture d-block'></img>
+                <img src='/img/AboutMe/myPicture.jpg' alt='myPorfile' className='px-3 profileMyPicture d-block'></img>
               </div>
               <div className=' col-12 col-md-6 mt-3 mt-md-0 myProfileContents'>
                 <div className='fs-2'>권현우<span className='fs-5'>( 1993.4.10 )</span></div>
