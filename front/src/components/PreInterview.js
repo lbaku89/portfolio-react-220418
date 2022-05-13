@@ -44,7 +44,7 @@ class PreInterview extends Component{
   return (  
     <div className='khysection1' id="PreInterviewWrap">
       <div className='container-md'>
-        <div id="PreInterviewTitleBox" className="d-flex justify-contents-center align-items-start">
+        <div className="sectionTitleBox d-flex justify-contents-center align-items-start">
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>솔직하게 적어봤어요</h3>
         </div>

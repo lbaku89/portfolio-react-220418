@@ -37,7 +37,7 @@ export default function Portfolio() {
         "- useParams 이용한 주소창 변수 추출",
         "- useNavigate, Link Component 사용하여 경로변경",
       ],
-      workNoteSrc : "https://drive.google.com/file/d/11nHxhbYnmd3PITEF34rBocgZfiyLDjsV/view?usp=sharing",
+      workNoteSrc : "https://drive.google.com/file/d/1oHTcdfjbN99U5NyphSJ9kuhVms6-zU_4/view?usp=sharing",
       project : "#PreInterviewWrap",
       gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418"
     },
@@ -57,7 +57,7 @@ export default function Portfolio() {
         "- useState를 사용하여 array 관리",
         "- 사용성 향상을 위해 sweetalert2 사용",
       ],
-      workNoteSrc : "https://drive.google.com/file/d/12-Eis8wHh-f9qaYgF4jPIcsPUcdbsDVS/view?usp=sharing",
+      workNoteSrc : "https://drive.google.com/file/d/1-7OjgqJ_G8gEEPZUVuSVsm3ePbLkFtsX/view?usp=sharing",
       project : "#ContactMeWrap",
       gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418"
     },
@@ -66,7 +66,7 @@ export default function Portfolio() {
       purpsoeTxt2 : "간단한 방명록을 제작했습니다.",
       Period : "2일",
       Title : "Comment!",
-      SubTitle : "Restful api를 이용한 방명록제작",
+      SubTitle : "Restful api를 이용한 방명록 제작",
       Explanation : [
         "- Contents : 방문후기 게시판",
         "- React 함수형 component 사용",
@@ -78,7 +78,7 @@ export default function Portfolio() {
         "- useState 사용하여 화면에 노출되는 Comment list관리",
         "- useEffect 사용하여 최신 Data 화면에 노출"
       ],
-      workNoteSrc : "https://drive.google.com/file/d/1CnOazGbeybqW7bMzEuqpKPWzgvF5xtwB/view?usp=sharing",
+      workNoteSrc : "https://drive.google.com/file/d/1xrXsgDUUnloJJH6lg4Kf9oXS0GT3Tz0b/view?usp=sharing",
       project : "#CommentComponentWrap",
       gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418"
     }
@@ -132,9 +132,9 @@ export default function Portfolio() {
                           }
                         </ul>
                         <div className="d-flex align-items-center ">
-                          <a className="primary gmarket me-3 buttonStyle4 portfolioLink" href={content.workNoteSrc} target="_blank">제작노트</a>
+                          <a className="primary gmarket me-3 buttonStyle4 portfolioLink" target="_blacnk" href={content.workNoteSrc} target="_blank">제작노트</a>
                           <a className="primary gmarket buttonStyle4 me-3 portfolioLink" href={content.project}>보러가기</a>
-                          <a className="primary gmarket buttonStyle4 me-3 portfolioLink" href={content.gitHubSrc}>GitHub<FontAwesomeIcon icon={faGithub} className="ms-1 black"/></a>
+                          <a className="primary gmarket buttonStyle4 me-3 portfolioLink" target="_blacnk" href={content.gitHubSrc}>GitHub<FontAwesomeIcon icon={faGithub} className="ms-1 black"/></a>
                         </div>
                       </div>
                   </div>

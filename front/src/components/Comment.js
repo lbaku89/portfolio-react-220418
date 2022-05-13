@@ -180,7 +180,7 @@ export default function Comment() {
               (content)=>{
                 return(
                   <>
-                    <div className='d-flex justify-content-start p-2'>
+                    <div className='d-flex justify-content-start p-2 commentWrap'>
                       <div className='col-2'>{content.wr_name}</div>
                       <div className='col-8'>{content.wr_comment}</div>
                       <div className='col-2 d-flex justify-content-end'>

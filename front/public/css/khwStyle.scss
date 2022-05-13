@@ -678,6 +678,8 @@ html{
     box-shadow: none;
   }
 }
+.skillRankWrap{ margin-bottom: 1rem; padding-left: 1rem;}
+.skillRankBox{  margin-right: 0.5rem;  padding: 0.25rem 0.5rem}
 
 @media (max-width:767.98px){
   .sectionTitleBox{
@@ -689,8 +691,14 @@ html{
   }
 }
 @media (max-width:575.8px){
+
+  .positionSuggetionDiv{ font-size: 0.8rem;}
   #ContactMeFormTag{
-    .skillRankBox{ font-size: 0.8rem; }
+    .skillRankBox{ font-size: 0.7rem; padding: 0.5rem; margin-right: 0.25rem;}
+  }
+  .skillRankWrap{ margin-bottom: 0.8rem; padding-left: 0; }
+  .skillChekcFormDiv{
+    font-size: 0.8rem;
   }
   .portfolioExplanation{
     font-size: 0.8rem;
@@ -848,6 +856,15 @@ html{
     height: 4rem;
   }
 }
+@media (max-width:575.98px){
+  .commentWrap{
+    font-size: 0.8rem;
+  }
+  .buttonStyle1{
+    font-size: 0.8rem;
+  }
+}
+
 
 
 

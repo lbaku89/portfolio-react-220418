@@ -134,7 +134,7 @@ export default function ContactMe(){
               <Form.Label className='mb-2 ps-3 pe-3' >
                 포지션
               </Form.Label>
-              <div className='d-flex justify-content-around'>
+              <div className='d-flex justify-content-around positionSuggetionDiv'>
               {['디자이너', '기획자', '퍼블리셔', '개발자'].map((type,i) => (
                 <div key={`default-${type}`} className="">
                   <Form.Check 
@@ -151,16 +151,16 @@ export default function ContactMe(){
               <Form.Label className='mb-2 ps-3 pe-3'  >
                 희망 업무 능력순위 <span className='subText'>( 순서대로 체크 )</span>
               </Form.Label>
-              <div className='d-flex mb-3'>
+              <div className='d-flex skillRankWrap'>
                   {checkedValueList.map((content,i)=>{
                     return(
-                      <div className='ms-3 px-3 py-1 bg-primary white text-center skillRankBox'>{i+1}순위 : {content}</div>
+                      <div className='bg-primary white text-center skillRankBox'>{i+1}순위 : {content}</div>
                     )
                   })}
                 </div>
               <div className='d-flex justify-content-around'>
               {['html+css', 'jquery','node,mysql','react'].map((type) => (
-                <div key={`default-${type}`} className="">
+                <div key={`default-${type}`} className="skillChekcFormDiv">
                   <Form.Check
                     type="checkbox"
                     id={`${type}`}
