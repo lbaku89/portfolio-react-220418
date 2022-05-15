@@ -407,7 +407,7 @@ html {
     margin-right: 0px;
   }
   .MainPageMainImgWrap > .MainPageTxtWrap p:last-child a {
-    margin-right: -200px;
+    margin-right: -150px;
   }
 }
 
@@ -948,6 +948,7 @@ html {
 
 .swiperPortfolioTitleNm {
   font-size: 3.6rem;
+  line-height: 3.6rem;
 }
 
 .portfolioLink {
@@ -957,6 +958,7 @@ html {
 @media (max-width: 991.98px) {
   .swiperPortfolioTitleNm {
     font-size: 2rem;
+    line-height: 2rem;
   }
 }
 

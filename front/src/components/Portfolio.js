@@ -5,11 +5,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from "swiper";
+
+
+
 
 // Import Swiper styles
-import 'swiper/css';
-import "swiper/css/pagination";
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
+
+import 'swiper/components/pagination/pagination.min.css'
+import 'swiper/components/navigation/navigation.min.css'
+
+import SwiperCore, { Pagination, Navigation } from "swiper";
+
+
+
 
 
 
@@ -84,7 +94,10 @@ export default function Portfolio() {
     }
   ]
   
+  
+//SwiperCore.use([Navigation]);
 
+SwiperCore.use([Pagination]);
 
   return (
     <div className='khysection1 bg-color2' id="PortfolioWrap">
@@ -93,28 +106,29 @@ export default function Portfolio() {
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>권현우 작업물</h3>
         </div>
-        <Swiper slidesPerView={1} pagination={{clickable:true}} modules={[Pagination]} className="py-5 h-100" id="mySwiper">
+        <Swiper slidesPerView={1}  pagination={{clickable:true}} modules={[Pagination]}      
+       className="mySwiper py-5 h-100" id="mySwiper">
           {myPortfolioInfo.map((content)=>{
             return(
               <SwiperSlide>
                 <div className="row align-items-center px-3">
                   <div className='col-12 col-md-6  mb-5 mb-lg-0 d-flex flex-column justify-content-center portfolioLeftBox'>
-                    <div className="gmarket text-center mb-4">
-                      <p className="primary fs-3 mb-2">UI/UX 기획 및 설계</p>
-                      <p className="bg-color1 white d-inline-block px-3 mb-2 pt-1">제작목적</p>
+                    <div className="gmarket text-center mb-2 mb-md-4">
+                      <p className="fs-3 mb-2">UI/UX 기획 및 설계</p>
+                      <p className="bg-color4 white d-inline-block px-3 mb-2 pt-1">제작목적</p>
                       <p>{content.purposeTxt1}<br></br>
                       {content.purpsoeTxt2}
                       </p>
                     </div>
-                    <div className="gmarket text-center mb-4">
-                      <p className="primary fs-3 mb-2">DB설계</p>
-                      <p className="bg-color1 white d-inline-block px-3 mb-2 pt-1">제작환경</p>
+                    <div className="gmarket text-center mb-2 mb-md-4">
+                      <p className="fs-3 mb-2">DB설계</p>
+                      <p className="bg-color4 white d-inline-block px-3 mb-2 pt-1">제작환경</p>
                       <p>DB : AWS RDS MySQL<br></br>
                         MySQL Workbench 사용</p>
                     </div>
-                    <div className="gmarket text-center mb-0">
-                      <p className="primary fs-3 mb-2">서버구축 및 연동</p>
-                      <p className="bg-color1 white d-inline-block px-3 mb-2 pt-1">제작환경</p>
+                    <div className="gmarket text-center">
+                      <p className="fs-3 mb-2">서버구축 및 연동</p>
+                      <p className="bg-color4 white d-inline-block px-3 mb-2 pt-1">제작환경</p>
                       <p className="mb-0">React ( v17.0 )  + Node ( v16.14 ) + xml + MySQL
                       </p>
                     </div>
@@ -132,9 +146,9 @@ export default function Portfolio() {
                           }
                         </ul>
                         <div className="d-flex align-items-center ">
-                          <a className="primary gmarket me-3 buttonStyle4 portfolioLink" target="_blacnk" href={content.workNoteSrc} target="_blank">제작노트</a>
+                          <a className="primary gmarket me-3 buttonStyle4 portfolioLink" rel="noopener noreferrer" href={content.workNoteSrc} target="_blank">제작노트</a>
                           <a className="primary gmarket buttonStyle4 me-3 portfolioLink" href={content.project}>보러가기</a>
-                          <a className="primary gmarket buttonStyle4 me-3 portfolioLink" target="_blacnk" href={content.gitHubSrc}>GitHub<FontAwesomeIcon icon={faGithub} className="ms-1 black"/></a>
+                          <a className="primary gmarket buttonStyle4 me-3 portfolioLink" rel="noopener noreferrer" target="_blank" href={content.gitHubSrc}>GitHub<FontAwesomeIcon icon={faGithub} className="ms-1 black"/></a>
                         </div>
                       </div>
                   </div>
