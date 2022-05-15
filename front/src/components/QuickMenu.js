@@ -76,18 +76,23 @@ export default function QuickMenu2() {
         return { login: login, password: password }
       }
     }).then((result) => {
-      if( result.login === undefined || result.password === undefined ){ return 0; }
-      if(result.value.login==admin.id&&result.value.password==admin.password){
-        navigate("/admin");
-        document.getElementsByClassName("loginIcon")[0].classList.add("rotate180");
-        Swal.fire("관리자페이지 접속 성공")
+   
+      try{
+        if(result.value.login==admin.id&&result.value.password==admin.password){
+          navigate("/admin");
+          document.getElementsByClassName("loginIcon")[0].classList.add("rotate180");
+          Swal.fire("관리자페이지 접속 성공")
+          setLoginState(false);
+          }
+          
+          else{
+          Swal.fire('ID와 비밀번호를 확인해주세요')
+            }
+       
+        }catch (error){
+          return 0 ;
+        }
 
-        setLoginState(false);
-
-      }
-      else{
-        Swal.fire('ID와 비밀번호를 확인해주세요')
-      }
       
     })
   }  
