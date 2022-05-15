@@ -76,6 +76,7 @@ export default function QuickMenu2() {
         return { login: login, password: password }
       }
     }).then((result) => {
+      if( result.login === undefined || result.password === undefined ){ return 0; }
       if(result.value.login==admin.id&&result.value.password==admin.password){
         navigate("/admin");
         document.getElementsByClassName("loginIcon")[0].classList.add("rotate180");
