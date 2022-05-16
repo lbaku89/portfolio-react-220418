@@ -30,6 +30,28 @@ export default function Portfolio() {
 
   const myPortfolioInfo = [
     {
+      purposeTxt1 : "프론트엔드 지원자 권현우를",
+      purpsoeTxt2 : "소개하기 위한 페이지",
+      Period : "2주",
+      Title : "Self-Introduction",
+      SubTitle : "자기소개를 위한 SPA",
+      Explanation : [
+        "- Contents : 권현우 소개",
+        "- React를 이용한 SPA제작 불필요한 re-loading 제거하여 효율성과 속도 향상",
+        "- Node, Mysql, React, xml 연동하여 사용자와의 interaction 가능하도록 제작 ( Restful api )",
+        "- Form 유효성 검사 진행하여 양식에 맞지 않는 정보는 db source 낭비하지 않도록 방지",
+        "- Bootstrap5, Reactstrap, React-bootstrap, scss 사용하여 신속한 작업",
+        "- 다양한 기기를 고려한 반응형 화면 제작 ( bootstrap grid system )",
+        "- Contents 관리를 위한 관리자 login system 구현",
+        "- 사용자와의 interaction 결과가 즉각적으로 반영 되도록 react hook 활용",
+        "- react hook을 활용한 함수형 Component update",
+        "- react life cycle를 이해하기 위해 Class Component 제작",
+      ],
+      workNoteSrc : "https://drive.google.com/file/d/1xsOGN4rOjIJTmQkzDLkTxROOBnqNQLae/view?usp=sharing",
+      project : "#mainPage",
+      gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418"
+    },
+    {
       purposeTxt1 : "인사담당자가 '권현우'라는 구직자에게 궁금해 할 만한 사항들에",
       purpsoeTxt2 : "대한 대답을 미리 작성하여 보여주기 위해 제작",
       Period : "3일",
@@ -49,7 +71,7 @@ export default function Portfolio() {
       ],
       workNoteSrc : "https://drive.google.com/file/d/1oHTcdfjbN99U5NyphSJ9kuhVms6-zU_4/view?usp=sharing",
       project : "#PreInterviewWrap",
-      gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418"
+      gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418/blob/main/front/src/components/PreInterview.js"
     },
     {
       purposeTxt1 : "인사담당자가 ‘권현우’ 라는 구직자에게 면접제안을",
@@ -69,7 +91,7 @@ export default function Portfolio() {
       ],
       workNoteSrc : "https://drive.google.com/file/d/1-7OjgqJ_G8gEEPZUVuSVsm3ePbLkFtsX/view?usp=sharing",
       project : "#ContactMeWrap",
-      gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418"
+      gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418/blob/main/front/src/components/ContactMe.js"
     },
     {
       purposeTxt1 : "자기소개 페이지를 방문한 사람들이 후기를 남길 수 있도록",
@@ -90,7 +112,7 @@ export default function Portfolio() {
       ],
       workNoteSrc : "https://drive.google.com/file/d/1xrXsgDUUnloJJH6lg4Kf9oXS0GT3Tz0b/view?usp=sharing",
       project : "#CommentComponentWrap",
-      gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418"
+      gitHubSrc : "https://github.com/lbaku89/portfolio-react-220418/blob/main/front/src/components/Comment.js"
     }
   ]
   
