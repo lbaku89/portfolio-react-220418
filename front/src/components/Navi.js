@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 // react Component import 
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink, UncontrolledDropdown,
-  DropdownToggle, DropdownMenu,DropdownItem,
+
 } from 'reactstrap';
 
 export default class Header extends Component {
@@ -85,22 +85,22 @@ export default class Header extends Component {
               id="NaviNav"
             >
               <NavItem>
-                <NavLink href="#AboutMeWrap" className='NaviNavLink'>
+                <NavLink href="#AboutMeWrap2" className='NaviNavLink' onClick={this.toggle}>
                   ABOUT ME
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#PortfolioWrap" className='NaviNavLink'>
+                <NavLink href="#PortfolioWrap2" className='NaviNavLink' onClick={this.toggle}>
                   PORTFOLIO
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#PreInterviewWrap" className='NaviNavLink'>
+                <NavLink href="#PreInterviewWrap2" className='NaviNavLink' onClick={this.toggle}>
                   PRE-INTERVIEW
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#ContactMeWrap" className='NaviNavLink'>
+                <NavLink href="#ContactMeWrap2" className='NaviNavLink' onClick={this.toggle}>
                   CONTACT ME
                 </NavLink>
               </NavItem>

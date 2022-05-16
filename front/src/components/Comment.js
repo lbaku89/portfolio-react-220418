@@ -177,17 +177,15 @@ export default function Comment() {
         <div className='col-12 col-md-8'>
           <div>
             {commentList.map(
-              (content)=>{
+              (content,i)=>{
                 return(
-                  <>
-                    <div className='d-flex justify-content-start p-2 commentWrap'>
-                      <div className='col-2'>{content.wr_name}</div>
-                      <div className='col-8'>{content.wr_comment}</div>
-                      <div className='col-2 d-flex justify-content-end'>
-                        <button onClick={e=>commentDelete(content.no,content.wr_password)} className='buttonStyle1 h-30px mt-0'>삭제</button>
-                      </div>
+                  <div className='d-flex justify-content-start p-2 commentWrap' key={"commentDiv" +i} >
+                    <div className='col-2'>{content.wr_name}</div>
+                    <div className='col-8'>{content.wr_comment}</div>
+                    <div className='col-2 d-flex justify-content-end'>
+                      <button onClick={e=>commentDelete(content.no,content.wr_password)} className='buttonStyle1 h-30px mt-0'>삭제</button>
                     </div>
-                  </>
+                  </div>
                 )
               }
             )}

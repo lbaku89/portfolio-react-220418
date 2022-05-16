@@ -16,7 +16,7 @@ import 'swiper/swiper.min.css'
 import 'swiper/components/pagination/pagination.min.css'
 import 'swiper/components/navigation/navigation.min.css'
 
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination } from "swiper";
 
 
 
@@ -124,15 +124,15 @@ SwiperCore.use([Pagination]);
   return (
     <div className='khysection1 bg-color2' id="PortfolioWrap">
       <div className='container-lg'>
-        <div className="sectionTitleBox d-flex justify-contents-center align-items-start"> 
+        <div className="sectionTitleBox d-flex justify-contents-center align-items-start pt-5" id="PortfolioWrap2"> 
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>권현우 작업물</h3>
         </div>
         <Swiper slidesPerView={1}  pagination={{clickable:true}} modules={[Pagination]}      
        className="mySwiper py-5 h-100" id="mySwiper">
-          {myPortfolioInfo.map((content)=>{
+          {myPortfolioInfo.map((content, i)=>{
             return(
-              <SwiperSlide>
+              <SwiperSlide key={"portfolioKey"+i}>
                 <div className="row align-items-center px-3">
                   <div className='col-12 col-md-6  mb-5 mb-lg-0 d-flex flex-column justify-content-center portfolioLeftBox'>
                     <div className="gmarket text-center mb-2 mb-md-4">
@@ -162,8 +162,8 @@ SwiperCore.use([Pagination]);
                         <p className="bg-color3 d-inline-block p-2 gmarket white">단독작업 / {content.Period}</p>
                         <ul className="ps-0 gmarket">
                           {
-                            content.Explanation.map((subContent)=>{
-                              return(<li className="portfolioExplanation">{subContent}</li>)
+                            content.Explanation.map((subContent,j)=>{
+                              return(<li className="portfolioExplanation" key={"explanationKey"+j}>{subContent}</li>)
                             })
                           }
                         </ul>

@@ -4,7 +4,7 @@ import { faPlus, faRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
 import {useNavigate} from 'react-router-dom'
 
-export default function QuickMenu2() {
+export default function QuickMenu(){
 
   const [willOpen,setWillOpen] = useState(true);
   const [loginState,setLoginState] = useState(true)
@@ -107,7 +107,11 @@ export default function QuickMenu2() {
         {
           quickMenuInfo.map((content,i)=>{
             return(
-              <li className='mb-2 QuickMenuLi'><a href={content.href} target="_blank"><img src={content.imgSrc}></img></a></li>
+              <li className='mb-2 QuickMenuLi' key={"quickMenuLiKey"+i}>
+                <a href={content.href} target="_blank">
+                  <img src={content.imgSrc}></img>
+                </a>
+              </li>
             )
           })
         }

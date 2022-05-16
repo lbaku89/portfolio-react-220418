@@ -96,7 +96,7 @@ export default function InterviewModify() {
 
   return (
   <div className='khysection1' id="preInterviewModifyWrap">
-    <div className='container-md'>
+    <div className='container-md pt-5' id="PreInterviewWrap2">
         <div  className="d-flex justify-contents-center align-items-start sectionTitleBox">
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>Pre-Interview 수정중</h3>

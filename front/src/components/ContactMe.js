@@ -95,7 +95,7 @@ export default function ContactMe(){
 
   return (
     <div className='khysection1  bg-color2' id='ContactMeWrap'>
-      <div className='container-md'>
+      <div className='container-md pt-5' id='ContactMeWrap2'>
         <div className="sectionTitleBox d-flex justify-contents-center align-items-start"> 
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>귀사의 연락을 기다립니다</h3>
@@ -111,7 +111,7 @@ export default function ContactMe(){
                 회사명
               </Form.Label>
               <Col sm="9">
-                <Form.Control className="FormControlTag"type="text" id="wr_subject" placeholder="회사명" name="wr_subject"/>
+                <Form.Control className="FormControlTag"type="text" placeholder="회사명" name="wr_subject"/>
               </Col>
             </Form.Group>
             <Form.Group as={Row} className="mb-3 FormGroupTag" controlId="wr_hp" >
@@ -119,7 +119,7 @@ export default function ContactMe(){
                 담당자 연락처
               </Form.Label>
               <Col sm="9">
-                <Form.Control className="FormControlTag"type="text" id="wr_hp" placeholder="010-6372-9168" name="wr_hp"/>
+                <Form.Control className="FormControlTag"type="text" placeholder="010-6372-9168" name="wr_hp"/>
               </Col>
             </Form.Group>
             <Form.Group as={Row} className="mb-3 FormGroupTag" controlId="interview_date" >
@@ -127,7 +127,7 @@ export default function ContactMe(){
                 면접날짜, 시간
               </Form.Label>
               <Col sm="9">
-                <Form.Control className="FormControlTag"type="text" id="interview_time" placeholder="6/10 오후2시" name="interview_date"/>
+                <Form.Control className="FormControlTag"type="text" placeholder="6/10 오후2시" name="interview_date"/>
               </Col>
             </Form.Group>
             <Form.Group className='FormGroupTag mb-3'>
@@ -154,7 +154,7 @@ export default function ContactMe(){
               <div className='d-flex skillRankWrap'>
                   {checkedValueList.map((content,i)=>{
                     return(
-                      <div className='bg-primary white text-center skillRankBox'>{i+1}순위 : {content}</div>
+                      <div className='bg-primary white text-center skillRankBox' key={"sillRankDiv" +i}>{i+1}순위 : {content}</div>
                     )
                   })}
                 </div>

@@ -43,7 +43,7 @@ class PreInterview extends Component{
   render(){ 
   return (  
     <div className='khysection1' id="PreInterviewWrap">
-      <div className='container-md'>
+      <div className='container-md  pt-5' id="PreInterviewWrap2">
         <div className="sectionTitleBox d-flex justify-contents-center align-items-start">
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>솔직하게 적어봤어요</h3>
@@ -53,7 +53,7 @@ class PreInterview extends Component{
           {this.state.interviewData.map((content,i)=>{
             console.log(typeof(content.date))
             return(
-              <Accordion.Item eventKey={i.toString()} className="AccordionItem">
+              <Accordion.Item eventKey={i.toString()} key={"preInterview"+i} className="AccordionItem">
                 <Accordion.Header className='AccordionHeader'><div>{i+1+". "}{content.question}</div></Accordion.Header>
                 <Accordion.Body className="AccordionBody">
                   <div className='row'>

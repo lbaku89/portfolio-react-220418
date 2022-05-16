@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 
 
-export default function AboutMe() {
+export default function AboutMe(){
 
   // skill 능숙도 data
   const myAbility = [
@@ -99,7 +99,7 @@ export default function AboutMe() {
   return (
     <div id='AboutMeWrap'  className='container-lg khysection1'>
         {/*section title text */}
-        <div className="sectionTitleBox d-flex justify-contents-center align-items-start">
+        <div className="sectionTitleBox d-flex justify-contents-center align-items-start pt-5" id="AboutMeWrap2">
           <div className='bg-primary'></div>
           <h3 className='gmarket align-text-bottom'>저를 소개해요</h3>
         </div>
@@ -168,26 +168,26 @@ export default function AboutMe() {
             <ul id="AboutMeSkillUl">
               {myAbility.map((content,i)=>{
                   return(
-                    <li className='row' data-aos="fade-up" data-aos-duration={300*i}>
+                    <li className='row' data-aos="fade-up" data-aos-duration={300*i} key={"myAbilityKey"+i} >
                       <div className='AboutMeIconBox col-5 col-sm-2 display-flex align-items-center'>
-                      {content.imgSrc.map((content2)=> {
+                      {content.imgSrc.map((content2,j)=> {
                         return(
-                          <img src={content2.img} alt={content2.alt} className='AboutMeIcon me-1'/>
+                          <img src={content2.img} alt={content2.alt} className='AboutMeIcon me-1'key={"ImgKey"+j} />
                             )
                           }
                         )
                       }
                       </div>
-                    <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
-                      <p>{content.skillNm}</p>
-                      <div className='graph w-100'>
-                        <span className={content.stack} ></span>
+                      <div className='AboutMeSkillgraphBox col-10 col-sm-8'>
+                        <p>{content.skillNm}</p>
+                        <div className='graph w-100'>
+                          <span className={content.stack} ></span>
+                        </div>
                       </div>
-                    </div>
-                    <span className="graphTxtDiv col-2">
-                    {content.graphPercent}<span>%</span>
-                    </span>
-                  </li>
+                      <span className="graphTxtDiv col-2">
+                      {content.graphPercent}<span>%</span>
+                      </span>
+                    </li>
                   )
               })
             }              
