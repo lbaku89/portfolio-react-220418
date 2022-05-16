@@ -35,7 +35,7 @@ export default function AboutMe() {
         { img : "/img/icon/cssIcon.png",
           alt : "css icon"},
         ],
-      skillNm:"Photoshop, Illustrator",
+      skillNm:"Html, css",
       stack:"stack95",
       graphPercent:"95"
     },
