@@ -9,3 +9,6 @@
 - 사용자와의 interaction 결과가 즉각적으로 반영 되도록 react hook 활용
 - react hook을 활용한 함수형 Component update
 - react life cycle를 이해하기 위해 Class Component 제작 
+
+
+![image](https://user-images.githubusercontent.com/96039047/168951384-f94a35f5-5c67-4ec1-a028-229808755a22.png)
