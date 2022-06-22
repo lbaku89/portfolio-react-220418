@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 
 // react Component import 
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink, UncontrolledDropdown,
@@ -22,46 +21,53 @@ export default class Header extends Component {
   }
  
   render() {
-    // navigation scroll event 구현! 
-    $(document).ready(function(){
-      // 변수선언
-      var didScroll;
-      var lastScrollTop = 0;
-      var delta = 5;
-      var navbarHeight = $('#NaviNavbar').outerHeight();
 
-      // 스크롤 터지면 didScroll = true
-      $(window).scroll(function(){
-        didScroll=true;
-      });
+    document.addEventListener('DOMContentLoaded',function(){
 
-      // 0.25초마다 scroll 상태 확인
+      let didScroll;
+      let lastScrollTop = 0;
+      let delta = 5; 
+      
+      window.addEventListener('scroll',function(){
+          didScroll = true;
+      })
+
+      // 0.25초 마다 scroll 됐는지 확인 
       setInterval(function(){
-        if(didScroll){  
-          hasScrolled(); // hasScrolled Function 실행!
-          didScroll =false; // didScroll은 0으로 
-        }
-      },250);
-
-      function hasScrolled(){
-        var st = $(window).scrollTop();
-        
-        if(Math.abs(lastScrollTop-st)<=delta)
-          return;
-
-        if(st>lastScrollTop && st>navbarHeight){
-          $('#NaviNavbar').addClass('NaviNavUp')
-        }else{
-
-          if(st+$(window).height()<$(document).height()){
-            $('#NaviNavbar').removeClass('NaviNavUp')
+          if(didScroll){
+              hasScrolled();
+              didScroll=false;
           }
-        }
-        lastScrollTop=st;
+      },250)
+
+      // didScroll = true 일 경우 진행 
+      function hasScrolled(){
+          let st = window.scrollY;
+
+          // scroll이 최상단에 있을 때 무조건 navi가 보이게
+          if(st===0){
+            document.getElementById("NaviNavbar").classList.remove('NaviNavUp');
+          }else{
+            // scroll이 5보다 적게 움직였을 때 navibar 변경 x 
+            if(delta>=Math.abs(st-lastScrollTop)){
+              lastScrollTop = st;
+              return 0;
+            } 
+            else{
+              if(st-lastScrollTop>0){
+                  //scroll 내리면 navibar 없애기
+                  document.getElementById("NaviNavbar").classList.add('NaviNavUp')
+              }else{
+                  //scroll 올리면 navibar 없애기
+                  document.getElementById("NaviNavbar").classList.remove('NaviNavUp')
+              }
+            }
+          }
+          lastScrollTop = st;
       }
-    })
-    
-    
+  })
+
+
     return (
 
        <div id="NaviWrap">
