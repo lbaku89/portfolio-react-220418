@@ -1,5 +1,5 @@
 ➡️ URL : http://13.124.88.30/  
-### UI/UX 화면 설계 및 구현 백엔드 DATA 연동까지 혼자 스스로 작업했습니다
+### UI/UX 화면 설계 및 구현, 백엔드 DATA 연동까지 혼자 스스로 작업했습니다
 # Restful api로 구현된 Single Page Application
   제작특징   
 - React를 이용한 SPA제작 불필요한 re-loading 제거하여 효율성과 속도 향상
